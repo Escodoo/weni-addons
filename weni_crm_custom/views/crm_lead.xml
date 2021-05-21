@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2021 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <!--    Lead Form-->
+    <record model="ir.ui.view" id="crm_lead_form_view_leads">
+        <field name="name">crm.lead.form.leads (in weni_crm_custom)</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
+        <field name="arch" type="xml">
+            <button name="action_set_lost" position="replace">
+                <button name="%(crm.crm_lead_lost_action)d"
+                        string="Mark Lost"
+                        type="action" class="oe_highlight"
+                        context="{'default_lead_id': active_id}"
+                        attrs="{'invisible': ['&amp;', ('probability', '=', 0), ('active', '=', False)]}"/>
+            </button>
+            <field name="tag_ids" position="after">
+                <field name="weni_icp_classification"/>
+                <field name="lost_reason" attrs="{'invisible': [('active', '=', True)]}"/>
+            </field>
+            <notebook position="inside">
+                <page name="weni_lead_details" string="Lead Details">
+                    <group name="weni_company_details" string="Company Details">
+                        <field name="weni_company_size"/>
+                        <field name="weni_average_ticket"/>
+                        <field name="weni_technological_maturity"/>
+                        <field name="weni_has_dedicate_team"/>
+                        <field name="weni_active_contact"/>
+                    </group>
+                    <group name="weni_project_detail" string="Project Details">
+                        <field name="weni_project_financier"/>
+                        <field name="weni_project_budget"/>
+                        <field name="weni_project_time_window"/>
+                        <field name="weni_project_gap"/>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+    <!-- Opportunity Form -->
+    <record model="ir.ui.view" id="crm_lead_form_view_oppor">
+        <field name="name">crm.lead.form.oppor (in weni_crm_custom)</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+        <field name="arch" type="xml">
+            <field name="tag_ids" position="after">
+                <field name="weni_icp_classification"/>
+            </field>
+            <notebook position="inside">
+                <page name="weni_lead_details" string="Opportunity Details">
+                    <group name="weni_company_details" string="Company Details">
+                        <field name="weni_company_size"/>
+                        <field name="weni_average_ticket"/>
+                        <field name="weni_technological_maturity"/>
+                        <field name="weni_has_dedicate_team"/>
+                        <field name="weni_active_contact"/>
+                    </group>
+                    <group name="weni_project_detail" string="Project Details">
+                        <field name="weni_project_financier"/>
+                        <field name="weni_project_budget"/>
+                        <field name="weni_project_time_window"/>
+                        <field name="weni_project_gap"/>
+                        <field name="weni_project_gap_primary"/>
+                        <field name="weni_project_gap_secondary"/>
+                        <field name="weni_project_integration"/>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+    <!-- Muda sequencia das visões disponiveis nos leads -->
+    <record id="crm.crm_lead_all_leads_view_kanban" model="ir.actions.act_window.view">
+        <field name="sequence" eval="1"/>
+    </record>
+    <record id="crm.crm_lead_all_leads_view_tree" model="ir.actions.act_window.view">
+        <field name="sequence" eval="2"/>
+    </record>
+
+    <!-- Adiciona agrupamento padrão por stage_id -->
+    <record model="ir.ui.view" id="view_crm_lead_kanban">
+        <field name="name">crm.lead.kanban (in weni_crm_custom)</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_lead_kanban"/>
+        <field name="arch" type="xml">
+             <kanban position="attributes">
+                <attribute name="default_group_by">stage_id</attribute>
+             </kanban>
+        </field>
+    </record>
+
+</odoo>
