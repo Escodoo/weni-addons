@@ -56,9 +56,9 @@ class CrmLead(models.Model):
     weni_icp_classification = fields.Selection(
         string='ICP Classification',
         selection=[
-            ('no_fit', 'No FIT'),
-            ('medium_fit', 'Medium FIT'),
-            ('high_fit', 'High FIT')
+            ('no_fit', 'No Fit'),
+            ('medium_fit', 'Medium Fit'),
+            ('high_fit', 'High Fit')
         ],)
 
     # weni_lead_line_channel_ids = fields.One2many(
