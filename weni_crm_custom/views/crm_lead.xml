@@ -21,7 +21,7 @@
                 <field name="weni_icp_classification"/>
                 <field name="lost_reason" attrs="{'invisible': [('active', '=', True)]}"/>
             </field>
-            <notebook position="inside">
+            <page name="extra" position="before">
                 <page name="weni_lead_details" string="Lead Details">
                     <group name="weni_company_details" string="Company Details">
                         <field name="weni_company_size"/>
@@ -37,7 +37,10 @@
                         <field name="weni_project_gap"/>
                     </group>
                 </page>
-            </notebook>
+                <page name="weni_channel" string="Channels">
+                     <field name="weni_channel_ids"/>
+                </page>
+            </page>
         </field>
     </record>
 
@@ -71,6 +74,9 @@
                 </page>
                 <page name="weni_channel" string="Channels">
                      <field name="weni_channel_ids"/>
+                </page>
+                <page name="weni_decision_makers" string="Decision Makers">
+                     <field name="decision_maker_ids"/>
                 </page>
             </page>
         </field>
