@@ -60,3 +60,17 @@ class CrmLead(models.Model):
             ('medium_fit', 'Medium FIT'),
             ('high_fit', 'High FIT')
         ],)
+
+    # weni_lead_line_channel_ids = fields.One2many(
+    #     comodel_name='crm.lead.line_channel',
+    #     inverse_name='lead_id',
+    #     string='Lead Channels',
+    # )
+
+    weni_channel_ids = fields.Many2many(
+        "crm.lead.channel",
+        "crm_leed_channel_rel",
+        "lead_id",
+        "channel_id",
+        "Channels",
+    )

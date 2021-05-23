@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2021 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record model="ir.ui.view" id="crm_lead_channel_form_view">
+        <field name="name">crm.lead.channel.form (in weni_crm_custom)</field>
+        <field name="model">crm.lead.channel</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <!-- TODO -->
+                </header>
+                <sheet>
+                    <!-- TODO -->
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter"></div>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="crm_lead_channel_search_view">
+        <field name="name">crm.lead.channel.search (in weni_crm_custom)</field>
+        <field name="model">crm.lead.channel</field>
+        <field name="arch" type="xml">
+            <search>
+                <!-- TODO -->
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="crm_lead_channel_tree_view">
+        <field name="name">crm.lead.channel.tree (in weni_crm_custom)</field>
+        <field name="model">crm.lead.channel</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="crm_lead_channel_act_window">
+        <field name="name">Channel</field>
+        <field name="res_model">crm.lead.channel</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <record model="ir.ui.menu" id="crm_lead_channel_menu">
+        <field name="name">Channels</field>
+        <field name="parent_id" ref="crm.crm_menu_config"/>
+        <field name="action" ref="crm_lead_channel_act_window"/>
+        <field name="sequence" eval="16"/>
+    </record>
+
+</odoo>
