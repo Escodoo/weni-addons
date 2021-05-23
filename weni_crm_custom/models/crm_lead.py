@@ -74,3 +74,9 @@ class CrmLead(models.Model):
         "channel_id",
         "Channels",
     )
+
+    decision_maker_ids = fields.One2many(
+        comodel_name='crm.lead.decision.maker',
+        inverse_name='lead_id',
+        string='Lead Lines',
+    )
