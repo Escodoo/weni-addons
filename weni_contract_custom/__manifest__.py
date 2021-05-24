@@ -11,6 +11,7 @@
     'website': 'https://www.escodoo.com.br',
     'depends': [
         'contract_forecast',
+        'contract_variable_quantity',
     ],
     'data': [
         'security/contract_line_consumption.xml',
