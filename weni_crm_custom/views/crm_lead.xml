@@ -18,7 +18,6 @@
                         attrs="{'invisible': ['&amp;', ('probability', '=', 0), ('active', '=', False)]}"/>
             </button>
             <field name="tag_ids" position="after">
-                <field name="weni_icp_classification"/>
                 <field name="lost_reason" attrs="{'invisible': [('active', '=', True)]}"/>
             </field>
             <page name="extra" position="before">
@@ -29,6 +28,7 @@
                         <field name="weni_technological_maturity"/>
                         <field name="weni_has_dedicate_team"/>
                         <field name="weni_active_contacts"/>
+                        <field name="weni_icp_classification"/>
                     </group>
                     <group name="weni_project_detail" string="Project Details">
                         <field name="weni_project_budget"/>
@@ -49,9 +49,6 @@
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
         <field name="arch" type="xml">
-            <field name="tag_ids" position="after">
-                <field name="weni_icp_classification"/>
-            </field>
             <page name="lead" position="before">
                 <page name="weni_lead_details" string="Opportunity Details">
                     <group name="weni_company_details" string="Company Details">
@@ -60,6 +57,7 @@
                         <field name="weni_technological_maturity"/>
                         <field name="weni_has_dedicate_team"/>
                         <field name="weni_active_contacts"/>
+                        <field name="weni_icp_classification"/>
                     </group>
                     <group name="weni_project_detail" string="Project Details">
                         <field name="weni_project_budget"/>
