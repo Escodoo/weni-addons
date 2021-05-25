@@ -25,16 +25,15 @@
                 <page name="weni_lead_details" string="Lead Details">
                     <group name="weni_company_details" string="Company Details">
                         <field name="weni_company_size"/>
-                        <field name="weni_average_ticket"/>
+                        <field name="weni_average_selling_price"/>
                         <field name="weni_technological_maturity"/>
                         <field name="weni_has_dedicate_team"/>
-                        <field name="weni_active_contact"/>
+                        <field name="weni_active_contacts"/>
                     </group>
                     <group name="weni_project_detail" string="Project Details">
-                        <field name="weni_project_financier"/>
                         <field name="weni_project_budget"/>
-                        <field name="weni_project_time_window"/>
-                        <field name="weni_project_gap"/>
+                        <field name="weni_project_release_date"/>
+                        <field name="weni_project_pain"/>
                     </group>
                 </page>
                 <page name="weni_channel" string="Channels">
@@ -57,18 +56,17 @@
                 <page name="weni_lead_details" string="Opportunity Details">
                     <group name="weni_company_details" string="Company Details">
                         <field name="weni_company_size"/>
-                        <field name="weni_average_ticket"/>
+                        <field name="weni_average_selling_price"/>
                         <field name="weni_technological_maturity"/>
                         <field name="weni_has_dedicate_team"/>
-                        <field name="weni_active_contact"/>
+                        <field name="weni_active_contacts"/>
                     </group>
                     <group name="weni_project_detail" string="Project Details">
-                        <field name="weni_project_financier"/>
                         <field name="weni_project_budget"/>
-                        <field name="weni_project_time_window"/>
-                        <field name="weni_project_gap"/>
-                        <field name="weni_project_gap_primary"/>
-                        <field name="weni_project_gap_secondary"/>
+                        <field name="weni_project_release_date"/>
+                        <field name="weni_project_pain"/>
+                        <field name="weni_project_pain_primary"/>
+                        <field name="weni_project_pain_secondary"/>
                         <field name="weni_project_integration"/>
                     </group>
                 </page>
@@ -76,7 +74,7 @@
                      <field name="weni_channel_ids"/>
                 </page>
                 <page name="weni_decision_makers" string="Decision Makers">
-                     <field name="decision_maker_ids"/>
+                     <field name="weni_decision_maker_ids"/>
                 </page>
             </page>
         </field>

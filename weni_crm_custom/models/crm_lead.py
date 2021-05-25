@@ -15,8 +15,8 @@ class CrmLead(models.Model):
     weni_company_size = fields.Integer(
         string='Company Size')
 
-    weni_average_ticket = fields.Monetary(
-        'Average Ticket',
+    weni_average_selling_price = fields.Monetary(
+        'Average Selling Price',
         currency_field='company_currency',
         track_visibility='always')
 
@@ -26,29 +26,25 @@ class CrmLead(models.Model):
     weni_has_dedicate_team = fields.Boolean(
         string="Has Dedicated Team")
 
-    weni_active_contact = fields.Integer(
-        string='Active Contact')
-
-    weni_project_financier = fields.Many2one(
-        comodel_name='res.partner',
-        string='Project Financier')
+    weni_active_contacts = fields.Integer(
+        string='Active Contacts')
 
     weni_project_budget = fields.Monetary(
         'Budget',
         currency_field='company_currency',
         track_visibility='always')
 
-    weni_project_time_window = fields.Date(
-        'Time Window')
+    weni_project_release_date = fields.Date(
+        'Release Date')
 
-    weni_project_gap = fields.Html(
-        string='Gap')
+    weni_project_pain = fields.Html(
+        string='Pain')
 
-    weni_project_gap_primary = fields.Html(
-        string='Primary Gap')
+    weni_project_pain_primary = fields.Html(
+        string='Primary Pains')
 
-    weni_project_gap_secondary = fields.Html(
-        string='Secondary Gap')
+    weni_project_pain_secondary = fields.Html(
+        string='Secondary Pains')
 
     weni_project_integration = fields.Html(
         string='Integrations')
@@ -75,7 +71,7 @@ class CrmLead(models.Model):
         "Channels",
     )
 
-    decision_maker_ids = fields.One2many(
+    weni_decision_maker_ids = fields.One2many(
         comodel_name='crm.lead.decision.maker',
         inverse_name='lead_id',
         string='Lead Lines',
