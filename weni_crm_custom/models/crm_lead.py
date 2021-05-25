@@ -20,8 +20,13 @@ class CrmLead(models.Model):
         currency_field='company_currency',
         track_visibility='always')
 
-    weni_technological_maturity = fields.Char(
-        string="Technological Maturity")
+    weni_technological_maturity = fields.Selection(
+        string='Technological Maturity',
+        selection=[
+            ('low', 'Low'),
+            ('medium', 'Medium'),
+            ('high', 'High')
+        ],)
 
     weni_has_dedicate_team = fields.Boolean(
         string="Has Dedicated Team")
