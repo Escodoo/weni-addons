@@ -81,7 +81,11 @@ class CrmLead(models.Model):
         inverse_name='lead_id',
         string='Lead Lines',
     )
-
+    weni_user_ids = fields.One2many(
+        comodel_name='crm.lead.user',
+        inverse_name='lead_id',
+        string='Users',
+    )
     weni_contract_type = fields.Selection(
         string='Contract Type',
         selection=[

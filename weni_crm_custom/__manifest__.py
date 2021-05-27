@@ -14,6 +14,8 @@
         'crm_secondary_salesperson'
     ],
     'data': [
+        'security/crm_lead_user.xml',
+        'views/crm_lead_user.xml',
         'security/crm_lead_decision_maker.xml',
         'views/crm_lead_decision_maker.xml',
         'security/crm_lead_channel.xml',

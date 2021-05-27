@@ -76,6 +76,9 @@
                 <page name="weni_decision_makers" string="Decision Makers">
                      <field name="weni_decision_maker_ids"/>
                 </page>
+                <page name="weni_user" string="Users">
+                     <field name="weni_user_ids"/>
+                </page>
             </page>
         </field>
     </record>

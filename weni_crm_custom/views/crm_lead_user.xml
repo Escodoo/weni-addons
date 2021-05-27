@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2021 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record model="ir.ui.view" id="crm_lead_user_tree_view">
+        <field name="name">crm.lead.user.tree (in weni_crm_custom)</field>
+        <field name="model">crm.lead.user</field>
+        <field name="arch" type="xml">
+            <tree string="Users" editable="bottom">
+                <field name="user_id"/>
+                <field name="function"/>
+                <field name="email"/>
+                <field name="phone"/>
+                <field name="mobile"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>
