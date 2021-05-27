@@ -29,6 +29,7 @@
                         <field name="weni_has_dedicate_team"/>
                         <field name="weni_active_contacts"/>
                         <field name="weni_icp_classification"/>
+                        <field name="weni_contract_type"/>
                     </group>
                     <group name="weni_project_detail" string="Project Details">
                         <field name="weni_project_budget"/>
@@ -58,6 +59,7 @@
                         <field name="weni_has_dedicate_team"/>
                         <field name="weni_active_contacts"/>
                         <field name="weni_icp_classification"/>
+                        <field name="weni_contract_type"/>
                     </group>
                     <group name="weni_project_detail" string="Project Details">
                         <field name="weni_project_budget"/>

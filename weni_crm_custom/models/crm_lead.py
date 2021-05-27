@@ -81,3 +81,10 @@ class CrmLead(models.Model):
         inverse_name='lead_id',
         string='Lead Lines',
     )
+
+    weni_contract_type = fields.Selection(
+        string='Contract Type',
+        selection=[
+            ('project', 'Project'),
+            ('platform', 'Platform'),
+        ],)
