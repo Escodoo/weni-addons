@@ -34,7 +34,8 @@
                     <group name="weni_project_detail" string="Project Details">
                         <field name="weni_project_budget"/>
                         <field name="weni_project_release_date"/>
-                        <field name="weni_project_pain"/>
+                        <field name="weni_project_pain_primary"/>
+                        <field name="weni_project_pain_secondary"/>
                     </group>
                 </page>
                 <page name="weni_channel" string="Channels">
@@ -64,7 +65,6 @@
                     <group name="weni_project_detail" string="Project Details">
                         <field name="weni_project_budget"/>
                         <field name="weni_project_release_date"/>
-                        <field name="weni_project_pain"/>
                         <field name="weni_project_pain_primary"/>
                         <field name="weni_project_pain_secondary"/>
                         <field name="weni_project_integration"/>
@@ -73,7 +73,7 @@
                 <page name="weni_channel" string="Channels">
                      <field name="weni_channel_ids"/>
                 </page>
-                <page name="weni_decision_makers" string="Decision Makers">
+                <page name="weni_decision_maker" string="Decision Makers">
                      <field name="weni_decision_maker_ids"/>
                 </page>
                 <page name="weni_user" string="Users">

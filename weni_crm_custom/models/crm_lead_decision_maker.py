@@ -10,15 +10,12 @@ class CrmLeadDecisionMaker(models.Model):
     _description = 'Crm Lead Decision Maker'
 
     name = fields.Char()
-
     lead_id = fields.Many2one(
         'crm.lead',
         string='Lead')
-
     partner_id = fields.Many2one(
         'res.partner',
         string='Decision Maker')
-
     decision_maker_type = fields.Selection(
         string='Decision Maker Type',
         selection=[

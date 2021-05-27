@@ -11,15 +11,12 @@ class CrmLead(models.Model):
     secondary_user_id = fields.Many2one(
         'res.users',
         string='Pre Salesperson')
-
     weni_company_size = fields.Integer(
         string='Company Size')
-
     weni_average_selling_price = fields.Monetary(
         'Average Selling Price',
         currency_field='company_currency',
         track_visibility='always')
-
     weni_technological_maturity = fields.Selection(
         string='Technological Maturity',
         selection=[
@@ -27,33 +24,22 @@ class CrmLead(models.Model):
             ('medium', 'Medium'),
             ('high', 'High')
         ],)
-
     weni_has_dedicate_team = fields.Boolean(
         string="Has Dedicated Team")
-
     weni_active_contacts = fields.Integer(
         string='Active Contacts')
-
     weni_project_budget = fields.Monetary(
         'Budget',
         currency_field='company_currency',
         track_visibility='always')
-
     weni_project_release_date = fields.Date(
         'Release Date')
-
-    weni_project_pain = fields.Html(
-        string='Pain')
-
     weni_project_pain_primary = fields.Html(
         string='Primary Pains')
-
     weni_project_pain_secondary = fields.Html(
         string='Secondary Pains')
-
     weni_project_integration = fields.Html(
         string='Integrations')
-
     weni_icp_classification = fields.Selection(
         string='ICP Classification',
         selection=[
@@ -61,13 +47,6 @@ class CrmLead(models.Model):
             ('medium_fit', 'Medium Fit'),
             ('high_fit', 'High Fit')
         ],)
-
-    # weni_lead_line_channel_ids = fields.One2many(
-    #     comodel_name='crm.lead.line_channel',
-    #     inverse_name='lead_id',
-    #     string='Lead Channels',
-    # )
-
     weni_channel_ids = fields.Many2many(
         "crm.lead.channel",
         "crm_leed_channel_rel",
@@ -75,7 +54,6 @@ class CrmLead(models.Model):
         "channel_id",
         "Channels",
     )
-
     weni_decision_maker_ids = fields.One2many(
         comodel_name='crm.lead.decision.maker',
         inverse_name='lead_id',

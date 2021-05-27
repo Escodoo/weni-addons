@@ -10,7 +10,6 @@ class CrmLeadChannel(models.Model):
     _description = 'CRM Lead Channel'
 
     name = fields.Char()
-
     lead_ids = fields.Many2many(
         "crm.lead",
         "crm_lead_channel_rel",
