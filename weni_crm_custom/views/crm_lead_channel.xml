@@ -10,26 +10,14 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-                    <!-- TODO -->
                 </header>
                 <sheet>
-                    <!-- TODO -->
                     <group>
                         <field name="name"/>
                     </group>
                 </sheet>
                 <div class="oe_chatter"></div>
             </form>
-        </field>
-    </record>
-
-    <record model="ir.ui.view" id="crm_lead_channel_search_view">
-        <field name="name">crm.lead.channel.search (in weni_crm_custom)</field>
-        <field name="model">crm.lead.channel</field>
-        <field name="arch" type="xml">
-            <search>
-                <!-- TODO -->
-            </search>
         </field>
     </record>
 
