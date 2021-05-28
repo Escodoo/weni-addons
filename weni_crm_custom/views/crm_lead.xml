@@ -103,4 +103,27 @@
         </field>
     </record>
 
+    <record model="ir.ui.view" id="view_crm_lead_case_kanban">
+        <field name="name">crm.lead.case.kanban (in weni_crm_custom)</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_kanban_view_leads" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('o_kanban_record_bottom')]" position="before">
+                <div>
+                    <strong>
+                        Company Size:
+                    </strong>
+                    <field name="weni_company_size"/>
+                </div>
+                <div>
+                    <strong>
+                        Active Contacts:
+                    </strong>
+                    <field name="weni_active_contacts"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+
 </odoo>
