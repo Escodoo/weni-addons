@@ -11,7 +11,8 @@
     'website': 'https://www.escodoo.com.br',
     'depends': [
         'crm',
-        'crm_secondary_salesperson'
+        'crm_secondary_salesperson',
+        'crm_lead_saas',
     ],
     'data': [
         'security/crm_lead_user.xml',

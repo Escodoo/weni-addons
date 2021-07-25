@@ -21,25 +21,30 @@
                 <field name="lost_reason" attrs="{'invisible': [('active', '=', True)]}"/>
             </field>
             <page name="extra" position="before">
-                <page name="weni_lead_details" string="Lead Details">
-                    <group name="weni_company_details" string="Company Details">
+                <page name="weni_channel" string="Origin">
+                    <group name="weni_channel_details" string="Channels">
+                        <field name="weni_channel_ids" nolabel="1"/>
+                    </group>
+                </page>
+                <page name="weni_icp_data" string="ICP Data">
+                    <group name="weni_icp_details" string="ICP Details">
                         <field name="weni_company_size"/>
                         <field name="weni_average_selling_price"/>
                         <field name="weni_technological_maturity"/>
                         <field name="weni_has_dedicate_team"/>
                         <field name="weni_active_contacts"/>
-                        <field name="weni_icp_classification"/>
                         <field name="weni_sale_type"/>
+                        <field name="weni_icp_classification"/>
                     </group>
-                    <group name="weni_project_detail" string="Project Details">
+                </page>
+                <page name="weni_diagnostic" string="Diagnostic">
+                    <group name="weni_diagnostic_details" string="Diagnostic Details">
                         <field name="weni_project_budget"/>
                         <field name="weni_project_release_date"/>
                         <field name="weni_project_pain_primary"/>
                         <field name="weni_project_pain_secondary"/>
+                        <field name="weni_project_integration"/>
                     </group>
-                </page>
-                <page name="weni_channel" string="Channels">
-                     <field name="weni_channel_ids"/>
                 </page>
             </page>
         </field>
@@ -52,17 +57,27 @@
         <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
         <field name="arch" type="xml">
             <page name="lead" position="before">
-                <page name="weni_lead_details" string="Opportunity Details">
-                    <group name="weni_company_details" string="Company Details">
+                <page name="weni_channel" string="Origin">
+                    <group name="weni_channel_details" string="Channels">
+                        <field name="weni_channel_ids" nolabel="1"/>
+                    </group>
+                </page>
+                <page name="weni_icp_data" string="ICP Data">
+                    <group name="weni_icp_details" string="ICP Details">
                         <field name="weni_company_size"/>
                         <field name="weni_average_selling_price"/>
                         <field name="weni_technological_maturity"/>
                         <field name="weni_has_dedicate_team"/>
                         <field name="weni_active_contacts"/>
-                        <field name="weni_icp_classification"/>
                         <field name="weni_sale_type"/>
+                        <field name="weni_icp_classification"/>
+                        <field name="amount_mrr"/>
+                        <field name="amount_arr"/>
+                        <field name="amount_nrr"/>
                     </group>
-                    <group name="weni_project_detail" string="Project Details">
+                </page>
+                <page name="weni_diagnostic" string="Diagnostic">
+                    <group name="weni_diagnostic_details" string="Diagnostic Details">
                         <field name="weni_project_budget"/>
                         <field name="weni_project_release_date"/>
                         <field name="weni_project_pain_primary"/>
@@ -70,15 +85,26 @@
                         <field name="weni_project_integration"/>
                     </group>
                 </page>
-                <page name="weni_channel" string="Channels">
-                     <field name="weni_channel_ids"/>
+                <page name="weni_decision_makers" string="Decision Makers">
+                    <group name="weni_decision_makers_details" string="Decision Makers">
+                        <field name="weni_decision_maker_ids" nolabel="1"/>
+                    </group>
+                    <group name="weni_users_details" string="Users">
+                        <field name="weni_user_ids" nolabel="1"/>
+                    </group>
                 </page>
-                <page name="weni_decision_maker" string="Decision Makers">
-                     <field name="weni_decision_maker_ids"/>
-                </page>
-                <page name="weni_user" string="Users">
-                     <field name="weni_user_ids"/>
-                </page>
+            </page>
+        </field>
+    </record>
+
+    <!-- Opportunity Form -->
+    <record model="ir.ui.view" id="crm_lead_form_view">
+        <field name="name">crm.lead.form.oppor (in weni_crm_custom)</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm_lead_saas.crm_lead_form_view"/>
+        <field name="arch" type="xml">
+            <page name="crm_saas_values" position="attributes">
+                <attribute name="invisible">1</attribute>
             </page>
         </field>
     </record>

@@ -57,7 +57,7 @@ class CrmLead(models.Model):
     weni_decision_maker_ids = fields.One2many(
         comodel_name='crm.lead.decision.maker',
         inverse_name='lead_id',
-        string='Lead Lines',
+        string='Decision Markers',
     )
     weni_user_ids = fields.One2many(
         comodel_name='crm.lead.user',
