@@ -10,7 +10,7 @@ class ContractLineForecastPeriod(models.Model):
 
     @api.multi
     def _compute_price_subtotal(self):
-        # TODO: Herdar e alterar o valor.
+        # TODO: Herdar e alterar o valor. Ou migrar para OCA
         for line in self:
             subtotal = line.quantity * line.price_unit
             discount = line.discount / 100

@@ -10,7 +10,7 @@
 result = 0
 if line:
     line_consumption = env['contract.line.consumption'].search([('contract_line_id.id', '=', line.id),('date_consumption', '>', period_first_date),('date_consumption', '&lt;', period_last_date)], order="date_consumption desc", limit=1)
-    quantity_sale = line.quantity * line.compute_prorated(period_first_date, period_last_date, invoice_date)
+    quantity_sale = line.sale_order_line_id.product_uom_qty or 1
     quantity_consumption = line_consumption.quantity_consumption
     if not quantity_consumption or quantity_sale > quantity_consumption:
       quantity = quantity_sale
