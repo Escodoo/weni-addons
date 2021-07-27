@@ -143,15 +143,15 @@
             <xpath expr="//div[hasclass('o_kanban_record_bottom')]" position="before">
                 <div>
                     <strong>
-                        Company Size:
+                        MRR:
                     </strong>
-                    <field name="weni_company_size"/>
+                    <field name="amount_mrr" widget="monetary" options="{'currency_field': 'company_currency'}"/>
                 </div>
                 <div>
                     <strong>
-                        Active Contacts:
+                        NRR:
                     </strong>
-                    <field name="weni_active_contacts"/>
+                    <field name="amount_nrr" widget="monetary" options="{'currency_field': 'company_currency'}"/>
                 </div>
             </xpath>
         </field>
