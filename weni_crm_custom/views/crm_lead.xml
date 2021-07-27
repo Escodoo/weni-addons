@@ -21,11 +21,11 @@
                 <field name="lost_reason" attrs="{'invisible': [('active', '=', True)]}"/>
             </field>
             <page name="extra" position="before">
-                <page name="weni_channel" string="Origin">
-                    <group name="weni_channel_details" string="Channels">
-                        <field name="weni_channel_ids" nolabel="1"/>
-                    </group>
-                </page>
+<!--                <page name="weni_channel" string="Origin">-->
+<!--                    <group name="weni_channel_details" string="Channels">-->
+<!--                        <field name="weni_channel_ids" nolabel="1"/>-->
+<!--                    </group>-->
+<!--                </page>-->
                 <page name="weni_icp_data" string="ICP Data">
                     <group name="weni_icp_details" string="ICP Details">
                         <field name="weni_company_size"/>
@@ -57,11 +57,11 @@
         <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
         <field name="arch" type="xml">
             <page name="lead" position="before">
-                <page name="weni_channel" string="Origin">
-                    <group name="weni_channel_details" string="Channels">
-                        <field name="weni_channel_ids" nolabel="1"/>
-                    </group>
-                </page>
+<!--                <page name="weni_channel" string="Origin">-->
+<!--                    <group name="weni_channel_details" string="Channels">-->
+<!--                        <field name="weni_channel_ids" nolabel="1"/>-->
+<!--                    </group>-->
+<!--                </page>-->
                 <page name="weni_icp_data" string="ICP Data">
                     <group name="weni_icp_details" string="ICP Details">
                         <field name="weni_company_size"/>
