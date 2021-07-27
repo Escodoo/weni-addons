@@ -13,6 +13,13 @@
         'contract',
     ],
     'data': [
+        'views/account_analytic_account.xml',
+        'views/project_project.xml',
+        'views/res_currency.xml',
+        'views/crm_lead.xml',
+        'views/account_payment_term.xml',
+        'views/account_payment_mode.xml',
+        'views/account_payment.xml',
         'views/product_product.xml',
         'views/product_template.xml',
         'views/account_invoice_line.xml',

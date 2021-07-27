@@ -5,3 +5,10 @@ from . import account_invoice
 from . import account_invoice_line
 from . import product_template
 from . import product_product
+from . import account_payment
+from . import account_payment_mode
+from . import account_payment_term
+from . import crm_lead
+from . import res_currency
+from . import project_project
+from . import account_analytic_account
