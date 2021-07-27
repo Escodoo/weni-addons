@@ -11,6 +11,9 @@
     'website': 'https://www.escodoo.com.br',
     'depends': [
         'contract',
+        'crm',
+        'project',
+        'account_payment_mode',
     ],
     'data': [
         'views/account_analytic_account.xml',
