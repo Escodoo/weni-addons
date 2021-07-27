@@ -20,6 +20,9 @@
             <field name="tag_ids" position="after">
                 <field name="lost_reason" attrs="{'invisible': [('active', '=', True)]}"/>
             </field>
+            <field name="team_id" position="after">
+                <field name="source_id"/>
+            </field>
             <page name="extra" position="before">
 <!--                <page name="weni_channel" string="Origin">-->
 <!--                    <group name="weni_channel_details" string="Channels">-->
@@ -56,6 +59,9 @@
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
         <field name="arch" type="xml">
+            <field name="team_id" position="after">
+                <field name="source_id"/>
+            </field>
             <page name="lead" position="before">
 <!--                <page name="weni_channel" string="Origin">-->
 <!--                    <group name="weni_channel_details" string="Channels">-->
