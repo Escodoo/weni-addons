@@ -3,8 +3,8 @@
 
 from odoo import api, fields, models, _
 
-# TODO: remover modelo de dados
-class CrmLeadChannel(models.Model):
+
+class CrmLeadChannel(models.Model): # TODO: remover modelo de dados
 
     _name = 'crm.lead.channel'
     _description = 'CRM Lead Channel'
