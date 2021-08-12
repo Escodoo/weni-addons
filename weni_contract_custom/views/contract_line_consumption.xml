@@ -12,14 +12,15 @@
                 <header>
                 </header>
                 <sheet>
+                    <div class="oe_button_box" name="button_box"/>
                     <group>
-                        <field name="name"/>
-                        <field name="contract_line_id"/>
+                        <field name="contract_id"/>
+                        <field name="contract_line_id" domain="[('contract_id','=',contract_id)]"/>
                         <field name="consumption_date"/>
                         <field name="consumption_quantity"/>
+                        <field name="invoice_status"/>
                     </group>
                 </sheet>
-                <div class="oe_chatter"></div>
             </form>
         </field>
     </record>
@@ -38,18 +39,44 @@
         <field name="model">contract.line.consumption</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="name"/>
-                <field name="contract_line_id"/>
+                <field name="contract_id"/>
+                <field name="contract_line_id" domain="[('contract_id','=',contract_id)]"/>
                 <field name="consumption_date"/>
                 <field name="consumption_quantity"/>
+                <field name="invoice_status"/>
             </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="contract_line_consumption_graph_view">
+        <field name="name">contract.line.consumption.graph (in weni_contract_custom)</field>
+        <field name="model">contract.line.consumption</field>
+        <field name="arch" type="xml">
+            <graph string="Contract Lines Consumption">
+                <field name="contract_line_id"/>
+                <field name="consumption_quantity" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="contract_line_consumption_pivot_view">
+        <field name="name">contract.line.consumption.pivot (in weni_contract_custom)</field>
+        <field name="model">contract.line.consumption</field>
+        <field name="type">pivot</field>
+        <field name="arch" type="xml">
+            <pivot string="Contract Lines Consumption" display_quantity="true">
+                <field name="contract_id" type="row"/>
+                <field name="contract_line_id" type="row"/>
+                <field name="consumption_date" interval="month" type="col"/>
+                <field name="consumption_quantity" type="measure"/>
+            </pivot>
         </field>
     </record>
 
     <record model="ir.actions.act_window" id="contract_line_consumption_act_window">
         <field name="name">Contract Line Consumption</field>
         <field name="res_model">contract.line.consumption</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,pivot,graph</field>
         <field name="domain">[]</field>
         <field name="context">{}</field>
     </record>
