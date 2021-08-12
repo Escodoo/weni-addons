@@ -15,8 +15,8 @@
                     <group>
                         <field name="name"/>
                         <field name="contract_line_id"/>
-                        <field name="date_consumption"/>
-                        <field name="quantity_consumption"/>
+                        <field name="consumption_date"/>
+                        <field name="consumption_quantity"/>
                     </group>
                 </sheet>
                 <div class="oe_chatter"></div>
@@ -40,8 +40,8 @@
             <tree>
                 <field name="name"/>
                 <field name="contract_line_id"/>
-                <field name="date_consumption"/>
-                <field name="quantity_consumption"/>
+                <field name="consumption_date"/>
+                <field name="consumption_quantity"/>
             </tree>
         </field>
     </record>

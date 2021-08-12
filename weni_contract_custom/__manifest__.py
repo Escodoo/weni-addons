@@ -12,8 +12,12 @@
     'depends': [
         'contract_forecast',
         'contract_variable_quantity',
+        'product_contract',
     ],
     'data': [
+        'views/product_product.xml',
+        'views/contract_contract.xml',
+        'views/product_template.xml',
         'security/contract_line_consumption.xml',
         'views/contract_line_consumption.xml',
         'data/contract_variable_qty_consumption.xml',

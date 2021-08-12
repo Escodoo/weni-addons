@@ -9,17 +9,23 @@ class ContractLineConsumption(models.Model):
     _name = 'contract.line.consumption'
     _description = 'Contract Line Consumption'
 
+    # TODO: Se o consumo for do periodo podemos utilizar o nome
+    #  para dar mais consistencia. Em caso negativo, remover
     name = fields.Char()
 
     contract_line_id = fields.Many2one(
         comodel_name='contract.line',
-        index=True,
-        required='True')
+        index=True)
 
-    date_consumption = fields.Date(
-        string='Date of Consumption',
+    consumption_date = fields.Date(
+        string='Consumption Date',
         required='true')
 
-    quantity_consumption = fields.Integer(
-        string='Quantity Consumption',
-        required='True')
+    consumption_quantity = fields.Integer(
+        string='Consumption Quantity')
+
+    invoice_status = fields.Selection([
+        ('invoiced', 'Fully Invoiced'),
+        ('to_be_invoice', 'To Invoice'),
+    ], string='Invoice Status', readonly=True, default='to_be_invoice'
+    )
