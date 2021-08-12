@@ -5,7 +5,7 @@
 <odoo>
 
     <record model="ir.ui.view" id="contract_line_consumption_form_view">
-        <field name="name">contract.line.consumption.form (in weni_contract_custom)</field>
+        <field name="name">contract.line.consumption.form (in weni_contract_consumption)</field>
         <field name="model">contract.line.consumption</field>
         <field name="arch" type="xml">
             <form>
@@ -26,7 +26,7 @@
     </record>
 
     <record model="ir.ui.view" id="contract_line_consumption_search_view">
-        <field name="name">contract.line.consumption.search (in weni_contract_custom)</field>
+        <field name="name">contract.line.consumption.search (in weni_contract_consumption)</field>
         <field name="model">contract.line.consumption</field>
         <field name="arch" type="xml">
             <search>
@@ -35,7 +35,7 @@
     </record>
 
     <record model="ir.ui.view" id="contract_line_consumption_tree_view">
-        <field name="name">contract.line.consumption.tree (in weni_contract_custom)</field>
+        <field name="name">contract.line.consumption.tree (in weni_contract_consumption)</field>
         <field name="model">contract.line.consumption</field>
         <field name="arch" type="xml">
             <tree>
@@ -49,7 +49,7 @@
     </record>
 
     <record model="ir.ui.view" id="contract_line_consumption_graph_view">
-        <field name="name">contract.line.consumption.graph (in weni_contract_custom)</field>
+        <field name="name">contract.line.consumption.graph (in weni_contract_consumption)</field>
         <field name="model">contract.line.consumption</field>
         <field name="arch" type="xml">
             <graph string="Contract Lines Consumption">
@@ -60,7 +60,7 @@
     </record>
 
     <record model="ir.ui.view" id="contract_line_consumption_pivot_view">
-        <field name="name">contract.line.consumption.pivot (in weni_contract_custom)</field>
+        <field name="name">contract.line.consumption.pivot (in weni_contract_consumption)</field>
         <field name="model">contract.line.consumption</field>
         <field name="type">pivot</field>
         <field name="arch" type="xml">

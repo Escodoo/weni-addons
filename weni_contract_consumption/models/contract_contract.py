@@ -105,13 +105,13 @@ class ContractContract(models.Model):
     @api.multi
     def action_view_contract_consumption(self):
         action = self.env.ref(
-            "weni_contract_custom.contract_line_consumption_act_window").read()[0]
+            "weni_contract_consumption.contract_line_consumption_act_window").read()[0]
         if self.contract_consumption_count > 1:
             action["domain"] = [("id", "in", self.contract_consumption_ids.ids)]
         else:
             action["views"] = [(
                 self.env.ref(
-                    "weni_contract_custom.contract_line_consumption_form_view").id,
+                    "weni_contract_consumption.contract_line_consumption_form_view").id,
                 "form"
             )]
             action["res_id"] = \
