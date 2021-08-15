@@ -10,7 +10,7 @@
     'author': 'Escodoo',
     'website': 'https://www.escodoo.com.br',
     'depends': [
-        'product_contract',
+        'l10n_br_product_contract',
     ],
     'data': [
         'views/contract_contract.xml',
