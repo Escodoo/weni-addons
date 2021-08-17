@@ -107,7 +107,7 @@ class ContractContract(models.Model):
         super()._finalize_invoice_creation(invoices)
 
         consumption_model = self.env["contract.line.consumption"]
-        invoice_line_model = self.env["account.invoice.line"]
+        # invoice_line_model = self.env["account.invoice.line"]
 
         for invoice in invoices:
             period_date_start = invoice.date_invoice.replace(day=1)
@@ -117,9 +117,9 @@ class ContractContract(models.Model):
                 contract_id = contract_line_id.contract_id
 
                 if contract_id.contract_type == 'sale':
-                    surplus_product_id = (
-                            line.product_id.surplus_product_id or
-                            line.product_id)
+                    # surplus_product_id = (
+                    #         line.product_id.surplus_product_id or
+                    #         line.product_id)
 
                     consumption_lines = consumption_model.search(
                         [
@@ -135,7 +135,7 @@ class ContractContract(models.Model):
 
                     if consumption_quantity > line.quantity:
 
-                        consumption = consumption_quantity - line.quantity
+                        #consumption = consumption_quantity - line.quantity
 
                         product_context = dict(
                             self.env.context,
@@ -151,31 +151,36 @@ class ContractContract(models.Model):
                             contract_id.partner_id
                         )
 
-                        account = (
-                                surplus_product_id.property_account_income_id or
-                                surplus_product_id.categ_id.property_account_income_categ_id
-                        )
+                        # account = (
+                        #         surplus_product_id.property_account_income_id or
+                        #         surplus_product_id.categ_id.property_account_income_categ_id
+                        # )
+                        #
+                        # fpos = invoice.fiscal_position_id or invoice.partner_id.property_account_position_id
+                        # if fpos and account:
+                        #     account = fpos.map_account(account)
 
-                        fpos = invoice.fiscal_position_id or invoice.partner_id.property_account_position_id
-                        if fpos and account:
-                            account = fpos.map_account(account)
+                        # new_invoice_line = invoice_line_model.create({
+                        #
+                        #     'invoice_id': invoice.id,
+                        #     'name': surplus_product_id.name,
+                        #     'product_id': surplus_product_id.id,
+                        #     'price_unit': price_unit,
+                        #     'quantity': consumption,
+                        #     'account_id': account.id,
+                        #     'fiscal_operation_id': invoice.fiscal_operation_id.id,
+                        # })
 
-                        new_invoice_line = invoice_line_model.create({
+                        # new_invoice_line._onchange_product_id_fiscal()
+                        # new_invoice_line.price_unit = price_unit
+                        #
+                        # new_invoice_line._onchange_fiscal_operation_id()
+                        # new_invoice_line._onchange_fiscal_tax_ids()
 
-                            'invoice_id': invoice.id,
-                            'name': surplus_product_id.name,
-                            'product_id': surplus_product_id.id,
-                            'price_unit': price_unit,
-                            'quantity': consumption,
-                            'account_id': account.id,
-                            'fiscal_operation_id': invoice.fiscal_operation_id.id,
-                        })
+                        line.quantity = consumption_quantity
+                        line.price_unit = price_unit
 
-                        new_invoice_line._onchange_product_id_fiscal()
-                        new_invoice_line.price_unit = price_unit
-
-                        new_invoice_line._onchange_fiscal_operation_id()
-                        new_invoice_line._onchange_fiscal_tax_ids()
+                        line._onchange_fiscal_operation_id()
 
                         for consumption in consumption_lines:
                             consumption.invoice_status = 'invoiced'

@@ -8,7 +8,7 @@ class ProductTemplate(models.Model):
 
     _inherit = 'product.template'
 
-    surplus_product_id = fields.Many2one(
-        'product.product',
-        string='Surplus Product',
-    )
+    # surplus_product_id = fields.Many2one(
+    #     'product.product',
+    #     string='Surplus Product',
+    # )
