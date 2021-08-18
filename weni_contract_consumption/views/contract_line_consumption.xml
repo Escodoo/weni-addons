@@ -39,8 +39,10 @@
         <field name="model">contract.line.consumption</field>
         <field name="arch" type="xml">
             <tree>
+                <field name="partner_id"/>
+                <field name="product_id"/>
                 <field name="contract_id"/>
-                <field name="contract_line_id" domain="[('contract_id','=',contract_id)]"/>
+                <field name="contract_line_id"/>
                 <field name="consumption_date"/>
                 <field name="consumption_quantity"/>
                 <field name="invoice_status"/>
@@ -53,7 +55,8 @@
         <field name="model">contract.line.consumption</field>
         <field name="arch" type="xml">
             <graph string="Contract Lines Consumption">
-                <field name="contract_line_id"/>
+                <field name="product_id"/>
+                <field name="partner_id"/>
                 <field name="consumption_quantity" type="measure"/>
             </graph>
         </field>
@@ -65,8 +68,8 @@
         <field name="type">pivot</field>
         <field name="arch" type="xml">
             <pivot string="Contract Lines Consumption" display_quantity="true">
-                <field name="contract_id" type="row"/>
-                <field name="contract_line_id" type="row"/>
+                <field name="product_id" type="row"/>
+                <field name="partner_id" type="row"/>
                 <field name="consumption_date" interval="month" type="col"/>
                 <field name="consumption_quantity" type="measure"/>
             </pivot>
@@ -74,7 +77,7 @@
     </record>
 
     <record model="ir.actions.act_window" id="contract_line_consumption_act_window">
-        <field name="name">Contract Line Consumption</field>
+        <field name="name">Contract Product Consumption</field>
         <field name="res_model">contract.line.consumption</field>
         <field name="view_mode">tree,form,pivot,graph</field>
         <field name="domain">[]</field>
@@ -82,10 +85,18 @@
     </record>
 
     <record model="ir.ui.menu" id="contract_line_consumption_menu">
-        <field name="name">Contract Line Consumption</field>
+        <field name="name">Contract Product Consumption</field>
         <field name="parent_id" ref="contract.menu_config_contract"/>
         <field name="action" ref="contract_line_consumption_act_window"/>
         <field name="sequence" eval="16"/>
     </record>
+
+    <record model="ir.ui.menu" id="contract_line_consumption_menu">
+        <field name="name">Contract Product Consumption</field>
+        <field name="parent_id" ref="sale.menu_sale_report"/>
+        <field name="action" ref="contract_line_consumption_act_window"/>
+        <field name="sequence" eval="999"/>
+    </record>
+
 
 </odoo>
