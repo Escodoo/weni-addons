@@ -10,6 +10,7 @@
     'author': 'Escodoo',
     'website': 'https://www.escodoo.com.br',
     'depends': [
+        'sale',
         'l10n_br_contract',
     ],
     'data': [
