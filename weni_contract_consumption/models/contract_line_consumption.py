@@ -16,10 +16,22 @@ class ContractLineConsumption(models.Model):
         required='True',
     )
 
+    partner_id = fields.Many2one(
+        related='contract_id.partner_id',
+        string='Partner',
+        store='True',
+    )
+
     contract_line_id = fields.Many2one(
         comodel_name='contract.line',
         index=True,
         required='True',
+    )
+
+    product_id = fields.Many2one(
+        related='contract_line_id.product_id',
+        string='Product',
+        store = 'True',
     )
 
     consumption_date = fields.Date(
