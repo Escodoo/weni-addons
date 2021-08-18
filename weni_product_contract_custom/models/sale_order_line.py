@@ -9,7 +9,6 @@ class SaleOrderLine(models.Model):
 
     _inherit = 'sale.order.line'
 
-
     def _get_date_end(self):
         # Originally the suggested end date is multiplied by the number
         # of items. In this case we are multiplying by 12.
