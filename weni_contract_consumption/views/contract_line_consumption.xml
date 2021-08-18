@@ -84,14 +84,14 @@
         <field name="context">{}</field>
     </record>
 
-    <record model="ir.ui.menu" id="contract_line_consumption_menu">
+    <record model="ir.ui.menu" id="contract_line_consumption_account_menu">
         <field name="name">Contract Product Consumption</field>
-        <field name="parent_id" ref="contract.menu_config_contract"/>
+        <field name="parent_id" ref="account.account_reports_management_menu"/>
         <field name="action" ref="contract_line_consumption_act_window"/>
-        <field name="sequence" eval="16"/>
+        <field name="sequence" eval="999"/>
     </record>
 
-    <record model="ir.ui.menu" id="contract_line_consumption_menu">
+    <record model="ir.ui.menu" id="contract_line_consumption_sale_menu">
         <field name="name">Contract Product Consumption</field>
         <field name="parent_id" ref="sale.menu_sale_report"/>
         <field name="action" ref="contract_line_consumption_act_window"/>
