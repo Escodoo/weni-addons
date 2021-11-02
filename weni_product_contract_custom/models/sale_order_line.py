@@ -14,7 +14,11 @@ class SaleOrderLine(models.Model):
         # of items. In this case we are multiplying by 12.
 
         self.ensure_one()
-        super()._get_date_end()
+
+        # It is necessary to completely overwrite this method because when selling a large amount of the product, the
+        # system returns an error when calculating the original end date since there was an overflow of the allowed
+        # range of years.
+        # super()._get_date_end()
 
         contract_line_model = self.env["contract.line"]
         date_end = (
