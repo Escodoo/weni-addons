@@ -10,12 +10,15 @@ class ContractLine(models.Model):
 
     @api.model
     def cron_create_crm_opportunity_non_renewable_contract(self):
+        # TODO: Importante criar um campo na oportunidade de venda para sinalizar se é oriunda
+        # de geração através desta rotina.
+
         crm_model = self.env['crm.lead']
         today = fields.Date.context_today(self)
         contract_lines = self.search([
             ('is_auto_renew', '=', False),
-            ('date_end', '>', today),
-            ('termination_notice_date', '=', today)])
+            ('date_end', '>', today),])
+            # ('termination_notice_date', '=', today)])
         for line in contract_lines:
             name = (
                     'Renewal: ' +
@@ -26,7 +29,7 @@ class ContractLine(models.Model):
                 'description': line.contract_id.name,
                 'partner_id': line.contract_id.partner_id.id,
                 'user_id': line.contract_id.user_id.id,
-                'planned_revenue': line.price_subtotal,
+                'planned_revenue': line.price_subtotal * line.quantity,
                 'type': 'opportunity',
                 'priority': '3',
                 'date_deadline': line.date_end,
