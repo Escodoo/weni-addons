@@ -33,5 +33,6 @@ class SaleInvoicePlan(models.Model):
         for line in self:
             if line.invoiced == True:
                 raise UserError(
-                    _('Nao pode editar uma linha faturada'))
+                    _('This row already has an invoice created and therefore'
+                      'cannot be edited.'))
         return super(SaleInvoicePlan, self).write(vals)
