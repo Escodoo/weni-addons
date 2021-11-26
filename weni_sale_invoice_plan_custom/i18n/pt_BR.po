@@ -1,0 +1,61 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* weni_sale_invoice_plan_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-26 13:25+0000\n"
+"PO-Revision-Date: 2021-11-26 10:26-0300\n"
+"Last-Translator: Marcel Savegnago <marcel.savegnago@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: pt_BR\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: weni_sale_invoice_plan_custom
+#: model:ir.model.fields,field_description:weni_sale_invoice_plan_custom.field_sale_invoice_plan__description
+msgid "Description"
+msgstr "Descrição"
+
+#. module: weni_sale_invoice_plan_custom
+#: model:ir.model,name:weni_sale_invoice_plan_custom.model_sale_invoice_plan
+msgid "Invoice Planning Detail"
+msgstr "Detalhes de Planejamento de Fatura"
+
+#. module: weni_sale_invoice_plan_custom
+#: model:ir.model.fields,field_description:weni_sale_invoice_plan_custom.field_sale_invoice_plan__project_id
+msgid "Project"
+msgstr "Projeto"
+
+#. module: weni_sale_invoice_plan_custom
+#: model:ir.model.fields,field_description:weni_sale_invoice_plan_custom.field_sale_invoice_plan__project_task_ids
+msgid "Project Task"
+msgstr "Tarefa do Projeto"
+
+#. module: weni_sale_invoice_plan_custom
+#: model:ir.model.fields,help:weni_sale_invoice_plan_custom.field_sale_invoice_plan__project_id
+msgid "Sale Invoice Plan Project"
+msgstr "Projeto do Plano de Fatura de Venda"
+
+#. module: weni_sale_invoice_plan_custom
+#: model:ir.model,name:weni_sale_invoice_plan_custom.model_sale_order
+msgid "Sale Order"
+msgstr "Pedido de Venda"
+
+#. module: weni_sale_invoice_plan_custom
+#: code:addons/weni_sale_invoice_plan_custom/models/sale_invoice_plan.py:36
+#, python-format
+msgid "This row already has an invoice created and thereforecannot be edited."
+msgstr "Esta linha já tem uma fatura criada e, portanto, não pode ser editada."
+
+#. module: weni_sale_invoice_plan_custom
+#: model:ir.actions.server,name:weni_sale_invoice_plan_custom.ir_cron_weni_invoice_plan_ir_actions_server
+#: model:ir.cron,cron_name:weni_sale_invoice_plan_custom.ir_cron_weni_invoice_plan
+#: model:ir.cron,name:weni_sale_invoice_plan_custom.ir_cron_weni_invoice_plan
+msgid "WENI Sale Invoice Plan: Generate Invoices by Invoice Plan"
+msgstr "WENI Plano de Fatura de Venda: Gerar Faturas por Plano de Fatura"
