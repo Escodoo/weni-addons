@@ -26,6 +26,27 @@ This module extends the Odoo Sale Invoice Plan module to adapt it to the Custome
 .. contents::
    :local:
 
+Configuration
+=============
+
+To configure this module:
+
+* Go to Odoo Settings > Activate the developer mode
+* Go to Project > Configuration > Stages
+* Select an Stage and set set true on Closed (Tasks in this stage are considered closed)
+
+Usage
+=====
+
+To use this module:
+
+* Go to Sales
+* Create or select a quotation
+* Set the ato using invoice plan
+* Generate invoice plan
+* Define the tasks in the invoice plan lines
+* Waiting for the cron job to run or run manually.
+
 Known issues / Roadmap
 ======================
 
