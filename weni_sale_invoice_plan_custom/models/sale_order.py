@@ -44,3 +44,14 @@ class SaleOrder(models.Model):
             ('invoice_status', '=', 'to invoice'),
         ]
         return domain
+
+    @api.multi
+    def action_invoice_create(self, grouped=False, final=False):
+        inv_ids = super().action_invoice_create(grouped=grouped, final=final)
+        invoice_plan_id = self._context.get('invoice_plan_id')
+        if invoice_plan_id:
+            plan = self.env['sale.invoice.plan'].browse(invoice_plan_id)
+            invoices = self.env['account.invoice'].browse(inv_ids)
+            invoices.ensure_one()  # Expect 1 invoice for 1 invoice plan
+            invoices[0].comment += 'This invoice refers to: ' + plan.description
+        return inv_ids
