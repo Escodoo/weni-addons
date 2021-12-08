@@ -53,5 +53,7 @@ class SaleOrder(models.Model):
             plan = self.env['sale.invoice.plan'].browse(invoice_plan_id)
             invoices = self.env['account.invoice'].browse(inv_ids)
             invoices.ensure_one()  # Expect 1 invoice for 1 invoice plan
-            invoices[0].comment += 'This invoice refers to: ' + plan.description
+            if plan.description:
+                for line in invoices[0].invoice_line_ids:
+                    line.name = plan.description
         return inv_ids
