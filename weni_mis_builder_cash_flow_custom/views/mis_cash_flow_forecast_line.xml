@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2021 - TODAY, Marcel Savegnago
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+<!--    <record model="ir.ui.view" id="mis_cash_flow_forecast_line_form_view">-->
+<!--        <field name="name">mis.cash_flow.forecast_line.form (in weni_mis_builder_cash_flow_custom)</field>-->
+<!--        <field name="model">mis.cash_flow.forecast_line</field>-->
+<!--        <field name="inherit_id" ref="TODO othermodule.form_view"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            &lt;!&ndash; TODO &ndash;&gt;-->
+<!--        </field>-->
+<!--    </record>-->
+
+<!--    <record model="ir.ui.view" id="mis_cash_flow_forecast_line_search_view">-->
+<!--        <field name="name">mis.cash_flow.forecast_line.search (in weni_mis_builder_cash_flow_custom)</field>-->
+<!--        <field name="model">mis.cash_flow.forecast_line</field>-->
+<!--        <field name="inherit_id" ref="TODO othermodule.search_view"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            &lt;!&ndash; TODO &ndash;&gt;-->
+<!--        </field>-->
+<!--    </record>-->
+
+<!--    <record model="ir.ui.view" id="mis_cash_flow_forecast_line_tree_view">-->
+<!--        <field name="name">mis.cash_flow.forecast_line.tree (in weni_mis_builder_cash_flow_custom)</field>-->
+<!--        <field name="model">mis.cash_flow.forecast_line</field>-->
+<!--        <field name="inherit_id" ref="TODO othermodule.tree_view"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            &lt;!&ndash; TODO &ndash;&gt;-->
+<!--        </field>-->
+<!--    </record>-->
+
+    <record id="view_mis_cash_flow_forecast_line_pivot" model="ir.ui.view">
+        <field name="name">mis.cash_flow.forecast_line.pivot (in weni_mis_builder_cash_flow_custom)</field>
+        <field name="model">mis.cash_flow.forecast_line</field>
+        <field name="type">pivot</field>
+        <field name="arch" type="xml">
+            <pivot string="Contract Forecast">
+                <field name="account_id" type="row"/>
+                <field name="partner_id" type="row"/>
+                <field name="date" type="col" interval="month"/>
+                <field name="balance" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_mis_cash_flow_forecast_line_graph" model="ir.ui.view">
+        <field name="name">mis.cash_flow.forecast_line.graph (in weni_mis_builder_cash_flow_custom)</field>
+        <field name="model">mis.cash_flow.forecast_line</field>
+        <field name="arch" type="xml">
+            <graph string="Contract Forecast" stacked="True" type="bar">
+                <field name="date" type="row" interval="month"/>
+                <field name="account_id" type="row"/>
+                <field name="balance" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="mis_builder_cash_flow.action_mis_cash_flow_forecast_line" model="ir.actions.act_window">
+        <field name="view_mode">tree,graph,pivot,form</field>
+    </record>
+
+
+</odoo>
