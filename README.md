@@ -16,5 +16,6 @@ addon | version | summary
 [weni_project_custom](weni_project_custom/) | 12.0.1.0.0 | Weni Project Custom
 [weni_sale_custom](weni_sale_custom/) | 12.0.1.0.0 | Weni Sale Custom
 [weni_sale_invoice_plan_custom](weni_sale_invoice_plan_custom/) | 12.0.1.0.0 | Weni Sale Invoice Plan Custom
+[weni_sale_invoice_plan_forecast](weni_sale_invoice_plan_forecast/) | 12.0.1.0.0 | Weni Sale Invoice Plan Forecast
 
 [//]: # (end addons)
