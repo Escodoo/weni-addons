@@ -22,7 +22,7 @@ class SaleInvoicePlan(models.Model):
     def _prepare_forecast_line(self):
         self.ensure_one()
         return {
-            "name": '%s - %s' % (self.sale_id.display_name, self.partner_id.display_name),
+            "name": '%s - %s' % (self.sale_id.display_name, self.installment),
             "date": self.plan_date,
             "account_id": self.sale_id.partner_id.property_account_receivable_id.id,
             "partner_id": self.partner_id.id,
