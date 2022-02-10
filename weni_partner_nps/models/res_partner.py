@@ -22,7 +22,7 @@ class ResPartner(models.Model):
         for rec in self:
             if rec.weni_nps_ids:
                 category_ids = []
-                category_ids.append(rec.category_id.id)
+                category_ids.append(rec.category_id.ids)
                 if rec.weni_current_nps <= 3:
                     rec.weni_current_nps_classification = 'danger'
                     category_ids.append((4, tag_nps_danger_id))
