@@ -14,6 +14,8 @@
     ],
     'data': [
         'views/mis_cash_flow_forecast_line.xml',
+        'data/mis_report_instance.xml',
+        'data/mis_report_style.xml',
     ],
     'demo': [
     ],
