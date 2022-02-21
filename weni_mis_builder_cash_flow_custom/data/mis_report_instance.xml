@@ -53,7 +53,7 @@
     <field name="source">actuals_alt</field>
     <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow"/>
     <field name="mode">relative</field>
-    <field name="type">w</field>
+    <field name="type">m</field>
     <field name="offset">3</field>
     <field name="duration">1</field>
     <field name="sequence">30</field>
@@ -65,7 +65,7 @@
     <field name="source">actuals_alt</field>
     <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow"/>
     <field name="mode">relative</field>
-    <field name="type">w</field>
+    <field name="type">m</field>
     <field name="offset">4</field>
     <field name="duration">1</field>
     <field name="sequence">40</field>
@@ -77,7 +77,7 @@
     <field name="source">actuals_alt</field>
     <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow"/>
     <field name="mode">relative</field>
-    <field name="type">w</field>
+    <field name="type">m</field>
     <field name="offset">5</field>
     <field name="duration">1</field>
     <field name="sequence">50</field>
@@ -89,7 +89,7 @@
     <field name="source">actuals_alt</field>
     <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow"/>
     <field name="mode">relative</field>
-    <field name="type">w</field>
+    <field name="type">m</field>
     <field name="offset">6</field>
     <field name="duration">1</field>
     <field name="sequence">60</field>
@@ -101,7 +101,7 @@
     <field name="source">actuals_alt</field>
     <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow"/>
     <field name="mode">relative</field>
-    <field name="type">w</field>
+    <field name="type">m</field>
     <field name="offset">7</field>
     <field name="duration">1</field>
     <field name="sequence">70</field>
@@ -113,7 +113,7 @@
     <field name="source">actuals_alt</field>
     <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow"/>
     <field name="mode">relative</field>
-    <field name="type">w</field>
+    <field name="type">m</field>
     <field name="offset">8</field>
     <field name="duration">1</field>
     <field name="sequence">80</field>
@@ -125,7 +125,7 @@
     <field name="source">actuals_alt</field>
     <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow"/>
     <field name="mode">relative</field>
-    <field name="type">w</field>
+    <field name="type">m</field>
     <field name="offset">9</field>
     <field name="duration">1</field>
     <field name="sequence">90</field>
@@ -137,7 +137,7 @@
     <field name="source">actuals_alt</field>
     <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow"/>
     <field name="mode">relative</field>
-    <field name="type">w</field>
+    <field name="type">m</field>
     <field name="offset">10</field>
     <field name="duration">1</field>
     <field name="sequence">100</field>
@@ -149,7 +149,7 @@
     <field name="source">actuals_alt</field>
     <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow"/>
     <field name="mode">relative</field>
-    <field name="type">w</field>
+    <field name="type">m</field>
     <field name="offset">11</field>
     <field name="duration">1</field>
     <field name="sequence">110</field>
@@ -161,7 +161,7 @@
     <field name="source">actuals_alt</field>
     <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow"/>
     <field name="mode">relative</field>
-    <field name="type">w</field>
+    <field name="type">m</field>
     <field name="offset">12</field>
     <field name="duration">1</field>
     <field name="sequence">120</field>
