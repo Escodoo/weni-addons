@@ -96,7 +96,7 @@
   </record>
 
   <record id="mis_period_month_plus_7m" model="mis.report.instance.period">
-    <field name="name">+7w</field>
+    <field name="name">+7m</field>
     <field name="report_instance_id" ref="mis_instance_cash_flow_month"/>
     <field name="source">actuals_alt</field>
     <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow"/>
