@@ -13,9 +13,14 @@ class ContractLine(models.Model):
 
     forecast_line_ids = fields.One2many(
         comodel_name="mis.cash_flow.forecast_line",
-        inverse_name="contract_line_id",
+        compute='_compute_forecast_line_ids',
         string="Forecast Line",
         required=False,
+    )
+
+    forecast_line_count = fields.Integer(
+        compute='_compute_forecast_line_ids',
+        string='Forecast Line Count',
     )
 
     @api.multi
@@ -51,6 +56,9 @@ class ContractLine(models.Model):
         elif self.contract_id.contract_type == 'purchase':
             account_id = self.contract_id.partner_id.property_account_payable_id.id
 
+        parent_res_id = self.contract_id
+        parent_res_model_id = self.env['ir.model']._get(parent_res_id._name)
+
         return {
             "name": '%s - %s' % (
                 self.contract_id.display_name,
@@ -61,7 +69,10 @@ class ContractLine(models.Model):
             "partner_id": self.contract_id.partner_id.id,
             "balance": price_subtotal_company_signed,
             "company_id": self.contract_id.company_id.id,
-            "contract_line_id": self.id,
+            "res_model_id": self.env['ir.model']._get(self._name).id,
+            "res_id": self.id,
+            "parent_res_model_id": parent_res_model_id.id,
+            "parent_res_id": parent_res_id.id,
         }
 
     @api.multi
@@ -172,6 +183,13 @@ class ContractLine(models.Model):
                     rec.with_delay()._generate_forecast_lines()
         return res
 
+    @api.multi
+    def unlink(self):
+        for rec in self:
+            if rec.forecast_line_ids:
+                rec.forecast_line_ids.unlink()
+        return super().unlink()
+
     @api.model
     def cron_generate_forecast_lines(self):
         offset = 0
@@ -183,3 +201,18 @@ class ContractLine(models.Model):
             if len(contract_lines) < 100:
                 break
             offset += 100
+
+    def _compute_forecast_line_ids(self):
+        ForecastLine = self.env['mis.cash_flow.forecast_line']
+        forecast_lines = ForecastLine.search([
+            ('res_model', '=', self._name),
+            ('res_id', 'in', self.ids),
+        ])
+
+        result = dict.fromkeys(self.ids, ForecastLine)
+        for forecast in forecast_lines:
+            result[forecast.res_id] |= forecast
+
+        for rec in self:
+            rec.forecast_line_ids = result[rec.id]
+            rec.forecast_line_count = len(rec.forecast_line_ids)
