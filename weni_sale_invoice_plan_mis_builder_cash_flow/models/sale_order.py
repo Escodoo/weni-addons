@@ -15,7 +15,8 @@ class SaleOrder(models.Model):
             "state",
             "amount_total",
             "order_line",
-            "use_invoice_plan"
+            "use_invoice_plan",
+            "invoice_plan_ids"
         ]
 
     @api.multi
@@ -32,3 +33,11 @@ class SaleOrder(models.Model):
                     for line in rec.invoice_plan_ids:
                         line.with_delay()._generate_forecast_lines()
         return res
+
+    @api.multi
+    def unlink(self):
+        for rec in self:
+            for line in rec.invoice_plan_ids:
+                if line.forecast_line_ids:
+                    line.forecast_line_ids.unlink()
+        return super().unlink()
