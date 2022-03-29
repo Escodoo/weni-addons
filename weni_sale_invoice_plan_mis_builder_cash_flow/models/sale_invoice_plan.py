@@ -42,30 +42,6 @@ class SaleInvoicePlan(models.Model):
             "parent_res_id": parent_res_id.id,
         }
 
-    # @api.multi
-    # def _get_contract_forecast_end_date(self):
-    #     self.ensure_one()
-    #     today = fields.Date.context_today(self)
-    #     return today + self.get_relative_delta(
-    #         self.contract_id.company_id.contract_forecast_rule_type,
-    #         self.contract_id.company_id.contract_forecast_interval,
-    #     )
-
-    # @api.multi
-    # def _get_generate_forecast_periods_criteria(self, period_date_end):
-    #     self.ensure_one()
-    #     if not self.contract_id.company_id.enable_contract_forecast:
-    #         return False
-    #     if self.is_canceled or not self.active:
-    #         return False
-    #     contract_forecast_end_date = self._get_contract_forecast_end_date()
-    #     if not self.date_end or self.is_auto_renew:
-    #         return period_date_end < contract_forecast_end_date
-    #     return (
-    #         period_date_end <= self.date_end
-    #         and period_date_end <= contract_forecast_end_date
-    #     )
-
     @api.multi
     @job(default_channel=QUEUE_CHANNEL)
     def _generate_forecast_lines(self):
