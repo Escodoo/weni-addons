@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2022 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record model="ir.ui.view" id="res_partner_nps_form_view">
+        <field name="name">res.partner.nps.form (in weni_partner_nps)</field>
+        <field name="model">res.partner.nps</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box" />
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only" string="Name" />
+                        <h1>
+                            <field name="name" placeholder="Name..." />
+                        </h1>
+                        <div name="options_active" />
+                    </div>
+                    <group>
+                        <group>
+                            <field name="submission_date"/>
+                            <field name="partner_id"/>
+                            <field name="contact_id"/>
+                            <field name="nps"/>
+                        </group>
+                        <group>
+                            <field name="return_date"/>
+                            <field name="channel"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Comment">
+                            <field name="comment"/>
+                        </page>
+                    </notebook>
+                </sheet>
+<!--                <div class="oe_chatter"></div>-->
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="res_partner_nps_search_view">
+        <field name="name">res.partner.nps.search (in weni_partner_nps)</field>
+        <field name="model">res.partner.nps</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="submission_date" />
+                <field name="return_date" />
+                <field name="partner_id" />
+                <field name="contact_id" />
+                <field name="channel" />
+                <filter name="return_date" string="Retorned"
+                        domain="[('return_date', '!=', False)]"/>
+                <group string="Group By" name="groupby">
+                    <filter name="partner_id_groupby" string="Partner"
+                            context="{'group_by': 'partner_id'}"/>
+                    <filter name="contact_id_groupby" string="Contact"
+                            context="{'group_by': 'contact_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="res_partner_nps_tree_view">
+        <field name="name">res.partner.nps.tree (in weni_partner_nps)</field>
+        <field name="model">res.partner.nps</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="submission_date"/>
+                <field name="return_date"/>
+                <field name="contact_id"/>
+                <field name="channel"/>
+                <field name="nps"/>
+                <field name="comment"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="res_partner_nps_pivot_view">
+        <field name="name">res.partner.nps.pivot (in weni_partner_nps)</field>
+        <field name="model">res.partner.nps</field>
+         <field name="arch" type="xml">
+            <pivot string="NPSs Analysis" disable_linking="True">
+                <field name="submission_date" interval="month" type="col"/>
+                <field name="partner_id" type="row"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="res_partner_nps_graph_view">
+        <field name="name">res.partner.nps.graph (in weni_partner_nps)</field>
+        <field name="model">res.partner.nps</field>
+         <field name="arch" type="xml">
+             <graph string="NPSs Analysis">
+                <field name="partner_id" type="row"/>
+            </graph>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="res_partner_nps_act_window">
+        <field name="name">NPS</field>
+        <field name="res_model">res.partner.nps</field>
+        <field name="view_mode">tree,pivot,graph,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create an NPS Record.
+            </p>
+        </field>
+    </record>
+
+    <record model="ir.ui.menu" id="res_partner_nps_menu">
+        <field name="name">NPS</field>
+        <field name="parent_id" ref="contacts.res_partner_menu_config"/>
+        <field name="action" ref="res_partner_nps_act_window"/>
+        <field name="sequence" eval="16"/>
+    </record>
+
+</odoo>
