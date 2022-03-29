@@ -11,14 +11,13 @@
     'maintainers': ['marcelsavegnago'],
     'website': 'https://www.escodoo.com.br',
     'depends': [
-        'mis_builder_cash_flow',
+        'weni_mis_builder_cash_flow_custom',
         'sale_invoice_plan',
         'queue_job',
     ],
     'data': [
         'views/res_config_settings.xml',
         'views/res_company.xml',
-        'views/mis_cash_flow_forecast_line.xml',
         'data/sale_invoice_plan_forecast_line_cron.xml',
     ],
     'demo': [

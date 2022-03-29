@@ -15,6 +15,7 @@ class ContractContract(models.Model):
             "pricelist_id",
             "fiscal_position_id",
             "currency_id",
+            "contract_line_ids"
         ]
 
     @api.multi
@@ -31,3 +32,11 @@ class ContractContract(models.Model):
                     for line in rec.contract_line_ids:
                         line.with_delay()._generate_forecast_lines()
         return res
+
+    @api.multi
+    def unlink(self):
+        for rec in self:
+            for line in rec.contract_line_ids:
+                if line.forecast_line_ids:
+                    line.forecast_line_ids.unlink()
+        return super().unlink()
