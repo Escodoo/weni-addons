@@ -4,14 +4,23 @@
 
 <odoo>
 
-<!--    <record model="ir.ui.view" id="res_partner_form_view">-->
-<!--        <field name="name">res.partner.form (in weni_platform_integration)</field>-->
-<!--        <field name="model">res.partner</field>-->
-<!--        <field name="inherit_id" ref="TODO othermodule.form_view"/>-->
-<!--        <field name="arch" type="xml">-->
-<!--            &lt;!&ndash; TODO &ndash;&gt;-->
-<!--        </field>-->
-<!--    </record>-->
+    <record model="ir.ui.view" id="res_partner_form_view">
+        <field name="name">res.partner.form (in weni_platform_integration)</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page name="weni_integration_info" string="Weni Integration">
+                      <group>
+                          <group>
+                              <field name="weni_id"/>
+                          </group>
+                          <group></group>
+                      </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
 
 <!--    <record model="ir.ui.view" id="res_partner_search_view">-->
 <!--        <field name="name">res.partner.search (in weni_platform_integration)</field>-->
