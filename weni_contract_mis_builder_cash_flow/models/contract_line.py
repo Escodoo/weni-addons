@@ -39,7 +39,7 @@ class ContractLine(models.Model):
             cur = self.contract_id.currency_id
             price_subtotal = cur.round(subtotal)
             price_subtotal_signed = cur.round(price_subtotal_signed)
-            rate_date = self.date_invoice or fields.Date.today()
+            rate_date = recurring_next_date or fields.Date.today()
             price_subtotal_company = cur._convert(
                 price_subtotal,
                 self.contract_id.company_id.currency_id,
