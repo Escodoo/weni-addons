@@ -13,7 +13,7 @@
         'contacts',
     ],
     'data': [
-        'data/res_partner_category.xml',
+        # 'data/res_partner_category.xml',
         'security/res_partner_nps.xml',
         'views/res_partner_nps.xml',
         'views/res_partner.xml',
