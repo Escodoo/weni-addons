@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2022 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+<!--    <record model="ir.ui.view" id="contract_line_consumption_form_view">-->
+<!--        <field name="name">contract.line.consumption.form (in weni_contract_consumption_integration)</field>-->
+<!--        <field name="model">contract.line.consumption</field>-->
+<!--        <field name="inherit_id" ref="TODO othermodule.form_view"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            &lt;!&ndash; TODO &ndash;&gt;-->
+<!--        </field>-->
+<!--    </record>-->
+
+<!--    <record model="ir.ui.view" id="contract_line_consumption_search_view">-->
+<!--        <field name="name">contract.line.consumption.search (in weni_contract_consumption_integration)</field>-->
+<!--        <field name="model">contract.line.consumption</field>-->
+<!--        <field name="inherit_id" ref="TODO othermodule.search_view"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            &lt;!&ndash; TODO &ndash;&gt;-->
+<!--        </field>-->
+<!--    </record>-->
+
+<!--    <record model="ir.ui.view" id="contract_line_consumption_tree_view">-->
+<!--        <field name="name">contract.line.consumption.tree (in weni_contract_consumption_integration)</field>-->
+<!--        <field name="model">contract.line.consumption</field>-->
+<!--        <field name="inherit_id" ref="TODO othermodule.tree_view"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            &lt;!&ndash; TODO &ndash;&gt;-->
+<!--        </field>-->
+<!--    </record>-->
+
+</odoo>

@@ -4,14 +4,19 @@
 
 <odoo>
 
-<!--    <record model="ir.ui.view" id="contract_line_form_view">-->
-<!--        <field name="name">contract.line.form (in weni_platform_integration)</field>-->
-<!--        <field name="model">contract.line</field>-->
-<!--        <field name="inherit_id" ref="TODO othermodule.form_view"/>-->
-<!--        <field name="arch" type="xml">-->
-<!--            &lt;!&ndash; TODO &ndash;&gt;-->
-<!--        </field>-->
-<!--    </record>-->
+    <record model="ir.ui.view" id="contract_line_form_view">
+        <field name="name">contract.line.form (in weni_platform_integration)</field>
+        <field name="model">contract.line</field>
+        <field name="inherit_id" ref="contract.contract_line_form_view"/>
+        <field name="arch" type="xml">
+             <xpath expr="//field[@name='discount']/.." position="after">
+                 <group name="weni">
+                     <field name="id"/>
+                    <field name="weni_id" />
+                 </group>
+            </xpath>
+        </field>
+    </record>
 
 <!--    <record model="ir.ui.view" id="contract_line_search_view">-->
 <!--        <field name="name">contract.line.search (in weni_platform_integration)</field>-->
@@ -25,9 +30,11 @@
 <!--    <record model="ir.ui.view" id="contract_line_tree_view">-->
 <!--        <field name="name">contract.line.tree (in weni_platform_integration)</field>-->
 <!--        <field name="model">contract.line</field>-->
-<!--        <field name="inherit_id" ref="TODO othermodule.tree_view"/>-->
+<!--        <field name="inherit_id" ref="contract.contract_line_tree_view"/>-->
 <!--        <field name="arch" type="xml">-->
-<!--            &lt;!&ndash; TODO &ndash;&gt;-->
+<!--            <field name="product_id" position="after">-->
+<!--                <field name="weni_id"/>-->
+<!--            </field>-->
 <!--        </field>-->
 <!--    </record>-->
 
