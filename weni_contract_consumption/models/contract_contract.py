@@ -40,15 +40,12 @@ class ContractContract(models.Model):
 
                 if contract_id.contract_type == 'sale':
 
-                    # Alterado para utilizar apenas apenas o consumo do ultimo dia já que
-                    # segundo o Daniel a plataforma da WENI fornece a quantidade acumulada
-                    # e nao a quantidade consumida no dia.
                     consumption_lines = consumption_model.search(
                         [
                             ('contract_line_id', '=', contract_line_id.id),
                             ('consumption_date', '<', period_date_start),
                             ('invoice_status', '=', 'to_be_invoice')
-                        ], order='consumption_date desc', limit=1,
+                        ]
                     )
 
                     consumption_quantity = sum(
