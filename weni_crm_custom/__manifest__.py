@@ -5,14 +5,14 @@
     'name': 'Weni Crm Custom',
     'description': """
         Customizações do Modulo CRM - Weni""",
-    'version': '12.0.1.0.0',
+    'version': '12.0.2.0.0',
     'license': 'AGPL-3',
     'author': 'Escodoo',
     'website': 'https://www.escodoo.com.br',
     'depends': [
-        'crm',
+        'l10n_br_crm',
         'crm_secondary_salesperson',
-        'crm_lead_saas',
+        'crm_industry',
     ],
     'data': [
         'security/crm_lead_user.xml',

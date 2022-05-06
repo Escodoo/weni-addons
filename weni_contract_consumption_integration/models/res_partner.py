@@ -71,31 +71,32 @@ class ResPartner(models.Model):
         before_date_formated = before_date.strftime('%Y-%m-%d')
 
         for rec in self:
-            result = rec._weni_consumption_localize(apikey,
-                                           rec.weni_id,
-                                           after_date_formated,
-                                           before_date_formated)
-            if result and 'projects' in result:
-                for item in result['projects']:
-                    uuid = item.get('uuid')
-                    contract_line = contract_line.search([('weni_id', '=', uuid)], limit=1)
-                    if contract_line:
-                        consumption_line_is_invoiced = False
-                        for consumption_line in contract_line.contract_line_consumption_ids:
-                            if consumption_line.consumption_date == consumption_date:
-                                if consumption_line.invoice_status == 'to_be_invoice':
-                                    consumption_line.unlink()
-                                else:
-                                    _logger.error('[WENI INTEGRATION] Consumption Line is Invoiced: %s', consumption_line.contract_line_id.name)
-                                    consumption_line_is_invoiced = True
-                        if not consumption_line_is_invoiced:
-                            consumption.create({
-                                'contract_id': contract_line.contract_id.id,
-                                'contract_line_id':contract_line.id,
-                                'consumption_quantity': item.get('active_contacts'),
-                                'consumption_date': consumption_date,
-                                'invoice_status': 'to_be_invoice'
-                            })
+            if rec.weni_id:
+                result = rec._weni_consumption_localize(apikey,
+                                               rec.weni_id,
+                                               after_date_formated,
+                                               before_date_formated)
+                if result and 'projects' in result:
+                    for item in result['projects']:
+                        uuid = item.get('uuid')
+                        contract_line = contract_line.search([('weni_id', '=', uuid)], limit=1)
+                        if contract_line:
+                            consumption_line_is_invoiced = False
+                            for consumption_line in contract_line.contract_line_consumption_ids:
+                                if consumption_line.consumption_date == consumption_date:
+                                    if consumption_line.invoice_status == 'to_be_invoice':
+                                        consumption_line.unlink()
+                                    else:
+                                        _logger.error('[WENI INTEGRATION] Consumption Line is Invoiced: %s', consumption_line.contract_line_id.name)
+                                        consumption_line_is_invoiced = True
+                            if not consumption_line_is_invoiced:
+                                consumption.create({
+                                    'contract_id': contract_line.contract_id.id,
+                                    'contract_line_id':contract_line.id,
+                                    'consumption_quantity': item.get('active_contacts'),
+                                    'consumption_date': consumption_date,
+                                    'invoice_status': 'to_be_invoice'
+                                })
         return True
 
     @api.model
@@ -106,4 +107,5 @@ class ResPartner(models.Model):
             ]
         )
         for partner in partners:
-            partner.weni_consumption_localize()
+            if partner.weni_id:
+                partner.weni_consumption_localize()
