@@ -12,8 +12,15 @@
     'depends': [
         'partner_industry_secondary',
         'account',
+        'sale_team',
     ],
     'data': [
+        'security/weni_customer_mrr_scale.xml',
+        'views/weni_customer_mrr_scale.xml',
+        'security/weni_customer_service_type.xml',
+        'views/weni_customer_service_type.xml',
+        'security/weni_customer_status.xml',
+        'views/weni_customer_status.xml',
         'views/res_partner.xml',
     ],
     'demo': [

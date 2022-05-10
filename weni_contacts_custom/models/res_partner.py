@@ -19,22 +19,18 @@ class ResPartner(models.Model):
         ])
     )
 
-    weni_type_of_service = fields.Selection(
+    weni_service_type_id = fields.Many2one(
+        comodel_name='weni.customer.service.type',
         string="Type of Service",
-        selection=([
-            ('low','Low'),
-            ('medium','Medium'),
-            ('high','High')
-        ])
     )
 
     weni_cs_analyst_id = fields.Many2one(
-        comodel_name='res.user',
+        comodel_name='res.users',
         string='CS Analyst',
     )
 
     weni_service_analyst_id = fields.Many2one(
-        comodel_name='res.user',
+        comodel_name='res.users',
         string='Service Analyst',
     )
 
@@ -42,12 +38,14 @@ class ResPartner(models.Model):
         string='Customer at risk'
     )
 
-    weni_customer_status = fields.Selection(
+    weni_customer_status_id = fields.Many2one(
+        comodel_name='weni.customer.status',
         string='Customer Status',
-        selection=([
-            ('active','Active'),
-            ('churn','Churn')
-        ])
+    )
+
+    weni_customer_mrr_scale_id = fields.Many2one(
+        comodel_name='weni.customer.mrr.scale',
+        string="MRR Scale"
     )
 
     weni_churn_request_date = fields.Date(
