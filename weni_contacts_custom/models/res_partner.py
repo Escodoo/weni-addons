@@ -58,6 +58,10 @@ class ResPartner(models.Model):
         store=True
     )
 
+    weni_has_dedicate_team = fields.Boolean(
+        string="Has Dedicated Team"
+    )
+
     @api.multi
     @api.depends('commercial_partner_id',
                  'commercial_partner_id.child_ids',
