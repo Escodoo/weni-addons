@@ -16,6 +16,7 @@
                         <field name="weni_customer_mrr_scale_id"/>
                         <field name="industry_id"/>
                         <field name="secondary_industry_ids" widget="many2many_tags"/>
+                        <field name="weni_has_dedicate_team" />
                         <field name="weni_service_type_id"/>
                         <field name="weni_cs_analyst_id"/>
                         <field name="weni_service_analyst_id"/>
