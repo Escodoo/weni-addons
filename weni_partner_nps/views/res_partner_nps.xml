@@ -23,13 +23,13 @@
                     <group>
                         <group>
                             <field name="submission_date"/>
-                            <field name="partner_id"/>
-                            <field name="contact_id"/>
+                            <field name="partner_id" readonly="1"/>
+                            <field name="contact_id" domain="[('commercial_partner_id', '=', partner_id)]"/>
                             <field name="nps"/>
                         </group>
                         <group>
                             <field name="return_date"/>
-                            <field name="channel"/>
+                            <field name="channel_id" required="1"/>
                         </group>
                     </group>
                     <notebook>
@@ -53,7 +53,7 @@
                 <field name="return_date" />
                 <field name="partner_id" />
                 <field name="contact_id" />
-                <field name="channel" />
+                <field name="channel_id" />
                 <filter name="return_date" string="Retorned"
                         domain="[('return_date', '!=', False)]"/>
                 <group string="Group By" name="groupby">
@@ -74,7 +74,7 @@
                 <field name="submission_date"/>
                 <field name="return_date"/>
                 <field name="contact_id"/>
-                <field name="channel"/>
+                <field name="channel_id"/>
                 <field name="nps"/>
                 <field name="comment"/>
             </tree>

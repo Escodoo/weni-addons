@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2022 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record model="ir.ui.view" id="weni_partner_nps_channel_form_view">
+        <field name="name">weni.partner.nps.channel.form (in weni_partner_nps)</field>
+        <field name="model">weni.partner.nps.channel</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <!-- TODO -->
+                </header>
+                <sheet>
+                    <!-- TODO -->
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter"></div>
+            </form>
+        </field>
+    </record>
+
+<!--    <record model="ir.ui.view" id="weni_partner_nps_channel_search_view">-->
+<!--        <field name="name">weni.partner.nps.channel.search (in weni_partner_nps)</field>-->
+<!--        <field name="model">weni.partner.nps.channel</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <search>-->
+<!--                &lt;!&ndash; TODO &ndash;&gt;-->
+<!--            </search>-->
+<!--        </field>-->
+<!--    </record>-->
+
+    <record model="ir.ui.view" id="weni_partner_nps_channel_tree_view">
+        <field name="name">weni.partner.nps.channel.tree (in weni_partner_nps)</field>
+        <field name="model">weni.partner.nps.channel</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- TODO -->
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="weni_partner_nps_channel_act_window">
+        <field name="name">Partner Nps Channel</field>
+        <field name="res_model">weni.partner.nps.channel</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <record model="ir.ui.menu" id="weni_partner_nps_channel_menu">
+        <field name="name">Partner NPS Channel</field>
+        <field name="parent_id" ref="contacts.res_partner_menu_config"/>
+        <field name="action" ref="weni_partner_nps_channel_act_window"/>
+        <field name="sequence" eval="90"/>
+    </record>
+
+</odoo>

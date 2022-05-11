@@ -12,7 +12,7 @@
     'depends': [
         'partner_industry_secondary',
         'account',
-        'sale_team',
+        'sales_team',
     ],
     'data': [
         'security/weni_customer_mrr_scale.xml',

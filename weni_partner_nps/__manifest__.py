@@ -11,8 +11,11 @@
     'website': 'https://github.com/escodoo/weni-addons',
     'depends': [
         'contacts',
+        'sales_team',
     ],
     'data': [
+        'security/weni_partner_nps_channel.xml',
+        'views/weni_partner_nps_channel.xml',
         # 'data/res_partner_category.xml',
         'security/res_partner_nps.xml',
         'views/res_partner_nps.xml',

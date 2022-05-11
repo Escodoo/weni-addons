@@ -10,14 +10,14 @@ class ResPartnerNps(models.Model):
     _description = "Res Partner Nps"  # TODO
 
 
-
     name = fields.Char(string='Name', compute='_compute_name')
     submission_date = fields.Date(
         'Submission Date',
         default=fields.Date.context_today, required=True)
     return_date = fields.Date('Return Date')
-    channel = fields.Char('Channel', required=True)
-    partner_id = fields.Many2one('res.partner', 'Company', required=True)
+    channel_id = fields.Many2one('weni.partner.nps.channel', 'Channel')
+    channel = fields.Char('Old Field Channel')
+    partner_id = fields.Many2one('res.partner', 'Customer', required=True)
     contact_id = fields.Many2one('res.partner', 'Contact', required=True)
     nps = fields.Integer('NPS')
     comment = fields.Text('Comment', placeholder='Customer comment...')

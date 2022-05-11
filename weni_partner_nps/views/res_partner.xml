@@ -46,10 +46,6 @@
             <field name="active" position="before" >
                 <field name="company_type" invisible="1"/>
                 <field name="weni_current_nps" attrs="{'invisible': [('company_type','!=', 'company')]}"/>
-<!--                <field name="weni_current_nps_classification"-->
-<!--                       widget="label_selection"-->
-<!--                       options="{'classes': {'danger': 'danger', 'success': 'success', 'alert': 'warning'}}"-->
-<!--                       attrs="{'invisible': [('company_type','!=', 'company')]}"/>-->
             </field>
         </field>
     </record>
