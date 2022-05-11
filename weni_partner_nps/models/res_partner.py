@@ -16,24 +16,16 @@ class ResPartner(models.Model):
     @api.depends("weni_current_nps")
     def _compute_current_nps_classification(self):
 
-        # TODO: Está dando erro na instalação
-        # tag_nps_danger_id = self.env.ref("weni_partner_nps.res_partner_category_nps_danger").id
-        # tag_nps_alert_id = self.env.ref("weni_partner_nps.res_partner_category_nps_alert").id
-
         for rec in self:
             if rec.weni_nps_ids:
-                # category_ids = []
-                # category_ids.append(rec.category_id.ids)
                 if rec.weni_current_nps <= 3:
                     rec.weni_current_nps_classification = 'danger'
-                    # category_ids.append((4, tag_nps_danger_id))
                 elif rec.weni_current_nps > 3 and rec.weni_current_nps <= 6:
                     rec.weni_current_nps_classification = 'alert'
                 elif rec.weni_current_nps > 6:
                     rec.weni_current_nps_classification = 'success'
                 else:
                     rec.weni_current_nps_classification = False
-                # rec.category_id = category_ids
             else:
                 rec.weni_current_nps_classification = False
 
@@ -42,14 +34,6 @@ class ResPartner(models.Model):
     weni_nps_count = fields.Integer(
         compute=_compute_weni_nps_count, string="Number of NPSs",
     )
-
-    # weni_current_nps_classification = fields.Selection(
-    #     [("success", "Success"), ("alert", "Alert"), ("danger", "Danger")],
-    #     # compute="_compute_current_nps_classification",
-    #     readonly=True,
-    #     string="NPS Classification",
-    #     help="NPS Classification",
-    # )
 
     @api.depends('weni_nps_ids')
     def _compute_partner_nps(self):
