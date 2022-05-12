@@ -246,8 +246,19 @@
         <field name="inherit_id" ref="crm.view_crm_lead_kanban"/>
         <field name="arch" type="xml">
              <kanban position="attributes">
-                <attribute name="default_group_by">stage_id</attribute>
+                 <attribute name="default_group_by">stage_id</attribute>
+                 <attribute name="class">o_kanban_small_column o_opportunity_kanban</attribute>
+                 <attribute name="on_create">quick_create</attribute>
+                 <attribute name="quick_create_view">crm.quick_create_opportunity_form</attribute>
+                 <attribute name="archivable">false</attribute>
              </kanban>
+            <kanban position="inside">
+                <field name="stage_id" options='{"group_by_tooltip": {"requirements": "Description", "legend_priority": "Use of stars"}}'/>
+                <field name="planned_revenue"/>
+                <field name="kanban_state"/>
+                <field name="company_currency"/>
+                <progressbar field="activity_state" colors='{"planned": "success", "today": "warning", "overdue": "danger"}' sum_field="planned_revenue" help="This bar allows to filter the opportunities based on scheduled activities."/>
+            </kanban>
         </field>
     </record>
 
