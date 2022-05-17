@@ -10,7 +10,9 @@
     'author': 'Escodoo',
     'website': 'https://github.com/escodoo/weni-addons',
     'depends': [
-        'weni_contract_consumption'
+        'weni_contract_consumption',
+        'weni_platform_integration',
+        'queue_job'
     ],
     'data': [
         'views/res_partner.xml',

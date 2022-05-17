@@ -5,6 +5,10 @@ import logging
 import requests
 from datetime import date, timedelta
 from odoo import _, api, fields, models, tools
+from odoo.addons.queue_job.job import job
+from odoo.exceptions import ValidationError
+
+QUEUE_CHANNEL = "root.CONTRACT_CONSUMPTION_INTEGRATION"
 
 _logger = logging.getLogger(__name__)
 
@@ -17,7 +21,9 @@ def weni_consumption_find(search, apikey=False):
                           Save this key in System Parameters with key: weni.api_key_weni, value: <your api key>
                           Visit ... for more information.
                           ''')
-        return None
+        raise ValidationError(
+            _("API key(weni.api_key_weni) for Weni required.")
+        )
 
     url = "https://api.weni.ai/v1/organization/org/grpc/contact-active/" + search
 
@@ -25,7 +31,9 @@ def weni_consumption_find(search, apikey=False):
         result = requests.get(url, headers={'Authorization': apikey}).json()
     except:
         _logger.error('[WENI_INTEGRATION] Cannot contact weni servers. Please make sure that your Internet connection is up and running.')
-        return None
+        raise ValidationError(
+            _("Cannot contact weni servers.")
+        )
 
     try:
         if result['projects']:
@@ -55,7 +63,8 @@ class ResPartner(models.Model):
         return result
 
     @api.multi
-    def weni_consumption_localize(self):
+    @job(default_channel=QUEUE_CHANNEL)
+    def weni_consumption_localize(self, consumption_date=None):
         apikey = self.env['ir.config_parameter'].sudo().get_param('weni.api_key_weni')
         consumption = self.env['contract.line.consumption']
         contract_line = self.env['contract.line']
@@ -63,9 +72,13 @@ class ResPartner(models.Model):
         # before_date = date.today() - timedelta(days=1)
         # after_date = before_date.replace(day=1)
 
-        before_date = date.today()
-        after_date = date.today() - timedelta(days=2)
-        consumption_date = date.today() - timedelta(days=1)
+        if consumption_date:
+            before_date = consumption_date - timedelta(days=1)
+            after_date = consumption_date + timedelta(days=1)
+        else:
+            before_date = date.today()
+            after_date = date.today() - timedelta(days=2)
+            consumption_date = date.today() - timedelta(days=1)
 
         after_date_formated = after_date.strftime('%Y-%m-%d')
         before_date_formated = before_date.strftime('%Y-%m-%d')
@@ -97,15 +110,23 @@ class ResPartner(models.Model):
                                     'consumption_date': consumption_date,
                                     'invoice_status': 'to_be_invoice'
                                 })
+                else:
+                    return False
         return True
 
     @api.model
     def _cron_weni_consumption_localize(self):
-        partners = self.env['res.partner'].search(
-            [
-               ['contract_ids', '>', 0],
-            ]
-        )
-        for partner in partners:
-            if partner.weni_id:
-                partner.weni_consumption_localize()
+        offset = 0
+        while True:
+            partners = self.env['res.partner'].search(
+                [
+                   ['contract_ids', '>', 0]
+                ], limit=100, offset=offset
+            )
+            for partner in partners:
+                if partner.weni_id:
+                    partner.with_delay().weni_consumption_localize(date.today())
+
+            if len(partners) < 100:
+                break
+            offset += 100
