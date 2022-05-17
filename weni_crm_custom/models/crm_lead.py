@@ -63,7 +63,7 @@ class CrmLead(models.Model):
         string="Has Dedicated Team"
     )
     weni_customer_rating = fields.Float(
-        string="Customer Rating"
+        string="Company Rating"
     )
     weni_total_human_agents = fields.Integer(
         string="Total Human Agents"
