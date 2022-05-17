@@ -69,7 +69,9 @@ class ContractContract(models.Model):
                         )
 
                         line.quantity = consumption_quantity
-                        line.price_unit = price_unit
+
+                        if price_unit != line.product_id.list_price:
+                            line.price_unit = price_unit
 
                         line._onchange_fiscal_operation_id()
 
