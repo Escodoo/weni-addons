@@ -127,6 +127,9 @@ class CrmLead(models.Model):
         string='Users',
     )
 
+    weni_automation = fields.Boolean(
+        string='Weni Automation')
+
     @api.multi
     def action_set_lost(self):
         super().action_set_lost()
