@@ -60,16 +60,9 @@ class ResPartner(models.Model):
         consumption = self.env['contract.line.consumption']
         contract_line = self.env['contract.line']
 
-        # before_date = date.today() - timedelta(days=1)
-        # after_date = before_date.replace(day=1)
-
         before_date = date.today().replace(day=1)
         consumption_date = before_date - timedelta(days=1)
         after_date = consumption_date.replace(day=1) - timedelta(days=1)
-
-        # before_date = date.today()
-        # after_date = date.today() - timedelta(days=2)
-        # consumption_date = date.today() - timedelta(days=1)
 
         after_date_formated = after_date.strftime('%Y-%m-%d')
         before_date_formated = before_date.strftime('%Y-%m-%d')
