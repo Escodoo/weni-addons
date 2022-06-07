@@ -171,8 +171,8 @@
             </field>
 
             <field name="phone" position="after">
-                <field name="mobile" readonly="1"/>
-                <field name="function" readonly="1"/>
+                <field name="mobile"/>
+                <field name="function"/>
             </field>
 
             <field name="name_surname" position="after">
