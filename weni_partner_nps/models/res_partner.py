@@ -55,3 +55,26 @@ class ResPartner(models.Model):
             action["views"] = [(self.env.ref("weni_partner_nps.res_partner_nps_form_view").id, "form")]
             action["res_id"] = self.weni_nps_ids and self.weni_nps_ids.ids[0] or False
         return action
+
+    def action_create_weni_npss(self):
+        for res in self.env['res.partner'].sudo().search([('is_company', '=', True)]):
+            res.create_nps()
+
+    def create_nps(self):
+        for rec in self:
+            contacts = rec.child_ids
+            rec.weni_nps_ids = self.env['res.partner.nps'].create(
+                {
+                    "partner.id": rec.id,
+                    "contact.id": rec.id
+                }
+            )
+            for child in contacts:
+                child.weni_nps_ids = self.env['res.partner.nps'].create(
+                    {
+                        "partner.id": rec.id,
+                        "contact.id": child.id
+                    }
+                )
+
+    
