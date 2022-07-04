@@ -17,6 +17,7 @@
         'security/weni_partner_nps_channel.xml',
         'views/weni_partner_nps_channel.xml',
         # 'data/res_partner_category.xml',
+        'data/weni_partner_nps_cron.xml',
         'security/res_partner_nps.xml',
         'views/res_partner_nps.xml',
         'views/res_partner.xml',

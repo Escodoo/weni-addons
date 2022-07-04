@@ -56,7 +56,7 @@
          <field name="binding_model_id" ref="model_res_partner"/>
         <field name="state">code</field>
         <field name="code">
-            model.action_create_weni_npss
+            records.action_create_weni_npss()
         </field>
     </record>
 

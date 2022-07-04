@@ -57,24 +57,31 @@ class ResPartner(models.Model):
         return action
 
     def action_create_weni_npss(self):
-        for res in self.env['res.partner'].sudo().search([('is_company', '=', True)]):
-            res.create_nps()
+        self.create_nps()
 
     def create_nps(self):
         for rec in self:
             contacts = rec.child_ids
-            rec.weni_nps_ids = self.env['res.partner.nps'].create(
+            self.env['res.partner.nps'].create(
                 {
-                    "partner.id": rec.id,
-                    "contact.id": rec.id
+                    "partner_id": rec.id,
+                    "contact_id": rec.id
                 }
             )
             for child in contacts:
-                child.weni_nps_ids = self.env['res.partner.nps'].create(
+                self.env['res.partner.nps'].create(
                     {
-                        "partner.id": rec.id,
-                        "contact.id": child.id
+                        "partner_id": rec.id,
+                        "contact_id": child.id
                     }
                 )
 
-    
+    @api.model
+    def _cron_create_nps(self):
+        partners = self.env['res.partner'].search(
+            [
+                ['is_company', '=', True],
+            ]
+        )
+        for partner in partners:
+            partner.create_nps()
