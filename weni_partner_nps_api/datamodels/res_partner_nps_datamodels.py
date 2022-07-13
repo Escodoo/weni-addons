@@ -19,6 +19,6 @@ class ResPartnerNpsOutput(Datamodel):
     id = fields.Integer(required=True, allow_none=False)
     name = fields.String(required=True, allow_none=False)
     nps = fields.Integer(required=True, allow_none=False)
-    channel_id = NestedModel('weni.partner.nps.channel', required=True, allow_none=False, many=False)
+    channel_id = NestedModel('weni.partner.nps.channel', required=True, allow_none=False, many=True)
     partner_id = NestedModel('res.partner', required=True, allow_none=False, many=True)
     contact_id = NestedModel('res.partner', required=True, allow_none=False, many=True)

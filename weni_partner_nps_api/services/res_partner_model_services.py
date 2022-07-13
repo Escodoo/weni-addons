@@ -4,22 +4,22 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 from odoo.addons.base_rest import restapi
-from odoo.addons.datamodel.core import Datamodel
+from odoo.addons.base_rest_datamodel.restapi import Datamodel
 from odoo.addons.component.core import Component
 
 
-class WeniPartnerModelService(Component):
+class FleetVehicleService(Component):
     _inherit = "base.weni.rest.service"
-    _name = "res.partner.model.service"
-    _usage = "weni_res_partner_model"
-    _expose_model = "res.partner.model"
+    _name = "weni.res.partner.service"
+    _usage = "partner"
+    _expose_model = "res.partner"
     _description = """
-    Res Partner Model Services
+    Fleet Vehicle Model Services
     """
 
     @restapi.method(
         routes=[(["/<int:id>"], "GET")],
-        output_param=Datamodel("res.partner.model.output"),
+        output_param=Datamodel("res.partner.output"),
     )
     def get(self, _id):
         record = self._get(_id)
@@ -27,17 +27,21 @@ class WeniPartnerModelService(Component):
 
     @restapi.method(
         routes=[(["/search"], "GET")],
-        input_param=Datamodel("res.partner.model.search.input"),
-        output_param=Datamodel("res.partner.model.search.output"),
+        input_param=Datamodel("res.partner.input"),
+        output_param=Datamodel("res.partner.output"),
     )
     def search(self, filters):
         domain = self._get_base_search_domain(filters)
         records = self.env[self._expose_model].search(domain)
         result = {"size": len(records), "data": self._to_json(records, many=True)}
-        return self.env.datamodels["res.partner.model.search.output"].load(result)
+        return self.env.datamodels["res.partner.output"].load(result)
 
     def _prepare_params(self, params):
-        for key in ["partner", "insurer"]:
+        for key in [
+            "id",
+            "name",
+            "weni_id",
+        ]:
             if key in params:
                 val = params.pop(key)
                 if val.get("id"):
@@ -48,7 +52,6 @@ class WeniPartnerModelService(Component):
         res = [
             "id",
             "name",
-            "active",
             "weni_id",
         ]
         return res
@@ -61,6 +64,6 @@ class WeniPartnerModelService(Component):
                 domain += [("id", "=", filters.id)]
             if filters.name:
                 domain.append(("name", "like", filters.name))
-            if filters.nps:
-                domain.append(("weni_id", "=", filters.nps))
+            if filters.weni_id:
+                domain.append(("weni_id", "like", filters.name))
         return domain

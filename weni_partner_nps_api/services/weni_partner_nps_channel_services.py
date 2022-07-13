@@ -4,22 +4,22 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 from odoo.addons.base_rest import restapi
-from odoo.addons.datamodel.core import Datamodel
+from odoo.addons.base_rest_datamodel.restapi import Datamodel
 from odoo.addons.component.core import Component
 
 
-class WeniPartnerNpsModelService(Component):
+class FleetVehicleService(Component):
     _inherit = "base.weni.rest.service"
-    _name = "weni.partner.model.service"
-    _usage = "weni_res_partner_nps_model"
-    _expose_model = "res.partner.nps.model"
+    _name = "weni.partner.nps.channel.service"
+    _usage = "nps_channel"
+    _expose_model = "weni.partner.nps.channel"
     _description = """
-    Weni Res Partner Nps Model Services
+    Fleet Vehicle Model Services
     """
 
     @restapi.method(
         routes=[(["/<int:id>"], "GET")],
-        output_param=Datamodel("res.partner.nps.model.output"),
+        output_param=Datamodel("weni.partner.nps.channel.output"),
     )
     def get(self, _id):
         record = self._get(_id)
@@ -27,19 +27,19 @@ class WeniPartnerNpsModelService(Component):
 
     @restapi.method(
         routes=[(["/search"], "GET")],
-        input_param=Datamodel("res.partner.nps.model.search.input"),
-        output_param=Datamodel("res.partner.nps.model.search.output"),
+        input_param=Datamodel("weni.partner.nps.channel.input"),
+        output_param=Datamodel("weni.partner.nps.channel.output"),
     )
     def search(self, filters):
         domain = self._get_base_search_domain(filters)
         records = self.env[self._expose_model].search(domain)
         result = {"size": len(records), "data": self._to_json(records, many=True)}
-        return self.env.datamodels["res.partner.nps.model.search.output"].load(result)
+        return self.env.datamodels["weni.partner.nps.channel.output"].load(result)
 
     @restapi.method(
         routes=[(["/create"], "POST")],
-        input_param=restapi.Datamodel("res.partner.nps.model.input"),
-        output_param=restapi.Datamodel("res.partner.nps.model.output"),
+        input_param=restapi.Datamodel("weni.partner.nps.channel.input"),
+        output_param=restapi.Datamodel("weni.partner.nps.channel.output"),
     )
     # pylint: disable=W8106
     def create(self, record):
@@ -49,7 +49,7 @@ class WeniPartnerNpsModelService(Component):
 
     @restapi.method(
         routes=[(["/update"], "POST")],
-        input_param=Datamodel("res.partner.nps.model.input"),
+        input_param=Datamodel("weni.partner.nps.channel.input"),
     )
     def update(self, values):
         record = self._get(values.id)
@@ -68,7 +68,9 @@ class WeniPartnerNpsModelService(Component):
             return {"response": "No record found"}
 
     def _prepare_params(self, params):
-        for key in ["vehicle", "insurer"]:
+        for key in [
+            "nps",
+        ]:
             if key in params:
                 val = params.pop(key)
                 if val.get("id"):
@@ -79,10 +81,6 @@ class WeniPartnerNpsModelService(Component):
         res = [
             "id",
             "name",
-            "active",
-            "nps",
-            ("partner_id:partner", ["id", "name"]),
-            ("contact_id:contact", ["id", "name"]),
         ]
         return res
 
@@ -94,6 +92,4 @@ class WeniPartnerNpsModelService(Component):
                 domain += [("id", "=", filters.id)]
             if filters.name:
                 domain.append(("name", "like", filters.name))
-            if filters.nps:
-                domain.append(("nps", "=", filters.nps))
         return domain
