@@ -27,14 +27,14 @@ class FleetVehicleService(Component):
 
     @restapi.method(
         routes=[(["/search"], "GET")],
-        input_param=Datamodel("weni.partner.nps.channel.input"),
-        output_param=Datamodel("weni.partner.nps.channel.output"),
+        input_param=Datamodel("weni.partner.nps.channel.search.input"),
+        output_param=Datamodel("weni.partner.nps.channel.search.output"),
     )
     def search(self, filters):
         domain = self._get_base_search_domain(filters)
         records = self.env[self._expose_model].search(domain)
         result = {"size": len(records), "data": self._to_json(records, many=True)}
-        return self.env.datamodels["weni.partner.nps.channel.output"].load(result)
+        return self.env.datamodels["weni.partner.nps.channel.search.output"].load(result)
 
     @restapi.method(
         routes=[(["/create"], "POST")],

@@ -4,7 +4,7 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 from odoo.addons.base_rest import restapi
-from odoo.addons.datamodel.core import Datamodel
+from odoo.addons.base_rest_datamodel.restapi import Datamodel
 from odoo.addons.component.core import Component
 
 
@@ -27,14 +27,14 @@ class WeniPartnerNpsService(Component):
 
     @restapi.method(
         routes=[(["/search"], "GET")],
-        input_param=Datamodel("res.partner.nps.input"),
-        output_param=Datamodel("res.partner.nps.output"),
+        input_param=Datamodel("res.partner.nps.search.input"),
+        output_param=Datamodel("res.partner.nps.search.output"),
     )
     def search(self, filters):
         domain = self._get_base_search_domain(filters)
         records = self.env[self._expose_model].search(domain)
         result = {"size": len(records), "data": self._to_json(records, many=True)}
-        return self.env.datamodels["res.partner.nps.output"].load(result)
+        return self.env.datamodels["res.partner.nps.search.output"].load(result)
 
     @restapi.method(
         routes=[(["/create"], "POST")],
@@ -71,7 +71,6 @@ class WeniPartnerNpsService(Component):
         for key in [
             "id",
             "name",
-            "nps",
         ]:
             if key in params:
                 val = params.pop(key)
@@ -83,7 +82,7 @@ class WeniPartnerNpsService(Component):
         res = [
             "id",
             "name",
-            "nps"
+            "nps",
             ("channel_id:channel", ["id", "name"]),
             ("contact_id:contact", ["id", "name"]),
             ("partner_id:partner", ["id", "name"]),
@@ -97,13 +96,13 @@ class WeniPartnerNpsService(Component):
             if filters.id:
                 domain += [("id", "=", filters.id)]
             if filters.name:
-                domain.append(("name", "like", filters.name))
+                domain += [("name", "like", filters.name)]
             if filters.nps:
-                domain.append(("nps", "like", filters.name))
-            if filters.channel_id:
-                domain.append(("channel_id", "like", filters.name))
-            if filters.contact_id:
-                domain.append(("contact_id", "like", filters.name))
-            if filters.partner_id:
-                domain.append(("partner_id", "like", filters.name))
+                domain += [("nps", "=", filters.name)]
+            # if filters.channel_id:
+            #     domain.append(("channel_id", "like", filters.name))
+            # if filters.contact_id:
+            #     domain.append(("contact_id", "like", filters.name))
+            # if filters.partner_id:
+            #     domain.append(("partner_id", "like", filters.name))
         return domain

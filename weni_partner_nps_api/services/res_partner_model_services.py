@@ -8,13 +8,13 @@ from odoo.addons.base_rest_datamodel.restapi import Datamodel
 from odoo.addons.component.core import Component
 
 
-class FleetVehicleService(Component):
+class ResPartnerService(Component):
     _inherit = "base.weni.rest.service"
     _name = "weni.res.partner.service"
     _usage = "partner"
     _expose_model = "res.partner"
     _description = """
-    Fleet Vehicle Model Services
+    Res Partner Model Services
     """
 
     @restapi.method(
@@ -27,14 +27,14 @@ class FleetVehicleService(Component):
 
     @restapi.method(
         routes=[(["/search"], "GET")],
-        input_param=Datamodel("res.partner.input"),
-        output_param=Datamodel("res.partner.output"),
+        input_param=Datamodel("res.partner.search.input"),
+        output_param=Datamodel("res.partner.search.output"),
     )
     def search(self, filters):
         domain = self._get_base_search_domain(filters)
         records = self.env[self._expose_model].search(domain)
         result = {"size": len(records), "data": self._to_json(records, many=True)}
-        return self.env.datamodels["res.partner.output"].load(result)
+        return self.env.datamodels["res.partner.search.output"].load(result)
 
     def _prepare_params(self, params):
         for key in [

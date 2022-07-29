@@ -10,3 +10,4 @@ class WeniRestApiController(main.RestController):
     _root_path = "/weni_partner_nps_api/"
     _collection_name = "weni.rest.services"
     _default_auth = "api_key"
+

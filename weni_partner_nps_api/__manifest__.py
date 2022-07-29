@@ -11,6 +11,7 @@
     "maintainers": ["marcelsavegnago"],
     "website": "https://github.com/Escodoo/weni_addons",
     "depends": [
+        'weni_platform_integration',
         "weni_partner_nps",
         "base_rest",
         "base_jsonify",
