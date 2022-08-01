@@ -80,7 +80,8 @@ class ResPartner(models.Model):
     def _cron_create_nps(self):
         partners = self.env['res.partner'].search(
             [
-                ['is_company', '=', True],
+                ('is_company', '=', True),
+                ('weni_customer_status_id.weni_status', '=', True)
             ]
         )
         for partner in partners:

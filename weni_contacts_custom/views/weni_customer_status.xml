@@ -16,6 +16,7 @@
                     <!-- TODO -->
                     <group>
                         <field name="name"/>
+                        <field name="weni_status"/>
                     </group>
                 </sheet>
                 <div class="oe_chatter"></div>

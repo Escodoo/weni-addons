@@ -10,3 +10,4 @@ class WeniCustomerStatus(models.Model):
     _description = "Customer Status"
 
     name = fields.Char()
+    weni_status = fields.Boolean(string="Active", default=False)

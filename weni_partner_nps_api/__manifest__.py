@@ -13,6 +13,7 @@
     "depends": [
         'weni_platform_integration',
         "weni_partner_nps",
+        "weni_contacts_custom",
         "base_rest",
         "base_jsonify",
         "base_rest_datamodel",
