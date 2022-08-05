@@ -16,7 +16,7 @@
                     <!-- TODO -->
                     <group>
                         <field name="name"/>
-                        <field name="weni_status"/>
+                        <field name="weni_generate_nps"/>
                     </group>
                 </sheet>
                 <div class="oe_chatter"></div>
@@ -41,6 +41,7 @@
             <tree>
                 <!-- TODO -->
                 <field name="name"/>
+                <field name="weni_generate_nps"/>
             </tree>
         </field>
     </record>
