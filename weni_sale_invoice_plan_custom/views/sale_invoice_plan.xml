@@ -1,38 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- Copyright 2021 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
-
 <odoo>
 
     <record model="ir.ui.view" id="sale_invoice_plan_form_view">
-        <field name="name">sale.invoice.plan.form (in weni_sale_invoice_plan_custom)</field>
+        <field
+            name="name"
+        >sale.invoice.plan.form (in weni_sale_invoice_plan_custom)</field>
         <field name="model">sale.invoice.plan</field>
-        <field name="inherit_id" ref="sale_invoice_plan.view_sale_invoice_plan_form"/>
+        <field name="inherit_id" ref="sale_invoice_plan.view_sale_invoice_plan_form" />
         <field name="arch" type="xml">
             <field name="invoiced" position="before">
-                <field name="description"/>
-                <field name="project_id"/>
-                <field name="project_task_ids"
-                       widget="many2many_tags"
-                       options="{'color_field': 'color', 'no_create_edit': True, 'no_create': True}"
-                       domain="[('project_id', '=', project_id)]"/>
+                <field name="description" />
+                <field name="project_id" />
+                <field
+                    name="project_task_ids"
+                    widget="many2many_tags"
+                    options="{'color_field': 'color', 'no_create_edit': True, 'no_create': True}"
+                    domain="[('project_id', '=', project_id)]"
+                />
             </field>
 
         </field>
     </record>
 
     <record model="ir.ui.view" id="sale_invoice_plan_tree_view">
-        <field name="name">sale.invoice.plan.tree (in weni_sale_invoice_plan_custom)</field>
+        <field
+            name="name"
+        >sale.invoice.plan.tree (in weni_sale_invoice_plan_custom)</field>
         <field name="model">sale.invoice.plan</field>
-        <field name="inherit_id" ref="sale_invoice_plan.view_sale_invoice_plan_tree"/>
+        <field name="inherit_id" ref="sale_invoice_plan.view_sale_invoice_plan_tree" />
         <field name="arch" type="xml">
             <field name="last" position="before">
-                <field name="description"/>
-                <field name="project_id"/>
-                <field name="project_task_ids"
-                       widget="many2many_tags"
-                       options="{'color_field': 'color', 'no_create_edit': True, 'no_create': True}"
-                       domain="[('project_id', '=', project_id)]"/>
+                <field name="description" />
+                <field name="project_id" />
+                <field
+                    name="project_task_ids"
+                    widget="many2many_tags"
+                    options="{'color_field': 'color', 'no_create_edit': True, 'no_create': True}"
+                    domain="[('project_id', '=', project_id)]"
+                />
             </field>
         </field>
     </record>
