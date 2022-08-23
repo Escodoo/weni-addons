@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- Copyright 2022 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
-
 <odoo>
 
     <record model="ir.ui.view" id="weni_partner_nps_channel_form_view">
@@ -15,10 +14,10 @@
                 <sheet>
                     <!-- TODO -->
                     <group>
-                        <field name="name"/>
+                        <field name="name" />
                     </group>
                 </sheet>
-                <div class="oe_chatter"></div>
+                <div class="oe_chatter" />
             </form>
         </field>
     </record>
@@ -39,7 +38,7 @@
         <field name="arch" type="xml">
             <tree>
                 <!-- TODO -->
-                <field name="name"/>
+                <field name="name" />
             </tree>
         </field>
     </record>
@@ -54,9 +53,9 @@
 
     <record model="ir.ui.menu" id="weni_partner_nps_channel_menu">
         <field name="name">Partner NPS Channel</field>
-        <field name="parent_id" ref="contacts.res_partner_menu_config"/>
-        <field name="action" ref="weni_partner_nps_channel_act_window"/>
-        <field name="sequence" eval="90"/>
+        <field name="parent_id" ref="contacts.res_partner_menu_config" />
+        <field name="action" ref="weni_partner_nps_channel_act_window" />
+        <field name="sequence" eval="90" />
     </record>
 
 </odoo>

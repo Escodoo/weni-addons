@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- Copyright 2022 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
-
 <odoo>
 
     <record model="ir.ui.view" id="res_partner_nps_form_view">
@@ -22,19 +21,22 @@
                     </div>
                     <group>
                         <group>
-                            <field name="submission_date"/>
-                            <field name="partner_id" readonly="1"/>
-                            <field name="contact_id" domain="[('commercial_partner_id', '=', partner_id)]"/>
-                            <field name="nps"/>
+                            <field name="submission_date" />
+                            <field name="partner_id" readonly="1" />
+                            <field
+                                name="contact_id"
+                                domain="[('commercial_partner_id', '=', partner_id)]"
+                            />
+                            <field name="nps" />
                         </group>
                         <group>
-                            <field name="return_date"/>
-                            <field name="channel_id" required="1"/>
+                            <field name="return_date" />
+                            <field name="channel_id" required="1" />
                         </group>
                     </group>
                     <notebook>
                         <page string="Comment">
-                            <field name="comment"/>
+                            <field name="comment" />
                         </page>
                     </notebook>
                 </sheet>
@@ -54,13 +56,22 @@
                 <field name="partner_id" />
                 <field name="contact_id" />
                 <field name="channel_id" />
-                <filter name="return_date" string="Retorned"
-                        domain="[('return_date', '!=', False)]"/>
+                <filter
+                    name="return_date"
+                    string="Retorned"
+                    domain="[('return_date', '!=', False)]"
+                />
                 <group string="Group By" name="groupby">
-                    <filter name="partner_id_groupby" string="Partner"
-                            context="{'group_by': 'partner_id'}"/>
-                    <filter name="contact_id_groupby" string="Contact"
-                            context="{'group_by': 'contact_id'}"/>
+                    <filter
+                        name="partner_id_groupby"
+                        string="Partner"
+                        context="{'group_by': 'partner_id'}"
+                    />
+                    <filter
+                        name="contact_id_groupby"
+                        string="Contact"
+                        context="{'group_by': 'contact_id'}"
+                    />
                 </group>
             </search>
         </field>
@@ -71,12 +82,12 @@
         <field name="model">res.partner.nps</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="submission_date"/>
-                <field name="return_date"/>
-                <field name="contact_id"/>
-                <field name="channel_id"/>
-                <field name="nps"/>
-                <field name="comment"/>
+                <field name="submission_date" />
+                <field name="return_date" />
+                <field name="contact_id" />
+                <field name="channel_id" />
+                <field name="nps" />
+                <field name="comment" />
             </tree>
         </field>
     </record>
@@ -86,8 +97,8 @@
         <field name="model">res.partner.nps</field>
          <field name="arch" type="xml">
             <pivot string="NPSs Analysis" disable_linking="True">
-                <field name="submission_date" interval="month" type="col"/>
-                <field name="partner_id" type="row"/>
+                <field name="submission_date" interval="month" type="col" />
+                <field name="partner_id" type="row" />
             </pivot>
         </field>
     </record>
@@ -97,7 +108,7 @@
         <field name="model">res.partner.nps</field>
          <field name="arch" type="xml">
              <graph string="NPSs Analysis">
-                <field name="partner_id" type="row"/>
+                <field name="partner_id" type="row" />
             </graph>
         </field>
     </record>
@@ -117,9 +128,9 @@
 
     <record model="ir.ui.menu" id="res_partner_nps_menu">
         <field name="name">NPS</field>
-        <field name="parent_id" ref="contacts.res_partner_menu_config"/>
-        <field name="action" ref="res_partner_nps_act_window"/>
-        <field name="sequence" eval="16"/>
+        <field name="parent_id" ref="contacts.res_partner_menu_config" />
+        <field name="action" ref="res_partner_nps_act_window" />
+        <field name="sequence" eval="16" />
     </record>
 
 </odoo>
