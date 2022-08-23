@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- Copyright 2022 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
-
 <odoo>
 
     <record model="ir.ui.view" id="weni_customer_service_type_form_view">
-        <field name="name">weni.customer.service.type.form (in weni_contacts_custom)</field>
+        <field
+            name="name"
+        >weni.customer.service.type.form (in weni_contacts_custom)</field>
         <field name="model">weni.customer.service.type</field>
         <field name="arch" type="xml">
             <form>
@@ -15,16 +16,18 @@
                 <sheet>
                     <!-- TODO -->
                     <group>
-                        <field name="name"/>
+                        <field name="name" />
                     </group>
                 </sheet>
-                <div class="oe_chatter"></div>
+                <div class="oe_chatter" />
             </form>
         </field>
     </record>
 
     <record model="ir.ui.view" id="weni_customer_service_type_search_view">
-        <field name="name">weni.customer.service.type.search (in weni_contacts_custom)</field>
+        <field
+            name="name"
+        >weni.customer.service.type.search (in weni_contacts_custom)</field>
         <field name="model">weni.customer.service.type</field>
         <field name="arch" type="xml">
             <search>
@@ -34,12 +37,14 @@
     </record>
 
     <record model="ir.ui.view" id="weni_customer_service_type_tree_view">
-        <field name="name">weni.customer.service.type.tree (in weni_contacts_custom)</field>
+        <field
+            name="name"
+        >weni.customer.service.type.tree (in weni_contacts_custom)</field>
         <field name="model">weni.customer.service.type</field>
         <field name="arch" type="xml">
             <tree>
                 <!-- TODO -->
-                <field name="name"/>
+                <field name="name" />
             </tree>
         </field>
     </record>
@@ -54,9 +59,9 @@
 
     <record model="ir.ui.menu" id="weni_customer_service_type_menu">
         <field name="name">Customer Service Type</field>
-        <field name="parent_id" ref="contacts.res_partner_menu_config"/>
-        <field name="action" ref="weni_customer_service_type_act_window"/>
-        <field name="sequence" eval="90"/>
+        <field name="parent_id" ref="contacts.res_partner_menu_config" />
+        <field name="action" ref="weni_customer_service_type_act_window" />
+        <field name="sequence" eval="90" />
     </record>
 
 </odoo>
