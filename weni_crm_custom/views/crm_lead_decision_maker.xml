@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- Copyright 2021 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
-
 <odoo>
 
     <record model="ir.ui.view" id="crm_lead_decision_maker_tree_view">
@@ -9,8 +8,8 @@
         <field name="model">crm.lead.decision.maker</field>
         <field name="arch" type="xml">
             <tree string="Decision Makers" editable="bottom">
-                <field name="partner_id"/>
-                <field name="decision_maker_type"/>
+                <field name="partner_id" />
+                <field name="decision_maker_type" />
             </tree>
         </field>
     </record>

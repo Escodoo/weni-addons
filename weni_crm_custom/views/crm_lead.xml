@@ -1,21 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- Copyright 2021 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
-
 <odoo>
 
     <!--    Lead Form-->
     <record model="ir.ui.view" id="crm_lead_form_view_leads">
         <field name="name">crm.lead.form.leads (in weni_crm_custom)</field>
         <field name="model">crm.lead</field>
-        <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
+        <field name="inherit_id" ref="crm.crm_case_form_view_leads" />
         <field name="arch" type="xml">
             <button name="action_set_lost" position="replace">
-                <button name="%(crm.crm_lead_lost_action)d"
-                        string="Mark Lost"
-                        type="action" class="oe_highlight"
-                        context="{'default_lead_id': active_id}"
-                        attrs="{'invisible': ['&amp;', ('probability', '=', 0), ('active', '=', False)]}"/>
+                <button
+                    name="%(crm.crm_lead_lost_action)d"
+                    string="Mark Lost"
+                    type="action"
+                    class="oe_highlight"
+                    context="{'default_lead_id': active_id}"
+                    attrs="{'invisible': ['&amp;', ('probability', '=', 0), ('active', '=', False)]}"
+                />
             </button>
 
             <h1 position="after">
@@ -23,15 +25,24 @@
                     <div class="col">
                         <label for="planned_revenue" class="oe_edit_only" />
                         <div class="o_row">
-                            <field name="company_currency" invisible="1"/>
-                            <field name="planned_revenue" class="oe_inline" widget='monetary' options="{'currency_field': 'company_currency'}"/>
+                            <field name="company_currency" invisible="1" />
+                            <field
+                                name="planned_revenue"
+                                class="oe_inline"
+                                widget='monetary'
+                                options="{'currency_field': 'company_currency'}"
+                            />
                             <span class="oe_grey"> at </span>
                         </div>
                     </div>
                     <div class="col">
-                        <label for="probability" class="oe_edit_only"/>
+                        <label for="probability" class="oe_edit_only" />
                         <div class="o_row d-flex">
-                            <field name="probability" widget="integer" class="oe_inline"/>
+                            <field
+                                name="probability"
+                                widget="integer"
+                                class="oe_inline"
+                            />
                             <span class="oe_grey"> %%</span>
                         </div>
                     </div>
@@ -40,8 +51,13 @@
                     <div class="col">
                         <label for="weni_amount_nrr" class="oe_edit_only" />
                         <div class="o_row">
-                            <field name="company_currency" invisible="1"/>
-                            <field name="weni_amount_nrr" class="oe_inline" widget='monetary' options="{'currency_field': 'company_currency'}"/>
+                            <field name="company_currency" invisible="1" />
+                            <field
+                                name="weni_amount_nrr"
+                                class="oe_inline"
+                                widget='monetary'
+                                options="{'currency_field': 'company_currency'}"
+                            />
                         </div>
                     </div>
                 </h2>
@@ -52,20 +68,26 @@
             </page>
 
             <field name="user_id" position="before">
-                <field name="weni_sale_type"/>
+                <field name="weni_sale_type" />
             </field>
 
             <field name="partner_name" position="after">
-                <field name="weni_linkedin_profile"/>
+                <field name="weni_linkedin_profile" />
             </field>
 
             <field name="tag_ids" position="after">
-                <field name="lost_reason" attrs="{'invisible': [('active', '=', True)]}"/>
-                <field name="weni_lost_date" attrs="{'invisible': [('active', '=', True)]}"/>
+                <field
+                    name="lost_reason"
+                    attrs="{'invisible': [('active', '=', True)]}"
+                />
+                <field
+                    name="weni_lost_date"
+                    attrs="{'invisible': [('active', '=', True)]}"
+                />
             </field>
 
             <field name="team_id" position="after">
-                <field name="source_id"/>
+                <field name="source_id" />
             </field>
 
 <!--            Invisible Fields-->
@@ -94,33 +116,33 @@
             <page name="extra" position="before">
                 <page name="weni_icp_data" string="ICP Data">
                     <group name="weni_icp_details" string="ICP Details">
-                        <field name="weni_company_size"/>
-                        <field name="weni_active_contacts"/>
-                        <field name="weni_has_dedicate_team"/>
-                        <field name="weni_customer_rating"/>
-                        <field name="weni_total_human_agents"/>
-                        <field name="weni_use_chatbot_solution"/>
-                        <field name="weni_systems_used"/>
-                        <field name="weni_icp_classification"/>
+                        <field name="weni_company_size" />
+                        <field name="weni_active_contacts" />
+                        <field name="weni_has_dedicate_team" />
+                        <field name="weni_customer_rating" />
+                        <field name="weni_total_human_agents" />
+                        <field name="weni_use_chatbot_solution" />
+                        <field name="weni_systems_used" />
+                        <field name="weni_icp_classification" />
                     </group>
                 </page>
                 <page name="weni_diagnostic" string="Diagnostic">
                     <group name="weni_diagnostic_details" string="Diagnostic Details">
                         <field name="weni_current_situation" />
-                        <field name="weni_project_pain_primary"/>
-                        <field name="weni_project_pain_secondary"/>
+                        <field name="weni_project_pain_primary" />
+                        <field name="weni_project_pain_secondary" />
                         <field name="weni_implication" />
                         <field name="weni_need" />
-                        <field name="weni_project_integration"/>
-                        <field name="weni_channels_used"/>
+                        <field name="weni_project_integration" />
+                        <field name="weni_channels_used" />
                     </group>
                 </page>
                 <page name="weni_decision_makers" string="Decision Makers">
                     <group name="weni_decision_makers_details" string="Decision Makers">
-                        <field name="weni_decision_maker_ids" nolabel="1"/>
+                        <field name="weni_decision_maker_ids" nolabel="1" />
                     </group>
                     <group name="weni_users_details" string="Users">
-                        <field name="weni_user_ids" nolabel="1"/>
+                        <field name="weni_user_ids" nolabel="1" />
                     </group>
                 </page>
             </page>
@@ -130,14 +152,14 @@
     <record model="ir.ui.view" id="crm_industry_crm_lead_form_view_leads">
         <field name="name">crm.lead.form.leads (in weni_crm_custom)</field>
         <field name="model">crm.lead</field>
-        <field name="inherit_id" ref="crm_industry.crm_case_form_view_leads"/>
+        <field name="inherit_id" ref="crm_industry.crm_case_form_view_leads" />
         <field name="arch" type="xml">
             <field name="tag_ids" position="after">
-                <field name="weni_sale_sector"/>
-                <field name="industry_id" position="move"/>
-                <field name="secondary_industry_ids" position="move"/>
-                <field name="weni_automation"/>
-                <field name="weni_is_freezed"/>
+                <field name="weni_sale_sector" />
+                <field name="industry_id" position="move" />
+                <field name="secondary_industry_ids" position="move" />
+                <field name="weni_automation" />
+                <field name="weni_is_freezed" />
             </field>
         </field>
     </record>
@@ -147,10 +169,10 @@
     <record model="ir.ui.view" id="crm_lead_form_view_oppor">
         <field name="name">crm.lead.form.oppor (in weni_crm_custom)</field>
         <field name="model">crm.lead</field>
-        <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+        <field name="inherit_id" ref="crm.crm_case_form_view_oppor" />
         <field name="arch" type="xml">
             <field name="team_id" position="after">
-                <field name="source_id"/>
+                <field name="source_id" />
             </field>
 
             <xpath expr="//div[hasclass('oe_title')]/h2" position="after">
@@ -158,74 +180,82 @@
                     <div class="col">
                         <label for="weni_amount_nrr" class="oe_edit_only" />
                         <div class="o_row">
-                            <field name="company_currency" invisible="1"/>
-                            <field name="weni_amount_nrr" class="oe_inline" widget='monetary' options="{'currency_field': 'company_currency'}"/>
+                            <field name="company_currency" invisible="1" />
+                            <field
+                                name="weni_amount_nrr"
+                                class="oe_inline"
+                                widget='monetary'
+                                options="{'currency_field': 'company_currency'}"
+                            />
                         </div>
                     </div>
                 </h2>
             </xpath>
 
             <field name="date_deadline" position="after">
-                <field name="weni_project_release_date"/>
-                <field name="cnpj" readonly="1"/>
-                <field name="website" readonly="1"/>
+                <field name="weni_project_release_date" />
+                <field name="cnpj" readonly="1" />
+                <field name="website" readonly="1" />
             </field>
 
             <field name="phone" position="after">
-                <field name="mobile"/>
-                <field name="function"/>
+                <field name="mobile" />
+                <field name="function" />
             </field>
 
             <field name="name_surname" position="after">
-                <field name="weni_linkedin_profile"/>
+                <field name="weni_linkedin_profile" />
             </field>
 
             <field name="cpf" position="replace">
-                <field name="cpf" invisible="1"/>
+                <field name="cpf" invisible="1" />
             </field>
 
             <field name="rg" position="replace">
-                <field name="rg" invisible="1"/>
+                <field name="rg" invisible="1" />
             </field>
 
             <field name="user_id" position="before">
-                <field name="weni_sale_type"/>
+                <field name="weni_sale_type" />
             </field>
 
             <field name="lost_reason" position="after">
-                <field name="weni_lost_date" attrs="{'invisible': [('active', '=', True)]}" />
+                <field
+                    name="weni_lost_date"
+                    attrs="{'invisible': [('active', '=', True)]}"
+                />
             </field>
 
             <page name="lead" position="before">
                 <page name="weni_icp_data" string="ICP Data">
                     <group name="weni_icp_details" string="ICP Details">
-                        <field name="weni_company_size"/>
-                        <field name="weni_active_contacts"/>
-                        <field name="weni_has_dedicate_team"/>
-                        <field name="weni_customer_rating"/>
-                        <field name="weni_total_human_agents"/>
-                        <field name="weni_use_chatbot_solution"/>
-                        <field name="weni_systems_used"/>
-                        <field name="weni_icp_classification"/>
+                        <field name="weni_company_size" />
+                        <field name="weni_active_contacts" />
+                        <field name="weni_has_dedicate_team" />
+                        <field name="weni_customer_rating" />
+                        <field name="weni_total_human_agents" />
+                        <field name="weni_use_chatbot_solution" />
+                        <field name="weni_systems_used" />
+                        <field name="weni_icp_classification" />
                     </group>
                 </page>
                 <page name="weni_diagnostic" string="Diagnostic">
                     <group name="weni_diagnostic_details" string="Diagnostic Details">
                         <field name="weni_current_situation" />
-                        <field name="weni_project_pain_primary"/>
-                        <field name="weni_project_pain_secondary"/>
+                        <field name="weni_project_pain_primary" />
+                        <field name="weni_project_pain_secondary" />
                         <field name="weni_implication" />
                         <field name="weni_need" />
-                        <field name="weni_project_integration"/>
-                        <field name="weni_channels_used"/>
+                        <field name="weni_project_integration" />
+                        <field name="weni_channels_used" />
                     </group>
                 </page>
                 <page name="weni_decision_makers" string="Decision Makers">
                     <group name="weni_decision_makers_details" string="Decision Makers">
-                        <field name="weni_decision_maker_ids" nolabel="1"/>
+                        <field name="weni_decision_maker_ids" nolabel="1" />
                     </group>
                     <group name="weni_users_details" string="Users">
-                        <field name="weni_user_ids" nolabel="1"/>
+                        <field name="weni_user_ids" nolabel="1" />
                     </group>
                 </page>
             </page>
@@ -235,45 +265,57 @@
     <record model="ir.ui.view" id="crm_industry_crm_case_form_view_oppor">
         <field name="name">crm.lead.form.opper (in weni_crm_custom)</field>
         <field name="model">crm.lead</field>
-        <field name="inherit_id" ref="crm_industry.crm_case_form_view_oppor"/>
+        <field name="inherit_id" ref="crm_industry.crm_case_form_view_oppor" />
         <field name="arch" type="xml">
             <field name="tag_ids" position="after">
-                <field name="weni_sale_sector"/>
-                <field name="industry_id" position="move"/>
-                <field name="secondary_industry_ids" position="move"/>
-                <field name="weni_automation"/>
-                <field name="weni_is_freezed"/>
+                <field name="weni_sale_sector" />
+                <field name="industry_id" position="move" />
+                <field name="secondary_industry_ids" position="move" />
+                <field name="weni_automation" />
+                <field name="weni_is_freezed" />
             </field>
         </field>
     </record>
 
     <!-- Muda sequencia das visões disponiveis nos leads -->
     <record id="crm.crm_lead_all_leads_view_kanban" model="ir.actions.act_window.view">
-        <field name="sequence" eval="1"/>
+        <field name="sequence" eval="1" />
     </record>
     <record id="crm.crm_lead_all_leads_view_tree" model="ir.actions.act_window.view">
-        <field name="sequence" eval="2"/>
+        <field name="sequence" eval="2" />
     </record>
 
     <!-- Adiciona agrupamento padrão por stage_id -->
     <record model="ir.ui.view" id="view_crm_lead_kanban">
         <field name="name">crm.lead.kanban (in weni_crm_custom)</field>
         <field name="model">crm.lead</field>
-        <field name="inherit_id" ref="crm.view_crm_lead_kanban"/>
+        <field name="inherit_id" ref="crm.view_crm_lead_kanban" />
         <field name="arch" type="xml">
              <kanban position="attributes">
                  <attribute name="default_group_by">stage_id</attribute>
-                 <attribute name="class">o_kanban_small_column o_opportunity_kanban</attribute>
+                 <attribute
+                    name="class"
+                >o_kanban_small_column o_opportunity_kanban</attribute>
                  <attribute name="on_create">quick_create</attribute>
-                 <attribute name="quick_create_view">crm.quick_create_opportunity_form</attribute>
+                 <attribute
+                    name="quick_create_view"
+                >crm.quick_create_opportunity_form</attribute>
                  <attribute name="archivable">false</attribute>
              </kanban>
             <kanban position="inside">
-                <field name="stage_id" options='{"group_by_tooltip": {"requirements": "Description", "legend_priority": "Use of stars"}}'/>
-                <field name="planned_revenue"/>
-                <field name="kanban_state"/>
-                <field name="company_currency"/>
-                <progressbar field="activity_state" colors='{"planned": "success", "today": "warning", "overdue": "danger"}' sum_field="planned_revenue" help="This bar allows to filter the opportunities based on scheduled activities."/>
+                <field
+                    name="stage_id"
+                    options='{"group_by_tooltip": {"requirements": "Description", "legend_priority": "Use of stars"}}'
+                />
+                <field name="planned_revenue" />
+                <field name="kanban_state" />
+                <field name="company_currency" />
+                <progressbar
+                    field="activity_state"
+                    colors='{"planned": "success", "today": "warning", "overdue": "danger"}'
+                    sum_field="planned_revenue"
+                    help="This bar allows to filter the opportunities based on scheduled activities."
+                />
             </kanban>
         </field>
     </record>
@@ -288,13 +330,21 @@
                     <strong>
                         MRR:
                     </strong>
-                    <field name="planned_revenue" widget="monetary" options="{'currency_field': 'company_currency'}"/>
+                    <field
+                        name="planned_revenue"
+                        widget="monetary"
+                        options="{'currency_field': 'company_currency'}"
+                    />
                 </div>
                 <div>
                     <strong>
                         NRR:
                     </strong>
-                    <field name="weni_amount_nrr" widget="monetary" options="{'currency_field': 'company_currency'}"/>
+                    <field
+                        name="weni_amount_nrr"
+                        widget="monetary"
+                        options="{'currency_field': 'company_currency'}"
+                    />
                 </div>
             </xpath>
         </field>
