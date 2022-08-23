@@ -1,20 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- Copyright 2021 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
-
 <odoo>
 
     <record model="ir.ui.view" id="contract_contract_form_view">
         <field name="name">contract.contract.form (in weni_contract_consumption)</field>
         <field name="model">contract.contract</field>
-        <field name="inherit_id" ref="contract.contract_contract_customer_form_view"/>
+        <field name="inherit_id" ref="contract.contract_contract_customer_form_view" />
         <field name="arch" type="xml">
            <div class="oe_button_box" name="button_box" position="inside">
-                <button class="oe_stat_button" type="object"
-                        name="action_view_contract_consumption" icon="fa-th-list"
-                        context="{'default_contract_id': id}">
+                <button
+                    class="oe_stat_button"
+                    type="object"
+                    name="action_view_contract_consumption"
+                    icon="fa-th-list"
+                    context="{'default_contract_id': id}"
+                >
                     <div class="o_stat_info">
-                        <field name="contract_consumption_count" class="o_stat_value"/>
+                        <field name="contract_consumption_count" class="o_stat_value" />
                         <span class="o_stat_text"> Consumption</span>
                     </div>
                 </button>
