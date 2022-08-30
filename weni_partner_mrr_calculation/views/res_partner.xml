@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record model="ir.ui.view" id="res_partner_form_view">
+        <field name="name">res.partner.form (in weni_contacts_custom)</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page
+                    string="CS"
+                    attrs="{'invisible':[('company_type','!=','company'),('customer','!=', True)]}"
+                >
+                    <group>
+                        <field name="weni_customer_size" />
+                        <field name="weni_customer_mrr_scale_id" />
+                        <field name="industry_id" />
+                        <field name="secondary_industry_ids" widget="many2many_tags" />
+                        <field name="weni_has_dedicate_team" />
+                        <field name="weni_service_type_id" />
+                        <field name="weni_cs_analyst_id" />
+                        <field name="weni_service_analyst_id" />
+                        <field name="weni_customer_at_risk" />
+                        <field name="weni_customer_status_id" />
+                        <field name="weni_churn_request_date" />
+                        <field name="weni_months_customer_lifetime" />
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+</odoo>
