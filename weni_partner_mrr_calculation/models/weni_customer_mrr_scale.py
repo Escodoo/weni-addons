@@ -11,7 +11,18 @@ class WeniCustomerMrrScale(models.Model):
     _description = "Customer MRR Scale"
 
     name = fields.Char("Name")
-    currency_id = fields.Many2one("res.currency", string="Currency")
+    company_id = fields.Many2one(
+        comodel_name="res.company",
+        default=lambda self: self.env.user.company_id,
+        string="Company",
+        required=False,
+        ondelete="cascade",
+    )
+    currency_id = fields.Many2one(
+        comodel_name="res.currency",
+        string="Currency",
+        related="company_id.currency_id",
+    )
     min_value = fields.Monetary("Min Value", currency_field="currency_id")
     max_value = fields.Monetary("Max Value", currency_field="currency_id")
 
