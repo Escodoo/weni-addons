@@ -2,25 +2,23 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 {
-    'name': 'Weni Partner Nps',
-    'summary': """
+    "name": "Weni Partner Nps",
+    "summary": """
         WENI Partner NPS""",
-    'version': '12.0.1.0.0',
-    'license': 'AGPL-3',
-    'author': 'Escodoo',
-    'website': 'https://github.com/escodoo/weni-addons',
-    'depends': [
-        'contacts',
-        'sales_team',
+    "version": "12.0.1.0.0",
+    "license": "AGPL-3",
+    "author": "Escodoo",
+    "website": "https://github.com/Escodoo/weni-addons",
+    "depends": [
+        "contacts",
+        "sales_team",
     ],
-    'data': [
-        'security/weni_partner_nps_channel.xml',
-        'views/weni_partner_nps_channel.xml',
-        # 'data/res_partner_category.xml',
-        'security/res_partner_nps.xml',
-        'views/res_partner_nps.xml',
-        'views/res_partner.xml',
+    "data": [
+        "security/weni_partner_nps_channel.xml",
+        "views/weni_partner_nps_channel.xml",
+        "security/res_partner_nps.xml",
+        "views/res_partner_nps.xml",
+        "views/res_partner.xml",
     ],
-    'demo': [
-    ],
+    "demo": [],
 }

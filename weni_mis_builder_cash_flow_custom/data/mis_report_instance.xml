@@ -1,21 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- Copyright 2022 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
-
 <odoo noupdate="True">
 
   <record id="mis_instance_cash_flow_month" model="mis.report.instance">
     <field name="name">Cash Flow Month</field>
-    <field name="report_id" ref="mis_builder_cash_flow.mis_report_cash_flow"/>
-    <field name="comparison_mode" eval="True"/>
-    <field name="landscape_pdf" eval="True"/>
+    <field name="report_id" ref="mis_builder_cash_flow.mis_report_cash_flow" />
+    <field name="comparison_mode" eval="True" />
+    <field name="landscape_pdf" eval="True" />
   </record>
 
   <record id="mis_period_month_current" model="mis.report.instance.period">
     <field name="name">Current</field>
-    <field name="report_instance_id" ref="mis_instance_cash_flow_month"/>
+    <field name="report_instance_id" ref="mis_instance_cash_flow_month" />
     <field name="source">actuals_alt</field>
-    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow"/>
+    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow" />
     <field name="mode">relative</field>
     <field name="type">m</field>
     <field name="offset">-500</field>
@@ -25,9 +24,9 @@
 
   <record id="mis_period_month_plus_1m" model="mis.report.instance.period">
     <field name="name">+1m</field>
-    <field name="report_instance_id" ref="mis_instance_cash_flow_month"/>
+    <field name="report_instance_id" ref="mis_instance_cash_flow_month" />
     <field name="source">actuals_alt</field>
-    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow"/>
+    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow" />
     <field name="mode">relative</field>
     <field name="type">m</field>
     <field name="offset">1</field>
@@ -37,9 +36,9 @@
 
   <record id="mis_period_month_plus_2m" model="mis.report.instance.period">
     <field name="name">+2m</field>
-    <field name="report_instance_id" ref="mis_instance_cash_flow_month"/>
+    <field name="report_instance_id" ref="mis_instance_cash_flow_month" />
     <field name="source">actuals_alt</field>
-    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow"/>
+    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow" />
     <field name="mode">relative</field>
     <field name="type">m</field>
     <field name="offset">2</field>
@@ -49,9 +48,9 @@
 
   <record id="mis_period_month_plus_3m" model="mis.report.instance.period">
     <field name="name">+3m</field>
-    <field name="report_instance_id" ref="mis_instance_cash_flow_month"/>
+    <field name="report_instance_id" ref="mis_instance_cash_flow_month" />
     <field name="source">actuals_alt</field>
-    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow"/>
+    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow" />
     <field name="mode">relative</field>
     <field name="type">m</field>
     <field name="offset">3</field>
@@ -61,9 +60,9 @@
 
   <record id="mis_period_month_plus_4m" model="mis.report.instance.period">
     <field name="name">+4m</field>
-    <field name="report_instance_id" ref="mis_instance_cash_flow_month"/>
+    <field name="report_instance_id" ref="mis_instance_cash_flow_month" />
     <field name="source">actuals_alt</field>
-    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow"/>
+    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow" />
     <field name="mode">relative</field>
     <field name="type">m</field>
     <field name="offset">4</field>
@@ -73,9 +72,9 @@
 
   <record id="mis_period_month_plus_5m" model="mis.report.instance.period">
     <field name="name">+5m</field>
-    <field name="report_instance_id" ref="mis_instance_cash_flow_month"/>
+    <field name="report_instance_id" ref="mis_instance_cash_flow_month" />
     <field name="source">actuals_alt</field>
-    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow"/>
+    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow" />
     <field name="mode">relative</field>
     <field name="type">m</field>
     <field name="offset">5</field>
@@ -85,9 +84,9 @@
 
   <record id="mis_period_month_plus_6m" model="mis.report.instance.period">
     <field name="name">+6m</field>
-    <field name="report_instance_id" ref="mis_instance_cash_flow_month"/>
+    <field name="report_instance_id" ref="mis_instance_cash_flow_month" />
     <field name="source">actuals_alt</field>
-    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow"/>
+    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow" />
     <field name="mode">relative</field>
     <field name="type">m</field>
     <field name="offset">6</field>
@@ -97,9 +96,9 @@
 
   <record id="mis_period_month_plus_7m" model="mis.report.instance.period">
     <field name="name">+7m</field>
-    <field name="report_instance_id" ref="mis_instance_cash_flow_month"/>
+    <field name="report_instance_id" ref="mis_instance_cash_flow_month" />
     <field name="source">actuals_alt</field>
-    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow"/>
+    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow" />
     <field name="mode">relative</field>
     <field name="type">m</field>
     <field name="offset">7</field>
@@ -109,9 +108,9 @@
 
   <record id="mis_period_month_plus_8m" model="mis.report.instance.period">
     <field name="name">+8m</field>
-    <field name="report_instance_id" ref="mis_instance_cash_flow_month"/>
+    <field name="report_instance_id" ref="mis_instance_cash_flow_month" />
     <field name="source">actuals_alt</field>
-    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow"/>
+    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow" />
     <field name="mode">relative</field>
     <field name="type">m</field>
     <field name="offset">8</field>
@@ -121,9 +120,9 @@
 
   <record id="mis_period_month_plus_9m" model="mis.report.instance.period">
     <field name="name">+9m</field>
-    <field name="report_instance_id" ref="mis_instance_cash_flow_month"/>
+    <field name="report_instance_id" ref="mis_instance_cash_flow_month" />
     <field name="source">actuals_alt</field>
-    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow"/>
+    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow" />
     <field name="mode">relative</field>
     <field name="type">m</field>
     <field name="offset">9</field>
@@ -133,9 +132,9 @@
 
   <record id="mis_period_month_plus_10m" model="mis.report.instance.period">
     <field name="name">+10m</field>
-    <field name="report_instance_id" ref="mis_instance_cash_flow_month"/>
+    <field name="report_instance_id" ref="mis_instance_cash_flow_month" />
     <field name="source">actuals_alt</field>
-    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow"/>
+    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow" />
     <field name="mode">relative</field>
     <field name="type">m</field>
     <field name="offset">10</field>
@@ -145,9 +144,9 @@
 
   <record id="mis_period_month_plus_11m" model="mis.report.instance.period">
     <field name="name">+11m</field>
-    <field name="report_instance_id" ref="mis_instance_cash_flow_month"/>
+    <field name="report_instance_id" ref="mis_instance_cash_flow_month" />
     <field name="source">actuals_alt</field>
-    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow"/>
+    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow" />
     <field name="mode">relative</field>
     <field name="type">m</field>
     <field name="offset">11</field>
@@ -157,9 +156,9 @@
 
   <record id="mis_period_month_plus_12m" model="mis.report.instance.period">
     <field name="name">+12m</field>
-    <field name="report_instance_id" ref="mis_instance_cash_flow_month"/>
+    <field name="report_instance_id" ref="mis_instance_cash_flow_month" />
     <field name="source">actuals_alt</field>
-    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow"/>
+    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow" />
     <field name="mode">relative</field>
     <field name="type">m</field>
     <field name="offset">12</field>
@@ -169,9 +168,9 @@
 
   <record id="mis_period_month_future" model="mis.report.instance.period">
     <field name="name">Future</field>
-    <field name="report_instance_id" ref="mis_instance_cash_flow_month"/>
+    <field name="report_instance_id" ref="mis_instance_cash_flow_month" />
     <field name="source">actuals_alt</field>
-    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow"/>
+    <field name="source_aml_model_id" ref="mis_builder_cash_flow.model_mis_cash_flow" />
     <field name="mode">relative</field>
     <field name="type">m</field>
     <field name="offset">13</field>

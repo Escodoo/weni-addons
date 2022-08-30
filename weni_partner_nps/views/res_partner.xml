@@ -1,28 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- Copyright 2022 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
-
 <odoo>
 
     <record model="ir.ui.view" id="res_partner_form_view">
         <field name="name">res.partner.form (in weni_partner_nps)</field>
         <field name="model">res.partner</field>
-        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="inherit_id" ref="base.view_partner_form" />
         <field name="arch" type="xml">
             <notebook position="inside">
-                <page string="NPS" attrs="{'invisible': [('company_type','!=', 'company')]}">
-                    <field name="weni_nps_ids" context="{'default_partner_id': active_id}" />
+                <page
+                    string="NPS"
+                    attrs="{'invisible': [('company_type','!=', 'company')]}"
+                >
+                    <field
+                        name="weni_nps_ids"
+                        context="{'default_partner_id': active_id}"
+                    />
                 </page>
             </notebook>
 
-            <xpath expr="//div[@name='button_box']" position="inside" >
-                <button class="oe_stat_button" type="object"
-                        icon="fa-area-chart"
-                        name="action_view_weni_npss"
-                        context="{'default_partner_id': active_id}"
-                        attrs="{'invisible': [('company_type','!=', 'company')]}"
-                        help="NPS">
-                        <field string="Current NPS" name="weni_current_nps" widget="statinfo"/>
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button
+                    class="oe_stat_button"
+                    type="object"
+                    icon="fa-area-chart"
+                    name="action_view_weni_npss"
+                    context="{'default_partner_id': active_id}"
+                    attrs="{'invisible': [('company_type','!=', 'company')]}"
+                    help="NPS"
+                >
+                        <field
+                        string="Current NPS"
+                        name="weni_current_nps"
+                        widget="statinfo"
+                    />
                 </button>
             </xpath>
 
@@ -41,11 +53,14 @@
     <record model="ir.ui.view" id="res_partner_tree_view">
         <field name="name">res.partner.tree (in weni_partner_nps)</field>
         <field name="model">res.partner</field>
-        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="inherit_id" ref="base.view_partner_tree" />
         <field name="arch" type="xml">
-            <field name="active" position="before" >
-                <field name="company_type" invisible="1"/>
-                <field name="weni_current_nps" attrs="{'invisible': [('company_type','!=', 'company')]}"/>
+            <field name="active" position="before">
+                <field name="company_type" invisible="1" />
+                <field
+                    name="weni_current_nps"
+                    attrs="{'invisible': [('company_type','!=', 'company')]}"
+                />
             </field>
         </field>
     </record>

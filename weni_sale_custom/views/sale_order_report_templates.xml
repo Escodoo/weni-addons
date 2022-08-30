@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <template id="report_saleorder_document" inherit_id="sale.report_saleorder_document">
+    <template
+        id="report_saleorder_document"
+        inherit_id="sale.report_saleorder_document"
+    >
 
         <!-- remove payment_term section -->
         <div name="payment_term" position="attributes">
@@ -20,7 +23,7 @@
         </th>
         <td name="td_taxes" position="before">
             <td name="td_recurrency" class="text-right">
-                <span t-field="line.is_contract"/>
+                <span t-field="line.is_contract" />
             </td>
         </td>
 

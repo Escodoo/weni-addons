@@ -1,29 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- Copyright 2021 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
-
 <odoo>
 
     <record model="ir.ui.view" id="account_invoice_form_view">
         <field name="name">account.invoice.form (in weni_account_custom)</field>
         <field name="model">account.invoice</field>
-        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="inherit_id" ref="account.invoice_form" />
         <field name="arch" type="xml">
             <header position="inside">
-                <button name="action_show_fiscal_document"
+                <button
+                    name="action_show_fiscal_document"
                     string="Fiscal Document"
                     type="object"
-                    icon="fa-file-text"/>
-                <button name="action_show_payment_slip"
+                    icon="fa-file-text"
+                />
+                <button
+                    name="action_show_payment_slip"
                     string="Payment Slip"
                     type="object"
-                    icon="fa-usd"/>
+                    icon="fa-usd"
+                />
             </header>
             <xpath expr="//page[@name='other_info']" position="after">
                 <page name="links" string="Links">
                     <group>
-                        <field name="weni_fiscal_document_url"/>
-                        <field name="weni_payment_slip_url"/>
+                        <field name="weni_fiscal_document_url" />
+                        <field name="weni_payment_slip_url" />
                     </group>
                 </page>
             </xpath>
@@ -42,17 +45,21 @@
     <record model="ir.ui.view" id="account_invoice_tree_view">
         <field name="name">account.invoice.tree (in weni_account_custom)</field>
         <field name="model">account.invoice</field>
-        <field name="inherit_id" ref="account.invoice_tree"/>
+        <field name="inherit_id" ref="account.invoice_tree" />
         <field name="arch" type="xml">
             <field name="state" position="after">
-                <button name="action_show_fiscal_document"
-                        string="Fiscal Document"
-                        type="object"
-                        icon="fa-file-text"/>
-                <button name="action_show_payment_slip"
-                        string="Payment Slip"
-                        type="object"
-                        icon="fa-usd"/>
+                <button
+                    name="action_show_fiscal_document"
+                    string="Fiscal Document"
+                    type="object"
+                    icon="fa-file-text"
+                />
+                <button
+                    name="action_show_payment_slip"
+                    string="Payment Slip"
+                    type="object"
+                    icon="fa-usd"
+                />
             </field>
         </field>
     </record>

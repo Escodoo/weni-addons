@@ -2,10 +2,13 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from dateutil.relativedelta import relativedelta
-from odoo import _, api, fields, models
+
+from odoo import api, fields, models
+
 from odoo.addons.queue_job.job import job
 
 QUEUE_CHANNEL = "root.CONTRACT_MIS_BUILDER_CASH_FLOW"
+
 
 class ContractLine(models.Model):
 
@@ -13,14 +16,14 @@ class ContractLine(models.Model):
 
     forecast_line_ids = fields.One2many(
         comodel_name="mis.cash_flow.forecast_line",
-        compute='_compute_forecast_line_ids',
+        compute="_compute_forecast_line_ids",
         string="Forecast Line",
         required=False,
     )
 
     forecast_line_count = fields.Integer(
-        compute='_compute_forecast_line_ids',
-        string='Forecast Line Count',
+        compute="_compute_forecast_line_ids",
+        string="Forecast Line Count",
     )
 
     @api.multi
@@ -28,14 +31,17 @@ class ContractLine(models.Model):
         self, period_date_start, period_date_end, recurring_next_date
     ):
         self.ensure_one()
-        sign = self.contract_id.contract_type in ['purchase'] and -1 or 1
+        sign = self.contract_id.contract_type in ["purchase"] and -1 or 1
         subtotal = self.quantity * self.price_unit
         discount = self.discount / 100
         subtotal *= 1 - discount
         price_subtotal_signed = subtotal * sign
         price_subtotal_company_signed = price_subtotal_signed
-        if (self.contract_id.currency_id and self.contract_id.company_id and
-                self.contract_id.currency_id != self.contract_id.company_id.currency_id):
+        if (
+            self.contract_id.currency_id
+            and self.contract_id.company_id
+            and self.contract_id.currency_id != self.contract_id.company_id.currency_id
+        ):
             cur = self.contract_id.currency_id
             price_subtotal = cur.round(subtotal)
             price_subtotal_signed = cur.round(price_subtotal_signed)
@@ -43,33 +49,36 @@ class ContractLine(models.Model):
             price_subtotal_company = cur._convert(
                 price_subtotal,
                 self.contract_id.company_id.currency_id,
-                self.contract_id.company_id, rate_date)
+                self.contract_id.company_id,
+                rate_date,
+            )
             price_subtotal_company_signed = price_subtotal_company * sign
-            currency_rate = (price_subtotal_signed
-                                  / price_subtotal_company_signed) or False
-        else:
-            price_subtotal = subtotal
-            currency_rate = 1
+        #     currency_rate = (
+        #         price_subtotal_signed / price_subtotal_company_signed
+        #     ) or False
+        # else:
+        #     price_subtotal = subtotal
 
-        if self.contract_id.contract_type == 'sale':
+        if self.contract_id.contract_type == "sale":
             account_id = self.contract_id.partner_id.property_account_receivable_id.id
-        elif self.contract_id.contract_type == 'purchase':
+        elif self.contract_id.contract_type == "purchase":
             account_id = self.contract_id.partner_id.property_account_payable_id.id
 
         parent_res_id = self.contract_id
-        parent_res_model_id = self.env['ir.model']._get(parent_res_id._name)
+        parent_res_model_id = self.env["ir.model"]._get(parent_res_id._name)
 
         return {
-            "name": '%s - %s' % (
+            "name": "%s - %s"
+            % (
                 self.contract_id.display_name,
-                self._insert_markers(period_date_start, period_date_end)
+                self._insert_markers(period_date_start, period_date_end),
             ),
             "date": recurring_next_date,
             "account_id": account_id,
             "partner_id": self.contract_id.partner_id.id,
             "balance": price_subtotal_company_signed,
             "company_id": self.contract_id.company_id.id,
-            "res_model_id": self.env['ir.model']._get(self._name).id,
+            "res_model_id": self.env["ir.model"]._get(self._name).id,
             "res_id": self.id,
             "parent_res_model_id": parent_res_model_id.id,
             "parent_res_id": parent_res_id.id,
@@ -110,11 +119,8 @@ class ContractLine(models.Model):
                 period_date_end = rec.next_period_date_end
                 recurring_next_date = rec.recurring_next_date
                 max_date_end = rec.date_end if not rec.is_auto_renew else False
-                while (
+                while period_date_end and rec._get_generate_forecast_line_criteria(
                     period_date_end
-                    and rec._get_generate_forecast_line_criteria(
-                        period_date_end
-                    )
                 ):
                     if period_date_end and recurring_next_date:
                         new_vals = rec._prepare_forecast_line(
@@ -145,7 +151,9 @@ class ContractLine(models.Model):
     def create(self, values):
         contract_lines = super(ContractLine, self).create(values)
         for contract_line in contract_lines:
-            if contract_line.contract_id.company_id.enable_contract_mis_cash_flow_forecast:
+            if (
+                contract_line.contract_id.company_id.enable_contract_mis_cash_flow_forecast
+            ):
                 contract_line.with_delay()._generate_forecast_lines()
         return contract_lines
 
@@ -173,10 +181,7 @@ class ContractLine(models.Model):
     def write(self, values):
         res = super(ContractLine, self).write(values)
         if any(
-            [
-                field in values
-                for field in self._get_forecast_update_trigger_fields()
-            ]
+            [field in values for field in self._get_forecast_update_trigger_fields()]
         ):
             for rec in self:
                 if rec.contract_id.company_id.enable_contract_mis_cash_flow_forecast:
@@ -195,7 +200,7 @@ class ContractLine(models.Model):
         offset = 0
         while True:
             contract_lines = self.search(
-                [('is_canceled', '=', False)], limit=100, offset=offset
+                [("is_canceled", "=", False)], limit=100, offset=offset
             )
             contract_lines.with_delay()._generate_forecast_lines()
             if len(contract_lines) < 100:
@@ -203,11 +208,13 @@ class ContractLine(models.Model):
             offset += 100
 
     def _compute_forecast_line_ids(self):
-        ForecastLine = self.env['mis.cash_flow.forecast_line']
-        forecast_lines = ForecastLine.search([
-            ('res_model', '=', self._name),
-            ('res_id', 'in', self.ids),
-        ])
+        ForecastLine = self.env["mis.cash_flow.forecast_line"]
+        forecast_lines = ForecastLine.search(
+            [
+                ("res_model", "=", self._name),
+                ("res_id", "in", self.ids),
+            ]
+        )
 
         result = dict.fromkeys(self.ids, ForecastLine)
         for forecast in forecast_lines:

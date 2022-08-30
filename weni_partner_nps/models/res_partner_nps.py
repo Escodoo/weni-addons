@@ -9,22 +9,21 @@ class ResPartnerNps(models.Model):
     _name = "res.partner.nps"
     _description = "Res Partner Nps"  # TODO
 
-
-    name = fields.Char(string='Name', compute='_compute_name')
+    name = fields.Char(string="Name", compute="_compute_name")
     submission_date = fields.Date(
-        'Submission Date',
-        default=fields.Date.context_today, required=True)
-    return_date = fields.Date('Return Date')
-    channel_id = fields.Many2one('weni.partner.nps.channel', 'Channel')
-    channel = fields.Char('Old Field Channel')
-    partner_id = fields.Many2one('res.partner', 'Customer', required=True)
-    contact_id = fields.Many2one('res.partner', 'Contact', required=True)
-    nps = fields.Integer('NPS')
-    comment = fields.Text('Comment', placeholder='Customer comment...')
+        "Submission Date", default=fields.Date.context_today, required=True
+    )
+    return_date = fields.Date("Return Date")
+    channel_id = fields.Many2one("weni.partner.nps.channel", "Channel")
+    channel = fields.Char("Old Field Channel")
+    partner_id = fields.Many2one("res.partner", "Customer", required=True)
+    contact_id = fields.Many2one("res.partner", "Contact", required=True)
+    nps = fields.Integer("NPS")
+    comment = fields.Text("Comment", placeholder="Customer comment...")
 
     @api.depends("submission_date", "partner_id", "contact_id")
     def _compute_name(self):
-        locale = self.env.context.get("lang") or self.env.user.lang or "en_US"
+        self.env.context.get("lang") or self.env.user.lang or "en_US"
         for rec in self:
             if not rec.partner_id or not rec.contact_id:
                 rec.name = "Draft"
@@ -32,5 +31,5 @@ class ResPartnerNps(models.Model):
                 rec.name = _("%s / %s / %s") % (
                     rec.submission_date,
                     rec.partner_id.name,
-                    rec.contact_id.name
+                    rec.contact_id.name,
                 )
