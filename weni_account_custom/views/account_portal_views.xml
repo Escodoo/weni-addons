@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <template
+        id="weni_account_portal_my_invoices"
+        inherit_id="account.portal_my_invoices"
+    >
+
+        <xpath
+            expr="//tr[@class='active']//th[@class='d-none d-md-table-cell']"
+            position="after"
+        >
+            <th />
+        </xpath>
+
+        <xpath expr="//td[@class='tx_status']" position="after">
+            <td class="text-left">
+                <t t-if="invoice.state == 'open' or invoice.state == 'paid' ">
+                    <div class="btn-toolbar flex-sm-nowrap">
+                        <div class="btn-group flex-grow-1 mb-1">
+                            <a
+                                t-att-class="'btn btn-sm btn-primary %s' % ('disabled' if not invoice.weni_fiscal_document_url else '')"
+                                t-att-href="invoice.weni_fiscal_document_url"
+                                title="Fiscal Document"
+                                target="_blank"
+                            ><i class="fa fa-download" /> Fiscal Document</a>
+                        </div>
+                        <div class="btn-group flex-grow-1 mb-1">
+                            <a
+                                t-att-class="'btn btn-sm btn-primary %s' % ('disabled' if not invoice.weni_payment_slip_url else '')"
+                                t-att-href="invoice.weni_payment_slip_url"
+                                id="print_invoice_report"
+                                title="Payment Slip"
+                                target="_blank"
+                            ><i class="fa fa-download" /> Payment Slip</a>
+                        </div>
+                    </div>
+
+                </t>
+          </td>
+        </xpath>
+
+    </template>
+
+</odoo>

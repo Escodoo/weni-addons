@@ -10,11 +10,12 @@ class ResPartner(models.Model):
 
     _inherit = "res.partner"
 
-    def search_max(self, invoice_id):
+    @api.model
+    def _compute_mrr(self, amount):
         return self.env["weni.customer.mrr.scale"].search(
             [
-                ("min_value", "<=", invoice_id.amount_total_company_signed),
-                ("max_value", ">=", invoice_id.amount_total_company_signed),
+                ("min_value", "<=", amount),
+                ("max_value", ">=", amount),
             ],
             limit=1,
         )
@@ -39,5 +40,5 @@ class ResPartner(models.Model):
                 )
                 if len(invoice_ids) > 0:
                     invoice_id = invoice_ids.sorted(key=lambda r: r.date_invoice)[-1]
-                    mrr = self.search_max(invoice_id)
+                    mrr = self._compute_mrr(invoice_id.amount_total_company_signed)
             partner.weni_customer_mrr_scale_id = mrr

@@ -86,18 +86,18 @@ class TestMrrScale(SavepointCase):
     def test_mrr_limits(self):
         self.assertEqual(self.invoice.amount_total, 200.00)
         self.assertTrue(
-            True if self.partner_1.search_max(self.invoice) else False,
+            True if self.partner_1._compute_mrr(self.invoice) else False,
             "MRR: Should return true for value between limits.",
         )
         self.invoice_line1.price_unit = 1200
         self.invoice._onchange_invoice_line_ids()
         self.assertFalse(
-            True if self.partner_1.search_max(self.invoice) else False,
+            True if self.partner_1._compute_mrr(self.invoice) else False,
             "MRR: Should return false for value above upper limit.",
         )
         self.invoice_line1.price_unit = 40
         self.invoice._onchange_invoice_line_ids()
         self.assertFalse(
-            True if self.partner_1.search_max(self.invoice) else False,
+            True if self.partner_1._compute_mrr(self.invoice) else False,
             "MRR: Should return true for value below lower limit.",
         )
