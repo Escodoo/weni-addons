@@ -13,8 +13,8 @@ class TestMrrScale(SavepointCase):
 
         cls.mrr = mrr_scale.create(
             {
-                "name": "Test Partner",
-                "currency_id": 1,
+                "name": "Test MRR",
+                "currency_id": cls.env.user.company_id.id,
                 "min_value": 50.00,
                 "max_value": 1000.00,
             }
@@ -33,21 +33,16 @@ class TestMrrScale(SavepointCase):
                 "reconcile": True,
             }
         )
-        cls.partner_1 = cls.env["res.partner"].create(
+        cls.partner = cls.env["res.partner"].create(
             {
                 "name": "Mr. Odoo",
-            }
-        )
-        cls.partner_2 = cls.env["res.partner"].create(
-            {
-                "name": "Mrs. Odoo",
             }
         )
         cls.tax = cls.env["account.tax"].create(
             {
                 "name": "NO TAX",
                 "amount_type": "percent",
-                "type_tax_use": "purchase",
+                "type_tax_use": "sale",
                 "amount": 0,
             }
         )
@@ -62,13 +57,12 @@ class TestMrrScale(SavepointCase):
             {
                 "name": "Test Customer Invoice",
                 "journal_id": cls.journal.id,
-                "partner_id": cls.partner_1.id,
+                "partner_id": cls.partner.id,
                 "account_id": cls.account.id,
                 "type": "in_invoice",
             }
         )
-        cls.invoice_line = cls.env["account.invoice.line"]
-        cls.invoice_line1 = cls.invoice_line.create(
+        cls.invoice_line = cls.env["account.invoice.line"].create(
             {
                 "invoice_id": cls.invoice.id,
                 "name": "Line 1",
@@ -86,18 +80,18 @@ class TestMrrScale(SavepointCase):
     def test_mrr_limits(self):
         self.assertEqual(self.invoice.amount_total, 200.00)
         self.assertTrue(
-            True if self.partner_1._compute_mrr(self.invoice) else False,
+            self.partner._compute_mrr(self.invoice.amount_total_company_signed),
             "MRR: Should return true for value between limits.",
         )
-        self.invoice_line1.price_unit = 1200
+        self.invoice_line.price_unit = 1200
         self.invoice._onchange_invoice_line_ids()
         self.assertFalse(
-            True if self.partner_1._compute_mrr(self.invoice) else False,
+            self.partner._compute_mrr(self.invoice.amount_total_company_signed),
             "MRR: Should return false for value above upper limit.",
         )
-        self.invoice_line1.price_unit = 40
+        self.invoice_line.price_unit = 40
         self.invoice._onchange_invoice_line_ids()
         self.assertFalse(
-            True if self.partner_1._compute_mrr(self.invoice) else False,
+            self.partner._compute_mrr(self.invoice.amount_total_company_signed),
             "MRR: Should return true for value below lower limit.",
         )
