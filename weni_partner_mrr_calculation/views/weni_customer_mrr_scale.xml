@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record model="ir.ui.view" id="weni_customer_mrr_scale_form_view">
+        <field
+            name="name"
+        >weni.customer.mrr.scale.form (in weni_partner_mrr_calculation)</field>
+        <field name="model">weni.customer.mrr.scale</field>
+        <field
+            name="inherit_id"
+            ref="weni_contacts_custom.weni_customer_mrr_scale_form_view"
+        />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="min_value" />
+                <field name="max_value" />
+                <field name="company_id" groups="base.group_multi_company" />
+                <field name="currency_id" />
+            </field>
+        </field>
+    </record>
+</odoo>
