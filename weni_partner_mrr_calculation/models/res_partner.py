@@ -35,7 +35,7 @@ class ResPartner(models.Model):
                 invoice_ids = invoice_ids.filtered(
                     lambda x: (x.state == "open" or x.state == "paid")
                     and x.type == "out_invoice"
-                    and x.invoice_line_ids.contract_line_id
+                    and x.invoice_line_ids[0].contract_line_id
                     and x.date_invoice > fields.Date.today() - relativedelta(months=3)
                 )
                 if len(invoice_ids) > 0:
