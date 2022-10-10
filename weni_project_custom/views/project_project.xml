@@ -3,15 +3,17 @@
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo>
 
-<!--    <record model="ir.ui.view" id="project_project_form_view">-->
-<!--        <field name="name">project.project.form (in weni_project_custom)</field>-->
-<!--        <field name="model">project.project</field>-->
-<!--        <field name="inherit_id" ref="TODO othermodule.form_view"/>-->
-<!--        <field name="arch" type="xml">-->
-<!--            &lt;!&ndash; TODO &ndash;&gt;-->
-<!--        </field>-->
-<!--    </record>-->
-
-
-
+    <record model="ir.ui.view" id="project_project_form_view">
+        <field name="name">project.project.form (in weni_project_custom)</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//field[@name='resource_calendar_id']/.."
+                position="attributes"
+            >
+                <attribute name="groups" />
+            </xpath>
+        </field>
+    </record>
 </odoo>
