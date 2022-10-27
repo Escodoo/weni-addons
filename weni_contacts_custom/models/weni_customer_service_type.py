@@ -10,3 +10,10 @@ class WeniCustomerServiceType(models.Model):
     _description = "Customer Service Type"
 
     name = fields.Char()
+
+    task_ids = fields.One2many(
+        comodel_name="weni.customer.service.type.task",
+        inverse_name="customer_service_type_id",
+        string="Recurrence Tasks",
+        required=False,
+    )
