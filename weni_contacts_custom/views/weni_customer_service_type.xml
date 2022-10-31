@@ -18,6 +18,13 @@
                     <group>
                         <field name="name" />
                     </group>
+                    <notebook>
+                        <page string="Recurrence Tasks">
+                            <group>
+                                <field name="task_ids" />
+                            </group>
+                        </page>
+                    </notebook>
                 </sheet>
                 <div class="oe_chatter" />
             </form>

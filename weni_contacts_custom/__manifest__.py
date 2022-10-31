@@ -13,8 +13,13 @@
         "partner_industry_secondary",
         "account",
         "sales_team",
+        "calendar",
     ],
     "data": [
+        "security/res_partner_service_type_task.xml",
+        "views/res_partner_service_type_task.xml",
+        "security/weni_customer_service_type_task.xml",
+        "views/weni_customer_service_type_task.xml",
         "security/weni_customer_mrr_scale.xml",
         "views/weni_customer_mrr_scale.xml",
         "security/weni_customer_service_type.xml",
@@ -22,6 +27,7 @@
         "security/weni_customer_status.xml",
         "views/weni_customer_status.xml",
         "views/res_partner.xml",
+        "data/ir_cron.xml",
     ],
     "demo": [],
 }

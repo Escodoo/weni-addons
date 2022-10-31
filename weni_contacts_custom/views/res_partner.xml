@@ -28,6 +28,9 @@
                         <field name="weni_months_customer_lifetime" />
                     </group>
                 </page>
+                <page string="Recurrence Tasks">
+                    <field name="weni_recurrence_task_ids" />
+                </page>
             </notebook>
         </field>
     </record>

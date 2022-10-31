@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record model="ir.ui.view" id="weni_customer_service_type_task_form_view">
+        <field
+            name="name"
+        >weni.customer.service.type.task.form (in weni_contacts_custom)</field>
+        <field name="model">weni.customer.service.type.task</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <!-- TODO -->
+                </header>
+                <sheet>
+                    <!-- TODO -->
+                    <group>
+                        <group>
+                            <field
+                                name="activity_type_id"
+                                domain="['|', ('res_model_id', '=', False), ('res_model_id', '=', 'res.partner')]"
+                            />
+                            <field name="name" />
+                        </group>
+                        <group>
+                            <field name="user_id" />
+                            <field name="recurrence_count" />
+                            <field name="recurrence_unit" />
+                            <field
+                                name="day_of_month"
+                                attrs="{'invisible': [('recurrence_unit', '!=', 'months')]}"
+                            />
+                        </group>
+                    </group>
+
+                    <field name="note" placeholder="Log a note..." />
+                </sheet>
+                <div class="oe_chatter" />
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="weni_customer_service_type_task_search_view">
+        <field
+            name="name"
+        >weni.customer.service.type.task.search (in weni_contacts_custom)</field>
+        <field name="model">weni.customer.service.type.task</field>
+        <field name="arch" type="xml">
+            <search>
+                <!-- TODO -->
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="weni_customer_service_type_task_tree_view">
+        <field
+            name="name"
+        >weni.customer.service.type.task.tree (in weni_contacts_custom)</field>
+        <field name="model">weni.customer.service.type.task</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="activity_type_id" />
+                <field name="recurrence_count" />
+                <field name="recurrence_unit" />
+                <field name="user_id" />
+            </tree>
+        </field>
+    </record>
+
+</odoo>
