@@ -64,4 +64,60 @@
         </field>
     </record>
 
+    <record model="ir.ui.view" id="account_invoice_supplier_form">
+        <field
+            name="name"
+        >account.invoice.supplier.form (in weni_account_custom)</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_supplier_form" />
+        <field name="arch" type="xml">
+            <header position="inside">
+                <button
+                    name="action_show_fiscal_document"
+                    string="Fiscal Document"
+                    type="object"
+                    icon="fa-file-text"
+                />
+                <button
+                    name="action_show_payment_slip"
+                    string="Payment Slip"
+                    type="object"
+                    icon="fa-usd"
+                />
+            </header>
+            <xpath expr="//page[@name='other_info']" position="after">
+                <page name="links" string="Links">
+                    <group>
+                        <field name="weni_fiscal_document_url" />
+                        <field name="weni_payment_slip_url" />
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="account_invoice_supplier_tree">
+        <field
+            name="name"
+        >account.invoice.supplier.tree (in weni_account_custom)</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_supplier_tree" />
+        <field name="arch" type="xml">
+            <field name="state" position="after">
+                <button
+                    name="action_show_fiscal_document"
+                    string="Fiscal Document"
+                    type="object"
+                    icon="fa-file-text"
+                />
+                <button
+                    name="action_show_payment_slip"
+                    string="Payment Slip"
+                    type="object"
+                    icon="fa-usd"
+                />
+            </field>
+        </field>
+    </record>
+
 </odoo>
