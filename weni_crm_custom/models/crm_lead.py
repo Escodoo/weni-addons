@@ -7,7 +7,6 @@ from odoo import api, fields, models
 
 
 class CrmLead(models.Model):
-
     _inherit = "crm.lead"
 
     # Main
@@ -96,7 +95,7 @@ class CrmLead(models.Model):
         return self.write({"weni_lost_date": date.today()})
 
     def toggle_active(self):
-        res = super(CrmLead, self).toggle_active()
+        res = super().toggle_active()
         for lead in self.filtered(lambda lead: lead.active):
             lead.lost_reason = False
             lead.weni_lost_date = False

@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class CrmLeadDecisionMaker(models.Model):
-
     _name = "crm.lead.decision.maker"
     _description = "Crm Lead Decision Maker"
 
