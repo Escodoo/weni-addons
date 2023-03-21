@@ -8,7 +8,6 @@ from odoo.fields import date
 
 
 class ResPartnerServiceTypeTask(models.Model):
-
     _name = "res.partner.service.type.task"
     _description = "Partner Service Type Task"
     _inherit = ["weni.customer.service.type.task.mixin"]
