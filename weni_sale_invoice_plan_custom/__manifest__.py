@@ -9,6 +9,7 @@
     "license": "AGPL-3",
     "author": "Escodoo",
     "maintainers": ["marcelsavegnago"],
+    'development_status': 'Alpha',
     "website": "https://github.com/Escodoo/weni-addons",
     "depends": [
         "sale_invoice_plan",
