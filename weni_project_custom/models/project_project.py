@@ -5,5 +5,4 @@ from odoo import models
 
 
 class ProjectProject(models.Model):
-
     _inherit = "project.project"
