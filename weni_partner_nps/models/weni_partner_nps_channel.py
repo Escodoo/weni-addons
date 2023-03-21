@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class WeniPartnerNpsChannel(models.Model):
-
     _name = "weni.partner.nps.channel"
     _description = "NPS Channel"
 

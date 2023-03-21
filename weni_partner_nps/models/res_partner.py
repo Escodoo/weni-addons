@@ -5,7 +5,6 @@ from odoo import api, fields, models
 
 
 class ResPartner(models.Model):
-
     _inherit = "res.partner"
 
     @api.depends("weni_nps_ids")
@@ -15,7 +14,6 @@ class ResPartner(models.Model):
 
     @api.depends("weni_current_nps")
     def _compute_current_nps_classification(self):
-
         for rec in self:
             if rec.weni_nps_ids:
                 if rec.weni_current_nps <= 3:
