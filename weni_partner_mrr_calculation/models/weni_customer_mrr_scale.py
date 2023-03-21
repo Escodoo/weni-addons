@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class WeniCustomerMrrScale(models.Model):
-
     _inherit = "weni.customer.mrr.scale"
     _description = "Customer MRR Scale"
 
