@@ -5,18 +5,15 @@ from odoo import api, fields, models
 
 
 class SaleOrder(models.Model):
-
     _inherit = "sale.order"
 
     @api.model
     def _cron_sale_invoice_plan(self):
-
         sale_order_ids = self.env["sale.order"].search(
             [("use_invoice_plan", "=", True), ("invoice_status", "=", "to invoice")]
         )
         sale_orders_invoiced = []
         for sale in sale_order_ids:
-
             invoice_plans = sale.invoice_plan_ids.filtered(
                 lambda l: not l.invoiced and l.plan_date <= fields.Date.today()
             )
