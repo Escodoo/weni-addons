@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class AccountPayment(models.Model):
-
     _inherit = "account.payment"
 
     weni_id = fields.Char(

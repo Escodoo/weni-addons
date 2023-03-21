@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class ProjectProject(models.Model):
-
     _inherit = "project.project"
 
     weni_id = fields.Char(
