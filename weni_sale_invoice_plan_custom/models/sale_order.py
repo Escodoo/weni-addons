@@ -15,11 +15,11 @@ class SaleOrder(models.Model):
         sale_orders_invoiced = []
         for sale in sale_order_ids:
             invoice_plans = sale.invoice_plan_ids.filtered(
-                lambda l: not l.invoiced and l.plan_date <= fields.Date.today()
+                lambda x: not x.invoiced and x.plan_date <= fields.Date.today()
             )
             for plan in invoice_plans:
                 task_open = plan.project_task_ids.filtered(
-                    lambda l: not l.stage_id.closed
+                    lambda x: not x.stage_id.closed
                 )
 
             if invoice_plans and not task_open:
