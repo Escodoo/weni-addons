@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class ContractLine(models.Model):
-
     _inherit = "contract.line"
 
     contract_line_consumption_ids = fields.One2many(
