@@ -5,7 +5,6 @@ from odoo import api, models
 
 
 class SaleOrder(models.Model):
-
     _inherit = "sale.order"
 
     @api.model
@@ -21,7 +20,7 @@ class SaleOrder(models.Model):
 
     @api.multi
     def write(self, values):
-        res = super(SaleOrder, self).write(values)
+        res = super().write(values)
         if any(
             [field in values for field in self._get_forecast_update_trigger_fields()]
         ):
