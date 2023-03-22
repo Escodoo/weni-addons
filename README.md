@@ -40,7 +40,7 @@ addon | version | maintainers | summary
 
 <!-- prettier-ignore-end -->
 
-## Licenses
+## Licenses.
 
 This repository is licensed under [AGPL-3.0](LICENSE).
 
