@@ -10,6 +10,7 @@
     "author": "Escodoo",
     "maintainers": ["marcelsavegnago"],
     "website": "https://github.com/Escodoo/weni-addons",
+    'development_status': 'Alpha',
     "depends": [
         "weni_mis_builder_cash_flow_custom",
         "sale_invoice_plan",

@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class WeniCustomerStatus(models.Model):
-
     _name = "weni.customer.status"
     _description = "Customer Status"
 

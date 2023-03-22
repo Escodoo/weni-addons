@@ -9,7 +9,6 @@ QUEUE_CHANNEL = "root.SALE_INVOICE_PLAN_MIS_BUILDER_CASH_FLOW"
 
 
 class SaleInvoicePlan(models.Model):
-
     _inherit = "sale.invoice.plan"
 
     forecast_line_ids = fields.One2many(
@@ -57,7 +56,7 @@ class SaleInvoicePlan(models.Model):
 
     @api.model
     def create(self, values):
-        plans = super(SaleInvoicePlan, self).create(values)
+        plans = super().create(values)
         for plan in plans:
             if plan.sale_id.company_id.enable_sale_invoice_plan_mis_cash_flow_forecast:
                 plan.with_delay()._generate_forecast_lines()
@@ -81,7 +80,7 @@ class SaleInvoicePlan(models.Model):
 
     @api.multi
     def write(self, values):
-        res = super(SaleInvoicePlan, self).write(values)
+        res = super().write(values)
         if any(
             [field in values for field in self._get_forecast_update_trigger_fields()]
         ):

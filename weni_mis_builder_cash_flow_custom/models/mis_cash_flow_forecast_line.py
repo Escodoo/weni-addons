@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class MisCashFlowForecastLine(models.Model):
-
     _inherit = "mis.cash_flow.forecast_line"
 
     res_id = fields.Integer(string="Resource ID")

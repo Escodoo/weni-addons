@@ -57,7 +57,6 @@ def weni_contract_consumption_query_data(weni_id=None, after=None, before=None):
 
 
 class ResPartner(models.Model):
-
     _inherit = "res.partner"
 
     @classmethod

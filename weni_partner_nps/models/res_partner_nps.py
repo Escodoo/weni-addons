@@ -5,7 +5,6 @@ from odoo import _, api, fields, models
 
 
 class ResPartnerNps(models.Model):
-
     _name = "res.partner.nps"
     _description = "Res Partner Nps"  # TODO
 

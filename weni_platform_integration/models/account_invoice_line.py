@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class AccountInvoiceLine(models.Model):
-
     _inherit = "account.invoice.line"
 
     weni_id = fields.Char(

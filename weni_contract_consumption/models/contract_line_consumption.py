@@ -5,7 +5,6 @@ from odoo import api, fields, models
 
 
 class ContractLineConsumption(models.Model):
-
     _name = "contract.line.consumption"
     _description = "Contract Line Consumption"
     _rec_name = "contract_line_id"

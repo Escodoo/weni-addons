@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class WeniCustomerServiceType(models.Model):
-
     _name = "weni.customer.service.type"
     _description = "Customer Service Type"
 

@@ -5,7 +5,6 @@ from odoo import api, models
 
 
 class ContractContract(models.Model):
-
     _inherit = "contract.contract"
 
     @api.model
@@ -20,7 +19,7 @@ class ContractContract(models.Model):
 
     @api.multi
     def write(self, values):
-        res = super(ContractContract, self).write(values)
+        res = super().write(values)
         if any(
             [field in values for field in self._get_forecast_update_trigger_fields()]
         ):

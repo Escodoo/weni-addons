@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class ContractContract(models.Model):
-
     _inherit = "contract.contract"
 
     weni_id = fields.Char(

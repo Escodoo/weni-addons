@@ -11,7 +11,6 @@ QUEUE_CHANNEL = "root.CONTRACT_MIS_BUILDER_CASH_FLOW"
 
 
 class ContractLine(models.Model):
-
     _inherit = "contract.line"
 
     forecast_line_ids = fields.One2many(
@@ -149,7 +148,7 @@ class ContractLine(models.Model):
 
     @api.model
     def create(self, values):
-        contract_lines = super(ContractLine, self).create(values)
+        contract_lines = super().create(values)
         for contract_line in contract_lines:
             if (
                 contract_line.contract_id.company_id.enable_contract_mis_cash_flow_forecast
@@ -179,7 +178,7 @@ class ContractLine(models.Model):
 
     @api.multi
     def write(self, values):
-        res = super(ContractLine, self).write(values)
+        res = super().write(values)
         if any(
             [field in values for field in self._get_forecast_update_trigger_fields()]
         ):

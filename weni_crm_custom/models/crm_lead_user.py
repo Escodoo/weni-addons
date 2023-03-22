@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class CrmLeadUser(models.Model):
-
     _name = "crm.lead.user"
     _description = "Crm Lead User"  # TODO
 

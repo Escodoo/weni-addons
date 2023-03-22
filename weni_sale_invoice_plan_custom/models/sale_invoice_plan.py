@@ -6,7 +6,6 @@ from odoo.exceptions import UserError
 
 
 class SaleInvoicePlan(models.Model):
-
     _inherit = "sale.invoice.plan"
 
     description = fields.Char(
@@ -37,4 +36,4 @@ class SaleInvoicePlan(models.Model):
                         "cannot be edited."
                     )
                 )
-        return super(SaleInvoicePlan, self).write(vals)
+        return super().write(vals)

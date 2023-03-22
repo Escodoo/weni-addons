@@ -5,7 +5,6 @@ from odoo import api, fields, models
 
 
 class ContractContract(models.Model):
-
     _inherit = "contract.contract"
 
     contract_consumption_ids = fields.One2many(
@@ -35,7 +34,6 @@ class ContractContract(models.Model):
                 contract_id = contract_line_id.contract_id
 
                 if contract_id.contract_type == "sale":
-
                     consumption_lines = consumption_model.search(
                         [
                             ("contract_line_id", "=", contract_line_id.id),
@@ -49,7 +47,6 @@ class ContractContract(models.Model):
                     )
 
                     if consumption_quantity > line.quantity:
-
                         product_context = dict(
                             self.env.context,
                             partner_id=contract_id.partner_id.id,

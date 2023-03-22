@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class AccountInvoice(models.Model):
-
     _inherit = "account.invoice"
 
     weni_fiscal_document_url = fields.Char(string="Fiscal Document URL")

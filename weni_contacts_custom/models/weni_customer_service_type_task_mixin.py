@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class WeniCustomerServiceTypeTaskMixin(models.AbstractModel):
-
     _name = "weni.customer.service.type.task.mixin"
     _description = "Customer Service Type Task Mixin"
 

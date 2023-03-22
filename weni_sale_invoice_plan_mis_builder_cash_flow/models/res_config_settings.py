@@ -5,7 +5,6 @@ from odoo import fields, models
 
 
 class ResConfigSettings(models.TransientModel):
-
     _inherit = "res.config.settings"
 
     enable_sale_invoice_plan_mis_cash_flow_forecast = fields.Boolean(
