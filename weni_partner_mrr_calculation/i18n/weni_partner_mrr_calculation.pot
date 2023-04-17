@@ -1,0 +1,52 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* weni_partner_mrr_calculation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: weni_partner_mrr_calculation
+#: model:ir.model.fields,field_description:weni_partner_mrr_calculation.field_weni_customer_mrr_scale__company_id
+msgid "Company"
+msgstr ""
+
+#. module: weni_partner_mrr_calculation
+#: model:ir.model,name:weni_partner_mrr_calculation.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: weni_partner_mrr_calculation
+#: model:ir.model.fields,field_description:weni_partner_mrr_calculation.field_weni_customer_mrr_scale__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: weni_partner_mrr_calculation
+#: model:ir.model,name:weni_partner_mrr_calculation.model_weni_customer_mrr_scale
+msgid "Customer MRR Scale"
+msgstr ""
+
+#. module: weni_partner_mrr_calculation
+#: model:ir.model.fields,field_description:weni_partner_mrr_calculation.field_weni_customer_mrr_scale__max_value
+msgid "Max Value"
+msgstr ""
+
+#. module: weni_partner_mrr_calculation
+#: model:ir.model.fields,field_description:weni_partner_mrr_calculation.field_weni_customer_mrr_scale__min_value
+msgid "Min Value"
+msgstr ""
+
+#. module: weni_partner_mrr_calculation
+#: model:ir.actions.server,name:weni_partner_mrr_calculation._cron_update_mrr_ir_actions_server
+#: model:ir.cron,cron_name:weni_partner_mrr_calculation._cron_update_mrr
+#: model:ir.cron,name:weni_partner_mrr_calculation._cron_update_mrr
+msgid "Update MRR Fields"
+msgstr ""
+
