@@ -1,415 +1,400 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* weni_crm_custom
+#	* weni_crm_custom
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-07 13:04+0000\n"
-"PO-Revision-Date: 2022-06-07 10:28-0300\n"
-"Last-Translator: Marcel Savegnago <marcel.savegnago@gmail.com>\n"
+"Last-Translator: <>\n"
 "Language-Team: \n"
-"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.0\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
 
 #. module: weni_crm_custom
 #: model_terms:ir.ui.view,arch_db:weni_crm_custom.crm_lead_form_view_leads
 msgid "<span class=\"oe_grey\"> at </span>"
-msgstr "<span class=“oe_grey”> em </span>"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model_terms:ir.ui.view,arch_db:weni_crm_custom.view_crm_lead_case_kanban
-msgid ""
-"<strong>\n"
+msgid "<strong>\n"
 "                        MRR:\n"
 "                    </strong>"
 msgstr ""
-"<strong>\n"
-"                        MRR:\n"
-"                    </strong>"
 
 #. module: weni_crm_custom
 #: model_terms:ir.ui.view,arch_db:weni_crm_custom.view_crm_lead_case_kanban
-msgid ""
-"<strong>\n"
+msgid "<strong>\n"
 "                        NRR:\n"
 "                    </strong>"
 msgstr ""
-"<strong>\n"
-"                        RNR:\n"
-"                    </strong>"
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_active_contacts
 msgid "Active Contacts"
-msgstr "Contatos ativos"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_amount_nrr
 msgid "Amount NRR"
-msgstr "Valor RNR"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,help:weni_crm_custom.field_crm_lead__weni_amount_nrr
 msgid "Amount Non-Recurring Revenue"
-msgstr "Valor Receita Não Recorrente"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model,name:weni_crm_custom.model_crm_lead_channel
 msgid "CRM Lead Channel"
-msgstr "Canal de Oportunidade de CRM"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.actions.act_window,name:weni_crm_custom.crm_lead_channel_act_window
 msgid "Channel"
-msgstr "Canal"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_channel_ids
 msgid "Channels"
-msgstr "Canais"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_channels_used
 msgid "Channels Used"
-msgstr "Canais Utilizados"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_customer_rating
 msgid "Company Rating"
-msgstr "Avaliação da Empresa"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_company_size
 msgid "Company Size"
-msgstr "Porte de Empresa"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_channel__create_uid
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_decision_maker__create_uid
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_user__create_uid
 msgid "Created by"
-msgstr "Criado Por"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_channel__create_date
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_decision_maker__create_date
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_user__create_date
 msgid "Created on"
-msgstr "Criado em"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model,name:weni_crm_custom.model_crm_lead_decision_maker
 msgid "Crm Lead Decision Maker"
-msgstr "Crm Decisores"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model,name:weni_crm_custom.model_crm_lead_user
 msgid "Crm Lead User"
-msgstr "Crm Usuário Principal"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_current_situation
 msgid "Current Situation"
-msgstr "Situação Atual"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_decision_maker__partner_id
 msgid "Decision Maker"
-msgstr "Decisor"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_decision_maker__decision_maker_type
 msgid "Decision Maker Type"
-msgstr "Tipo de Tomador de Decisão"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model_terms:ir.ui.view,arch_db:weni_crm_custom.crm_lead_decision_maker_tree_view
 #: model_terms:ir.ui.view,arch_db:weni_crm_custom.crm_lead_form_view_leads
 #: model_terms:ir.ui.view,arch_db:weni_crm_custom.crm_lead_form_view_oppor
 msgid "Decision Makers"
-msgstr "Decisores"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_decision_maker_ids
 msgid "Decision Markers"
-msgstr "Decisores"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model_terms:ir.ui.view,arch_db:weni_crm_custom.crm_lead_form_view_leads
 #: model_terms:ir.ui.view,arch_db:weni_crm_custom.crm_lead_form_view_oppor
 msgid "Diagnostic"
-msgstr "Diagnóstico"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model_terms:ir.ui.view,arch_db:weni_crm_custom.crm_lead_form_view_leads
 #: model_terms:ir.ui.view,arch_db:weni_crm_custom.crm_lead_form_view_oppor
 msgid "Diagnostic Details"
-msgstr "Detalhes do Diagnóstico"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_channel__display_name
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_decision_maker__display_name
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_user__display_name
 msgid "Display Name"
-msgstr "Nome Exibido"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_user__email
 msgid "Email"
-msgstr "Email"
+msgstr ""
 
 #. module: weni_crm_custom
 #: selection:crm.lead,weni_sale_type:0
 msgid "Enterprise Project"
-msgstr "Projeto Enterprise"
+msgstr ""
 
 #. module: weni_crm_custom
 #: selection:crm.lead.decision.maker,decision_maker_type:0
 msgid "Financial"
-msgstr "Financeiro"
+msgstr ""
 
 #. module: weni_crm_custom
 #: selection:crm.lead,weni_sale_sector:0
 msgid "Government"
-msgstr "Governo"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_has_dedicate_team
 msgid "Has Dedicated Team"
-msgstr "Tem Equipe Dedicada"
+msgstr ""
 
 #. module: weni_crm_custom
 #: selection:crm.lead,weni_icp_classification:0
 msgid "High Fit"
-msgstr "Fit Alto"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_icp_classification
 msgid "ICP Classification"
-msgstr "Classificação ICP"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model_terms:ir.ui.view,arch_db:weni_crm_custom.crm_lead_form_view_leads
 #: model_terms:ir.ui.view,arch_db:weni_crm_custom.crm_lead_form_view_oppor
 msgid "ICP Data"
-msgstr "Dados ICP"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model_terms:ir.ui.view,arch_db:weni_crm_custom.crm_lead_form_view_leads
 #: model_terms:ir.ui.view,arch_db:weni_crm_custom.crm_lead_form_view_oppor
 msgid "ICP Details"
-msgstr "Detalhes ICP"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_channel__id
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_decision_maker__id
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_user__id
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_implication
 msgid "Implication"
-msgstr "Implicação"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_project_integration
 msgid "Integrations"
-msgstr "Integrações"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_is_freezed
 msgid "Is freezed"
-msgstr "Está congelado"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_user__function
 msgid "Job Position"
-msgstr "Cargo"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_channel____last_update
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_decision_maker____last_update
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_user____last_update
 msgid "Last Modified on"
-msgstr "Última modificação em"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_channel__write_uid
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_decision_maker__write_uid
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_user__write_uid
 msgid "Last Updated by"
-msgstr "Ultima Atualização por"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_channel__write_date
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_decision_maker__write_date
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_user__write_date
 msgid "Last Updated on"
-msgstr "Última Atualização em"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_decision_maker__lead_id
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_user__lead_id
 msgid "Lead"
-msgstr "Prospecto"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model,name:weni_crm_custom.model_crm_lead
 msgid "Lead/Opportunity"
-msgstr "Prospecção/Oportunidade"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_channel__lead_ids
 msgid "Leads"
-msgstr "Prospectos"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_linkedin_profile
 msgid "Linkedin Profile"
-msgstr "Perfil do Linkedin"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_lost_date
 msgid "Lost Date"
-msgstr "Data da Perda"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model_terms:ir.ui.view,arch_db:weni_crm_custom.crm_lead_form_view_leads
 msgid "Mark Lost"
-msgstr "Marcar como Perdido"
+msgstr ""
 
 #. module: weni_crm_custom
 #: selection:crm.lead,weni_icp_classification:0
 msgid "Medium Fit"
-msgstr "Fit Médio"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_user__mobile
 msgid "Mobile"
-msgstr "Celular"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__planned_revenue
 msgid "Monthly Recurring Revenue"
-msgstr "Receita Recorrente Mensal"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_channel__name
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_decision_maker__name
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_user__name
 msgid "Name"
-msgstr "Nome"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_need
 msgid "Need"
-msgstr "Necessidade"
+msgstr ""
 
 #. module: weni_crm_custom
 #: selection:crm.lead,weni_icp_classification:0
 msgid "No Fit"
-msgstr "Sem Fit"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_user__phone
 msgid "Phone"
-msgstr "Telefone"
+msgstr ""
 
 #. module: weni_crm_custom
 #: selection:crm.lead,weni_sale_type:0
 msgid "Platform"
-msgstr "Plataforma"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__secondary_user_id
 msgid "Pre Salesperson"
-msgstr "Pré-vendedor"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_project_pain_primary
 msgid "Primary Problems"
-msgstr "Problemas Primários"
+msgstr ""
 
 #. module: weni_crm_custom
 #: selection:crm.lead,weni_sale_sector:0
 msgid "Private Market"
-msgstr "Mercado Privado"
+msgstr ""
 
 #. module: weni_crm_custom
 #: selection:crm.lead,weni_sale_type:0
 msgid "Project"
-msgstr "Projeto"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_project_release_date
 msgid "Release Date"
-msgstr "Data de Lançamento"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_sale_type
 msgid "Sale Type"
-msgstr "Tipo de venda"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_project_pain_secondary
 msgid "Secondary Problems"
-msgstr "Problemas Secundários"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_sale_sector
 msgid "Sector"
-msgstr "Setor"
+msgstr ""
 
 #. module: weni_crm_custom
 #: selection:crm.lead,weni_sale_sector:0
 msgid "Social Impact"
-msgstr "Impacto Social"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_systems_used
 msgid "Systems Used"
-msgstr "Sistemas Utilizados"
+msgstr ""
 
 #. module: weni_crm_custom
 #: selection:crm.lead.decision.maker,decision_maker_type:0
 msgid "Technical"
-msgstr "Técnico"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model_terms:ir.ui.view,arch_db:weni_crm_custom.view_crm_lead_kanban
-msgid ""
-"This bar allows to filter the opportunities based on scheduled activities."
+msgid "This bar allows to filter the opportunities based on scheduled activities."
 msgstr ""
-"Esta barra permite filtrar as oportunidades com base nas atividades "
-"programadas."
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_total_human_agents
 msgid "Total Human Agents"
-msgstr "Total de Agentes Humanos"
+msgstr ""
 
 #. module: weni_crm_custom
 #: selection:crm.lead,weni_sale_sector:0
 msgid "UN"
-msgstr "UN"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_use_chatbot_solution
 msgid "Use Chatbot Solution"
-msgstr "Usa Solução Chatbot"
+msgstr ""
 
 #. module: weni_crm_custom
 #: selection:crm.lead.decision.maker,decision_maker_type:0
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_user__user_id
 msgid "User"
-msgstr "Usuário"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_user_ids
@@ -417,9 +402,10 @@ msgstr "Usuário"
 #: model_terms:ir.ui.view,arch_db:weni_crm_custom.crm_lead_form_view_oppor
 #: model_terms:ir.ui.view,arch_db:weni_crm_custom.crm_lead_user_tree_view
 msgid "Users"
-msgstr "Usuários"
+msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_automation
 msgid "Weni Automation"
-msgstr "Automação Weni"
+msgstr ""
+
