@@ -1,8 +1,8 @@
-<!-- [![Runbot Status](https://runbot.odoo-community.org/runbot/badge/flat//12.0.svg)](https://runbot.odoo-community.org/runbot/repo/github-com-oca-weni-addons-) -->
-<!-- [![Build Status](https://travis-ci.com/Escodoo/weni-addons.svg?branch=12.0)](https://travis-ci.com/Escodoo/weni-addons) -->
-[![codecov](https://codecov.io/gh/Escodoo/weni-addons/branch/12.0/graph/badge.svg)](https://codecov.io/gh/Escodoo/weni-addons)
-<!-- [![Translation Status](https://translation.odoo-community.org/widgets/weni-addons-14-0/-/svg-badge.svg)](https://translation.odoo-community.org/engage/weni-addons-14-0/?utm_source=widget) -->
-
+<!-- /!\ Non OCA Context : Set here the badge of your runbot / runboat instance. -->
+[![Pre-commit Status](https://github.com/Escodoo/weni-addons/actions/workflows/pre-commit.yml/badge.svg?branch=14.0)](https://github.com/Escodoo/weni-addons/actions/workflows/pre-commit.yml?query=branch%3A14.0)
+[![Build Status](https://github.com/Escodoo/weni-addons/actions/workflows/test.yml/badge.svg?branch=14.0)](https://github.com/Escodoo/weni-addons/actions/workflows/test.yml?query=branch%3A14.0)
+[![codecov](https://codecov.io/gh/Escodoo/weni-addons/branch/14.0/graph/badge.svg)](https://codecov.io/gh/Escodoo/weni-addons)
+<!-- /!\ Non OCA Context : Set here the badge of your translation instance. -->
 <!-- /!\ do not modify above this line -->
 
 # Weni Addons
