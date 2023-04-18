@@ -74,6 +74,11 @@ msgid "+9m"
 msgstr ""
 
 #. module: weni_mis_builder_cash_flow_custom
+#: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_mis_cash_flow_forecast_line__analytic_account_id
+msgid "Analytic Account"
+msgstr ""
+
+#. module: weni_mis_builder_cash_flow_custom
 #: model:mis.report.instance,name:weni_mis_builder_cash_flow_custom.mis_instance_cash_flow_month
 msgid "Cash Flow Month"
 msgstr ""
