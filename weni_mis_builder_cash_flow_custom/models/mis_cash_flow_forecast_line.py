@@ -12,7 +12,6 @@ class MisCashFlowForecastLine(models.Model):
     res_model = fields.Char(
         "Document Model Name", related="res_model_id.model", readonly=True, store=True
     )
-
     parent_res_id = fields.Integer(string="Parent Resource ID")
     parent_res_model_id = fields.Many2one(
         "ir.model", "Parent Document Model", ondelete="cascade"
@@ -22,6 +21,9 @@ class MisCashFlowForecastLine(models.Model):
         related="parent_res_model_id.model",
         readonly=True,
         store=True,
+    )
+    analytic_account_id = fields.Many2one(
+        string="Analytic Account", comodel_name="account.analytic.account"
     )
 
     def action_open_document_related(self):

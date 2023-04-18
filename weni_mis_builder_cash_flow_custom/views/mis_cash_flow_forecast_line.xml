@@ -39,6 +39,9 @@
                 <field name="parent_res_model" />
                 <field name="parent_res_id" />
             </field>
+            <field name="account_id" position="after">
+                <field name="analytic_account_id" />
+            </field>
         </field>
     </record>
 
@@ -84,6 +87,18 @@
                     name="action_open_parent_document_related"
                     attrs="{'invisible': ['|', ('res_model', '=', False), ('res_id', '=', False)]}"
                 />
+            </field>
+            <field name="account_id" position="after">
+                <field name="analytic_account_id" />
+            </field>
+
+            <field name="account_id" position="attributes">
+                <attribute name="domain">[
+                    ('company_id', '=', company_id),
+                    ('deprecated', '=', False),
+                    ('hide_in_cash_flow', '=', False),
+                    ]
+                </attribute>
             </field>
         </field>
     </record>
