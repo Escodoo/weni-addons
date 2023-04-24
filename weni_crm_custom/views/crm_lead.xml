@@ -160,6 +160,8 @@
                 <field name="secondary_industry_ids" position="move" />
                 <field name="weni_automation" />
                 <field name="weni_is_freezed" />
+                <field name="weni_qualified" />
+                <field name="weni_no_show" />
             </field>
         </field>
     </record>
@@ -273,6 +275,8 @@
                 <field name="secondary_industry_ids" position="move" />
                 <field name="weni_automation" />
                 <field name="weni_is_freezed" />
+                <field name="weni_qualified" />
+                <field name="weni_no_show" />
             </field>
         </field>
     </record>

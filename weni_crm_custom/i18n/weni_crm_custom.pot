@@ -409,3 +409,7 @@ msgstr ""
 msgid "Weni Automation"
 msgstr ""
 
+#. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_qualified
+msgid "Qualified ?"
+msgstr ""

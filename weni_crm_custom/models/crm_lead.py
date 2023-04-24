@@ -88,6 +88,8 @@ class CrmLead(models.Model):
     )
 
     weni_automation = fields.Boolean(string="Weni Automation")
+    weni_qualified = fields.Boolean(string="Qualified ?")
+    weni_no_show = fields.Boolean(string="No Show")
 
     @api.multi
     def action_set_lost(self):

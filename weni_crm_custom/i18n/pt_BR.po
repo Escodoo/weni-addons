@@ -423,3 +423,8 @@ msgstr "Usuários"
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_automation
 msgid "Weni Automation"
 msgstr "Automação Weni"
+
+#. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_qualified
+msgid "Qualified ?"
+msgstr "Qualificado ?"
