@@ -413,3 +413,23 @@ msgstr ""
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_qualified
 msgid "Qualified ?"
 msgstr ""
+
+#. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__rd_created_date
+msgid "Created Date"
+msgstr ""
+
+#. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__rd_first_conversion_date
+msgid "First Conversion Date"
+msgstr ""
+
+#. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__rd_conversion_origin
+msgid "Conversion Origin"
+msgstr ""
+
+#. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__rd_actions_history
+msgid "Actions History"
+msgstr ""
