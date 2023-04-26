@@ -90,7 +90,7 @@
                 <field name="source_id" />
             </field>
 
-<!--            Invisible Fields-->
+            <!--            Invisible Fields-->
             <xpath expr="//field[@name='legal_name']" position="attributes">
                 <attribute name="invisible">True</attribute>
             </xpath>
@@ -160,7 +160,26 @@
                 <field name="secondary_industry_ids" position="move" />
                 <field name="weni_automation" />
                 <field name="weni_is_freezed" />
+                <field name="weni_qualified" />
+                <field name="weni_no_show" />
             </field>
+
+            <xpath expr="//notebook/page[last()]" position="after">
+                <page string="RD Station">
+                    <group string="Information">
+                        <group>
+                            <field name="rd_created_date" />
+                            <field name="rd_conversion_origin" />
+                            <field name="rd_actions_history" />
+                        </group>
+                        <group>
+                            <field name="rd_odoo_lead_link" />
+                            <field name="rd_first_conversion_date" />
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+
         </field>
     </record>
 
@@ -273,7 +292,24 @@
                 <field name="secondary_industry_ids" position="move" />
                 <field name="weni_automation" />
                 <field name="weni_is_freezed" />
+                <field name="weni_qualified" />
+                <field name="weni_no_show" />
             </field>
+            <xpath expr="//notebook/page[last()]" position="after">
+                <page string="RD Station">
+                    <group string="Information">
+                        <group>
+                            <field name="rd_created_date" />
+                            <field name="rd_conversion_origin" />
+                            <field name="rd_actions_history" />
+                        </group>
+                        <group>
+                            <field name="rd_odoo_lead_link" />
+                            <field name="rd_first_conversion_date" />
+                        </group>
+                    </group>
+                </page>
+            </xpath>
         </field>
     </record>
 
@@ -291,17 +327,17 @@
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.view_crm_lead_kanban" />
         <field name="arch" type="xml">
-             <kanban position="attributes">
-                 <attribute name="default_group_by">stage_id</attribute>
-                 <attribute
+            <kanban position="attributes">
+                <attribute name="default_group_by">stage_id</attribute>
+                <attribute
                     name="class"
                 >o_kanban_small_column o_opportunity_kanban</attribute>
-                 <attribute name="on_create">quick_create</attribute>
-                 <attribute
+                <attribute name="on_create">quick_create</attribute>
+                <attribute
                     name="quick_create_view"
                 >crm.quick_create_opportunity_form</attribute>
-                 <attribute name="archivable">false</attribute>
-             </kanban>
+                <attribute name="archivable">false</attribute>
+            </kanban>
             <kanban position="inside">
                 <field
                     name="stage_id"

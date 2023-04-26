@@ -5,7 +5,7 @@
     "name": "Weni Crm Custom",
     "summary": """
         Customizações do Modulo CRM - Weni""",
-    "version": "12.0.2.0.0",
+    "version": "12.0.3.0.0",
     "license": "AGPL-3",
     "author": "Escodoo",
     "website": "https://github.com/Escodoo/weni-addons",

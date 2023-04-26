@@ -88,6 +88,15 @@ class CrmLead(models.Model):
     )
 
     weni_automation = fields.Boolean(string="Weni Automation")
+    weni_qualified = fields.Boolean(string="Qualified ?")
+    weni_no_show = fields.Boolean(string="No Show")
+
+    # RD Fields
+    rd_created_date = fields.Date(string="Created Date")
+    rd_first_conversion_date = fields.Date(string="First Conversion Date")
+    rd_conversion_origin = fields.Char(string="Conversion Origin")
+    rd_odoo_lead_link = fields.Char(string="Lead RD Link")
+    rd_actions_history = fields.Html(string="Actions History")
 
     @api.multi
     def action_set_lost(self):
