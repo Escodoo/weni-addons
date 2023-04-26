@@ -33,6 +33,11 @@ msgid "<strong>\n"
 msgstr ""
 
 #. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__rd_actions_history
+msgid "Actions History"
+msgstr ""
+
+#. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_active_contacts
 msgid "Active Contacts"
 msgstr ""
@@ -75,6 +80,16 @@ msgstr ""
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_company_size
 msgid "Company Size"
+msgstr ""
+
+#. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__rd_conversion_origin
+msgid "Conversion Origin"
+msgstr ""
+
+#. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__rd_created_date
+msgid "Created Date"
 msgstr ""
 
 #. module: weni_crm_custom
@@ -163,6 +178,11 @@ msgid "Financial"
 msgstr ""
 
 #. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__rd_first_conversion_date
+msgid "First Conversion Date"
+msgstr ""
+
+#. module: weni_crm_custom
 #: selection:crm.lead,weni_sale_sector:0
 msgid "Government"
 msgstr ""
@@ -207,6 +227,12 @@ msgid "Implication"
 msgstr ""
 
 #. module: weni_crm_custom
+#: model_terms:ir.ui.view,arch_db:weni_crm_custom.crm_industry_crm_case_form_view_oppor
+#: model_terms:ir.ui.view,arch_db:weni_crm_custom.crm_industry_crm_lead_form_view_leads
+msgid "Information"
+msgstr ""
+
+#. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_project_integration
 msgid "Integrations"
 msgstr ""
@@ -246,6 +272,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_decision_maker__lead_id
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_user__lead_id
 msgid "Lead"
+msgstr ""
+
+#. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__rd_odoo_lead_link
+msgid "Lead RD Link"
 msgstr ""
 
 #. module: weni_crm_custom
@@ -306,6 +337,11 @@ msgid "No Fit"
 msgstr ""
 
 #. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_no_show
+msgid "No Show"
+msgstr ""
+
+#. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_user__phone
 msgid "Phone"
 msgstr ""
@@ -333,6 +369,17 @@ msgstr ""
 #. module: weni_crm_custom
 #: selection:crm.lead,weni_sale_type:0
 msgid "Project"
+msgstr ""
+
+#. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_qualified
+msgid "Qualified ?"
+msgstr ""
+
+#. module: weni_crm_custom
+#: model_terms:ir.ui.view,arch_db:weni_crm_custom.crm_industry_crm_case_form_view_oppor
+#: model_terms:ir.ui.view,arch_db:weni_crm_custom.crm_industry_crm_lead_form_view_leads
+msgid "RD Station"
 msgstr ""
 
 #. module: weni_crm_custom
@@ -409,27 +456,3 @@ msgstr ""
 msgid "Weni Automation"
 msgstr ""
 
-#. module: weni_crm_custom
-#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_qualified
-msgid "Qualified ?"
-msgstr ""
-
-#. module: weni_crm_custom
-#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__rd_created_date
-msgid "Created Date"
-msgstr ""
-
-#. module: weni_crm_custom
-#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__rd_first_conversion_date
-msgid "First Conversion Date"
-msgstr ""
-
-#. module: weni_crm_custom
-#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__rd_conversion_origin
-msgid "Conversion Origin"
-msgstr ""
-
-#. module: weni_crm_custom
-#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__rd_actions_history
-msgid "Actions History"
-msgstr ""
