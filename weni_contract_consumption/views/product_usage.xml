@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2023 Escodoo - Rodrigo Neves Trindade
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record model="ir.ui.view" id="product_usage_form_view">
+        <field name="name">product.usage.form (in weni_contract_consumption)</field>
+        <field name="model">product.usage</field>
+        <field name="arch" type="xml">
+            <form>
+
+                <sheet>
+                    <div class="oe_button_box" name="button_box" />
+                    <group>
+                        <group>
+                            <field name="partner_id" />
+                            <!-- <field name="weni_id"/> -->
+                            <field name="project_uid" />
+                            <field name="project_name" />
+                            <field name="date" />
+                        </group>
+
+                        <group>
+                            <field name="channels_uuid" />
+                            <field name="channels_name" />
+                            <field name="channel_type" />
+                            <field name="channels_qtdmsg" />
+                        </group>
+                        <group>
+                            <field name="flows_uuid" />
+                            <field name="flows_name" />
+                            <field name="flows_qtdmsg" />
+                            <field name="ia_connect_uuid" />
+                            <field name="ia_connect_name" />
+                            <field name="ia_connect_qtdprediction" />
+                        </group>
+                        <group>
+                            <field name="human_service_department" />
+                            <field name="human_service_qrd_service" />
+                            <field name="human_agents_qty" />
+                            <field name="logins_qty" />
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter"></div>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="product_usage_search_view">
+        <field name="name">product.usage.search (in weni_contract_consumption)</field>
+        <field name="model">product.usage</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="product_consumption_graph_view">
+        <field
+            name="name"
+        >product.usage.graph (in weni_contract_consumption)</field>
+        <field name="model">product.usage</field>
+        <field name="arch" type="xml">
+            <graph string="Product Usage Consumption">
+                <field name="weni_id" />
+                <field name="partner_id" />
+                <field name="project_uid" />
+                <field name="channels_uuid" />
+                <field name="flows_uuid" />
+                <field name="ia_connect_uuid" />
+            </graph>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="product_usage_tree_view">
+        <field name="name">product.usage.tree (in weni_contract_consumption)</field>
+        <field name="model">product.usage</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="partner_id" />
+                <field name="weni_id" />
+                <field name="project_name" />
+                <field name="date" />
+                <field name="channels_name" />
+                <field name="channel_type" />
+                <field name="flows_name" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="product_consumption_pivot_view">
+        <field
+            name="name"
+        >product.usage.pivot (in weni_contract_consumption)</field>
+        <field name="model">product.usage</field>
+        <field name="type">pivot</field>
+        <field name="arch" type="xml">
+            <pivot string="Contract Lines Consumption" display_quantity="true">
+                <field name="weni_id" type="row" />
+                <field name="partner_id" type="row" />
+                <field name="date" interval="month" type="col" />
+                <field name="channels_qtdmsg" type="measure" />
+                <field name="flows_qtdmsg" />
+            </pivot>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="product_usage_act_window">
+        <field name="name">Product Usage</field> <!-- TODO -->
+        <field name="res_model">product.usage</field>
+        <field name="view_mode">tree,pivot,graph,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <record model="ir.ui.menu" id="product_usage_menu">
+        <field name="name">Product Usage</field>
+        <field name="parent_id" ref="sale.menu_sale_report" /> <!-- TODO -->
+        <field name="action" ref="product_usage_act_window" />
+        <field name="sequence" eval="999" /> <!-- TODO -->
+    </record>
+
+</odoo>

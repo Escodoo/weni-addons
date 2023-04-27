@@ -14,6 +14,8 @@
         "l10n_br_contract",
     ],
     "data": [
+        "security/product_usage.xml",
+        "views/product_usage.xml",
         "views/contract_contract.xml",
         "security/contract_line_consumption.xml",
         "views/contract_line_consumption.xml",
