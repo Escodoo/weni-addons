@@ -2,9 +2,9 @@
 <!-- Copyright 2023 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo noupdate="1">
-    <!-- Product Usages -->
-    <record id="product_usage_demo_1" model="product.usage">
-        <field name="name">Product Usage Demo 1</field>
+    <!-- Weni Product Usages -->
+    <record id="weni_product_usage_demo_1" model="weni.product.usage">
+        <field name="name">Weni Product Usage Demo 1</field>
         <field name="partner_id" ref="base.res_partner_1" />
         <field name="weni_id">WENI12345</field>
         <field name="project_uid">PROJ123</field>
@@ -30,8 +30,8 @@
         <field name="login_count">25</field>
     </record>
 
-    <record id="product_usage_demo_2" model="product.usage">
-        <field name="name">Product Usage Demo 2</field>
+    <record id="weni_product_usage_demo_2" model="weni.product.usage">
+        <field name="name">Weni Product Usage Demo 2</field>
         <field name="partner_id" ref="base.res_partner_2" />
         <field name="weni_id">WENI67890</field>
         <field name="project_uid">PROJ456</field>

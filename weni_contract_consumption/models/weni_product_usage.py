@@ -4,9 +4,9 @@
 from odoo import fields, models
 
 
-class ProductUsage(models.Model):
-    _name = "product.usage"
-    _description = "Product Usage"
+class WeniProductUsage(models.Model):
+    _name = "weni.product.usage"
+    _description = "Weni Product Usage"
 
     name = fields.Char(help="The name of the product usage record.")
 

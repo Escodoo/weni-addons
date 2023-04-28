@@ -3,9 +3,9 @@
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
 <odoo>
 
-    <record model="ir.ui.view" id="product_usage_form_view">
-        <field name="name">product.usage.form (in weni_contract_consumption)</field>
-        <field name="model">product.usage</field>
+    <record model="ir.ui.view" id="weni_product_usage_form_view">
+        <field name="name">weni.product.usage.form (in weni_contract_consumption)</field>
+        <field name="model">weni.product.usage</field>
         <field name="arch" type="xml">
             <form>
                 <sheet>
@@ -45,9 +45,9 @@
         </field>
     </record>
 
-    <record model="ir.ui.view" id="product_usage_search_view">
-        <field name="name">product.usage.search (in weni_contract_consumption)</field>
-        <field name="model">product.usage</field>
+    <record model="ir.ui.view" id="weni_product_usage_search_view">
+        <field name="name">weni.product.usage.search (in weni_contract_consumption)</field>
+        <field name="model">weni.product.usage</field>
         <field name="arch" type="xml">
             <search>
                 <field name="name" />
@@ -55,9 +55,9 @@
         </field>
     </record>
 
-    <record model="ir.ui.view" id="product_usage_tree_view">
-        <field name="name">product.usage.tree (in weni_contract_consumption)</field>
-        <field name="model">product.usage</field>
+    <record model="ir.ui.view" id="weni_product_usage_tree_view">
+        <field name="name">weni.product.usage.tree (in weni_contract_consumption)</field>
+        <field name="model">weni.product.usage</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="partner_id" />
@@ -71,9 +71,9 @@
         </field>
     </record>
 
-    <record model="ir.ui.view" id="product_usage_pivot_view">
-        <field name="name">product.usage.pivot (in weni_contract_consumption)</field>
-        <field name="model">product.usage</field>
+    <record model="ir.ui.view" id="weni_product_usage_pivot_view">
+        <field name="name">weni.product.usage.pivot (in weni_contract_consumption)</field>
+        <field name="model">weni.product.usage</field>
         <field name="type">pivot</field>
         <field name="arch" type="xml">
             <pivot string="Contract Lines Consumption">
@@ -87,11 +87,11 @@
         </field>
     </record>
 
-    <record model="ir.ui.view" id="product_usage_graph_view">
-        <field name="name">product.usage.graph (in weni_contract_consumption)</field>
-        <field name="model">product.usage</field>
+    <record model="ir.ui.view" id="weni_product_usage_graph_view">
+        <field name="name">weni.product.usage.graph (in weni_contract_consumption)</field>
+        <field name="model">weni.product.usage</field>
         <field name="arch" type="xml">
-            <graph string="Product Usage Consumption" type="pie">
+            <graph string="Weni Product Usage Consumption" type="pie">
                 <field name="project_name" type="row" />
                 <field name="partner_id" type="row" />
                 <field name="date" interval="month" type="col" />
@@ -100,18 +100,18 @@
         </field>
     </record>
 
-    <record model="ir.actions.act_window" id="product_usage_act_window">
-        <field name="name">Product Usage</field>
-        <field name="res_model">product.usage</field>
+    <record model="ir.actions.act_window" id="weni_product_usage_act_window">
+        <field name="name">Weni Product Usage</field>
+        <field name="res_model">weni.product.usage</field>
         <field name="view_mode">tree,pivot,graph,form</field>
         <field name="domain">[]</field>
         <field name="context">{}</field>
     </record>
 
-    <record model="ir.ui.menu" id="product_usage_menu">
-        <field name="name">Product Usage</field>
+    <record model="ir.ui.menu" id="weni_product_usage_menu">
+        <field name="name">Weni Product Usage</field>
         <field name="parent_id" ref="sale.menu_sale_report" />
-        <field name="action" ref="product_usage_act_window" />
+        <field name="action" ref="weni_product_usage_act_window" />
         <field name="sequence" eval="999" />
     </record>
 
