@@ -26,7 +26,7 @@ addon | version | maintainers | summary
 [weni_contract_consumption](weni_contract_consumption/) | 12.0.1.0.0 |  | Weni Contract Custom
 [weni_contract_consumption_integration](weni_contract_consumption_integration/) | 12.0.1.0.0 |  | Weni Contract Consumption Integration
 [weni_contract_mis_builder_cash_flow](weni_contract_mis_builder_cash_flow/) | 12.0.1.0.0 |  | Weni Contract Mis Builder Cash Flow
-[weni_crm_custom](weni_crm_custom/) | 12.0.2.0.0 |  | Customizações do Modulo CRM - Weni
+[weni_crm_custom](weni_crm_custom/) | 12.0.3.0.0 |  | Customizações do Modulo CRM - Weni
 [weni_mis_builder_cash_flow_custom](weni_mis_builder_cash_flow_custom/) | 12.0.1.0.0 |  | Weni Mis Builder Cash Flow Custom
 [weni_partner_mrr_calculation](weni_partner_mrr_calculation/) | 12.0.1.0.0 |  | WENI Partner MRR Calculation
 [weni_partner_nps](weni_partner_nps/) | 12.0.1.0.0 |  | WENI Partner NPS
