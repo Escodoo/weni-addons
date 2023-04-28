@@ -24,6 +24,36 @@ msgid "<span class=\"o_stat_text\"> Consumption</span>"
 msgstr ""
 
 #. module: weni_contract_consumption
+#: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__weni_id
+msgid "A unique identifier for the Weni project."
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__active_user_count
+msgid "Active User Count"
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__channel_message_count
+msgid "Channel Message Count"
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__channel_name
+msgid "Channel Name"
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__channel_type
+msgid "Channel Type"
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__channel_uuid
+msgid "Channel UUID"
+msgstr ""
+
+#. module: weni_contract_consumption
 #: model:ir.model.fields,field_description:weni_contract_consumption.field_contract_line_consumption__consumption_date
 msgid "Consumption Date"
 msgstr ""
@@ -59,6 +89,7 @@ msgstr ""
 #. module: weni_contract_consumption
 #: model_terms:ir.ui.view,arch_db:weni_contract_consumption.contract_line_consumption_graph_view
 #: model_terms:ir.ui.view,arch_db:weni_contract_consumption.contract_line_consumption_pivot_view
+#: model_terms:ir.ui.view,arch_db:weni_contract_consumption.weni_product_usage_pivot_view
 msgid "Contract Lines Consumption"
 msgstr ""
 
@@ -71,17 +102,40 @@ msgstr ""
 
 #. module: weni_contract_consumption
 #: model:ir.model.fields,field_description:weni_contract_consumption.field_contract_line_consumption__create_uid
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__create_uid
 msgid "Created by"
 msgstr ""
 
 #. module: weni_contract_consumption
 #: model:ir.model.fields,field_description:weni_contract_consumption.field_contract_line_consumption__create_date
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__create_date
 msgid "Created on"
 msgstr ""
 
 #. module: weni_contract_consumption
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__date
+msgid "Date"
+msgstr ""
+
+#. module: weni_contract_consumption
 #: model:ir.model.fields,field_description:weni_contract_consumption.field_contract_line_consumption__display_name
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__display_name
 msgid "Display Name"
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__flow_message_count
+msgid "Flow Message Count"
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__flow_name
+msgid "Flow Name"
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__flow_uuid
+msgid "Flow UUID"
 msgstr ""
 
 #. module: weni_contract_consumption
@@ -90,7 +144,38 @@ msgid "Fully Invoiced"
 msgstr ""
 
 #. module: weni_contract_consumption
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__human_agent_count
+msgid "Human Agent Count"
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__human_service_department
+msgid "Human Service Department"
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__human_service_qrd_service_count
+msgid "Human Service QRD Service Count"
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__ia_connect_name
+msgid "IA Connect Name"
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__ia_connect_prediction_count
+msgid "IA Connect Prediction Count"
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__ia_connect_uuid
+msgid "IA Connect UUID"
+msgstr ""
+
+#. module: weni_contract_consumption
 #: model:ir.model.fields,field_description:weni_contract_consumption.field_contract_line_consumption__id
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__id
 msgid "ID"
 msgstr ""
 
@@ -101,21 +186,35 @@ msgstr ""
 
 #. module: weni_contract_consumption
 #: model:ir.model.fields,field_description:weni_contract_consumption.field_contract_line_consumption____last_update
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage____last_update
 msgid "Last Modified on"
 msgstr ""
 
 #. module: weni_contract_consumption
 #: model:ir.model.fields,field_description:weni_contract_consumption.field_contract_line_consumption__write_uid
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__write_uid
 msgid "Last Updated by"
 msgstr ""
 
 #. module: weni_contract_consumption
 #: model:ir.model.fields,field_description:weni_contract_consumption.field_contract_line_consumption__write_date
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__write_date
 msgid "Last Updated on"
 msgstr ""
 
 #. module: weni_contract_consumption
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__login_count
+msgid "Login Count"
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__name
+msgid "Name"
+msgstr ""
+
+#. module: weni_contract_consumption
 #: model:ir.model.fields,field_description:weni_contract_consumption.field_contract_line_consumption__partner_id
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__partner_id
 msgid "Partner"
 msgstr ""
 
@@ -125,7 +224,140 @@ msgid "Product"
 msgstr ""
 
 #. module: weni_contract_consumption
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__project_name
+msgid "Project Name"
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__project_uid
+msgid "Project UID"
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model_terms:ir.ui.view,arch_db:weni_contract_consumption.weni_product_usage_form_view
+msgid "Record Name"
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__date
+msgid "The date of the product usage record."
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__human_service_department
+msgid "The department associated with the human service."
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__ia_connect_name
+msgid "The name of the IA Connect."
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__channel_name
+msgid "The name of the channel."
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__flow_name
+msgid "The name of the flow."
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__name
+msgid "The name of the product usage record."
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__project_name
+msgid "The name of the project."
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__human_service_qrd_service_count
+msgid "The number of QRD services provided by the human service."
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__active_user_count
+msgid "The number of active users for this product usage record."
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__human_agent_count
+msgid "The number of human agents associated with this product usage record."
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__login_count
+msgid "The number of logins associated with this product usage record."
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__channel_message_count
+msgid "The number of messages in the channel."
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__flow_message_count
+msgid "The number of messages in the flow."
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__ia_connect_prediction_count
+msgid "The number of predictions made by the IA Connect."
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__partner_id
+msgid "The partner associated with this product usage."
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__channel_type
+msgid "The type of the channel."
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__ia_connect_uuid
+msgid "The unique identifier for the IA Connect."
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__channel_uuid
+msgid "The unique identifier for the channel."
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__flow_uuid
+msgid "The unique identifier for the flow."
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__project_uid
+msgid "The unique identifier for the project."
+msgstr ""
+
+#. module: weni_contract_consumption
 #: selection:contract.line.consumption,invoice_status:0
 msgid "To Invoice"
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__weni_id
+msgid "Weni ID"
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.actions.act_window,name:weni_contract_consumption.weni_product_usage_act_window
+#: model:ir.model,name:weni_contract_consumption.model_weni_product_usage
+#: model:ir.ui.menu,name:weni_contract_consumption.weni_product_usage_menu
+#: model_terms:ir.ui.view,arch_db:weni_contract_consumption.weni_product_usage_form_view
+msgid "Weni Product Usage"
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model_terms:ir.ui.view,arch_db:weni_contract_consumption.weni_product_usage_graph_view
+msgid "Weni Product Usage Consumption"
 msgstr ""
 
