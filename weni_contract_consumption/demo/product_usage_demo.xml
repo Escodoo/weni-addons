@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2023 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo noupdate="1">
+    <!-- Product Usages -->
+    <record id="product_usage_demo_1" model="product.usage">
+        <field name="name">Product Usage Demo 1</field>
+        <field name="partner_id" ref="base.res_partner_1" />
+        <field name="weni_id">WENI12345</field>
+        <field name="project_uid">PROJ123</field>
+        <field name="project_name">Demo Project 1</field>
+        <field
+            name="date"
+            eval="(DateTime.now() - timedelta(days=7)).strftime('%Y-%m-%d')"
+        />
+        <field name="active_user_count">15</field>
+        <field name="channel_uuid">CHAN123</field>
+        <field name="channel_name">Demo Channel 1</field>
+        <field name="channel_type">Text</field>
+        <field name="channel_message_count">120</field>
+        <field name="flow_uuid">FLOW123</field>
+        <field name="flow_name">Demo Flow 1</field>
+        <field name="flow_message_count">80</field>
+        <field name="ia_connect_uuid">IACON123</field>
+        <field name="ia_connect_name">Demo IA Connect 1</field>
+        <field name="ia_connect_prediction_count">50</field>
+        <field name="human_service_department">Customer Support</field>
+        <field name="human_service_qrd_service_count">30</field>
+        <field name="human_agent_count">5</field>
+        <field name="login_count">25</field>
+    </record>
+
+    <record id="product_usage_demo_2" model="product.usage">
+        <field name="name">Product Usage Demo 2</field>
+        <field name="partner_id" ref="base.res_partner_2" />
+        <field name="weni_id">WENI67890</field>
+        <field name="project_uid">PROJ456</field>
+        <field name="project_name">Demo Project 2</field>
+        <field
+            name="date"
+            eval="(DateTime.now() - timedelta(days=14)).strftime('%Y-%m-%d')"
+        />
+        <field name="active_user_count">20</field>
+        <field name="channel_uuid">CHAN456</field>
+        <field name="channel_name">Demo Channel 2</field>
+        <field name="channel_type">Voice</field>
+        <field name="channel_message_count">180</field>
+        <field name="flow_uuid">FLOW456</field>
+        <field name="flow_name">Demo Flow 2</field>
+        <field name="flow_message_count">100</field>
+        <field name="ia_connect_uuid">IACON456</field>
+        <field name="ia_connect_name">Demo IA Connect 2</field>
+        <field name="ia_connect_prediction_count">60</field>
+        <field name="human_service_department">Technical Support</field>
+        <field name="human_service_qrd_service_count">40</field>
+        <field name="human_agent_count">6</field>
+        <field name="login_count">30</field>
+    </record>
+</odoo>
