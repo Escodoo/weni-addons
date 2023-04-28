@@ -5,14 +5,15 @@
     "name": "Weni Project Custom",
     "summary": """
         Weni Project Custom""",
-    "version": "12.0.1.0.0",
+    "version": "12.0.2.0.0",
     "license": "AGPL-3",
     "author": "Escodoo",
     "website": "https://github.com/Escodoo/weni-addons",
-    "depends": [
-        "project",
-    ],
+    "depends": ["project", "web_widget_color"],
     "data": [
+        "security/project_task_kanban_state.xml",
+        "views/project_task_kanban_state.xml",
+        "views/project_task.xml",
         "views/project_project.xml",
         "views/res_partner.xml",
     ],
