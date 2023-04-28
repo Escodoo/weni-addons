@@ -32,7 +32,7 @@ addon | version | maintainers | summary
 [weni_partner_nps](weni_partner_nps/) | 12.0.1.0.0 |  | WENI Partner NPS
 [weni_platform_integration](weni_platform_integration/) | 12.0.1.0.0 |  | Weni Platform Integration
 [weni_product_contract_custom](weni_product_contract_custom/) | 12.0.1.0.0 |  | Weni Product Contract Custom
-[weni_project_custom](weni_project_custom/) | 12.0.1.0.0 |  | Weni Project Custom
+[weni_project_custom](weni_project_custom/) | 12.0.2.0.0 |  | Weni Project Custom
 [weni_sale_custom](weni_sale_custom/) | 12.0.1.0.0 |  | WENI Sale Custom
 [weni_sale_invoice_plan_custom](weni_sale_invoice_plan_custom/) | 12.0.1.0.0 | [![marcelsavegnago](https://github.com/marcelsavegnago.png?size=30px)](https://github.com/marcelsavegnago) | WENI - Module customization OCA/sale_workflow/sale_invoice_plan
 [weni_sale_invoice_plan_mis_builder_cash_flow](weni_sale_invoice_plan_mis_builder_cash_flow/) | 12.0.1.0.0 | [![marcelsavegnago](https://github.com/marcelsavegnago.png?size=30px)](https://github.com/marcelsavegnago) | Weni Sale Invoice Plan Mis Builder Cash Flow
