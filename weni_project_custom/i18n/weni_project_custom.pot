@@ -20,8 +20,64 @@ msgid "# Projects"
 msgstr ""
 
 #. module: weni_project_custom
+#: model:ir.model.fields,help:weni_project_custom.field_project_task_kanban_state__color
+msgid "Choose a color"
+msgstr ""
+
+#. module: weni_project_custom
+#: model:ir.model.fields,field_description:weni_project_custom.field_project_task_kanban_state__color
+msgid "Color"
+msgstr ""
+
+#. module: weni_project_custom
 #: model:ir.model,name:weni_project_custom.model_res_partner
 msgid "Contact"
+msgstr ""
+
+#. module: weni_project_custom
+#: model:ir.model.fields,field_description:weni_project_custom.field_project_task_kanban_state__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: weni_project_custom
+#: model:ir.model.fields,field_description:weni_project_custom.field_project_task_kanban_state__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: weni_project_custom
+#: model:ir.model.fields,field_description:weni_project_custom.field_project_task_kanban_state__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: weni_project_custom
+#: model:ir.model.fields,field_description:weni_project_custom.field_project_task_kanban_state__id
+msgid "ID"
+msgstr ""
+
+#. module: weni_project_custom
+#: model:ir.actions.act_window,name:weni_project_custom.project_task_kanban_state_act_window
+#: model:ir.ui.menu,name:weni_project_custom.project_task_kanban_state_menu
+msgid "Kanban State"
+msgstr ""
+
+#. module: weni_project_custom
+#: model:ir.model.fields,field_description:weni_project_custom.field_project_task_kanban_state____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: weni_project_custom
+#: model:ir.model.fields,field_description:weni_project_custom.field_project_task_kanban_state__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: weni_project_custom
+#: model:ir.model.fields,field_description:weni_project_custom.field_project_task_kanban_state__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: weni_project_custom
+#: model:ir.model.fields,field_description:weni_project_custom.field_project_task_kanban_state__name
+msgid "Name"
 msgstr ""
 
 #. module: weni_project_custom
@@ -30,9 +86,29 @@ msgid "Project"
 msgstr ""
 
 #. module: weni_project_custom
+#: model:ir.model,name:weni_project_custom.model_project_task_kanban_state
+msgid "Project Task Kanban State"
+msgstr ""
+
+#. module: weni_project_custom
 #: model:ir.model.fields,field_description:weni_project_custom.field_res_partner__project_ids
 #: model:ir.model.fields,field_description:weni_project_custom.field_res_users__project_ids
 #: model_terms:ir.ui.view,arch_db:weni_project_custom.res_partner_form_view
 msgid "Projects"
+msgstr ""
+
+#. module: weni_project_custom
+#: model:ir.model,name:weni_project_custom.model_project_task
+msgid "Task"
+msgstr ""
+
+#. module: weni_project_custom
+#: model:ir.model.fields,field_description:weni_project_custom.field_project_task__weni_kanban_state_id
+msgid "Weni Kanban State"
+msgstr ""
+
+#. module: weni_project_custom
+#: model:ir.model.fields,field_description:weni_project_custom.field_project_task__weni_kanban_state_color
+msgid "Weni Kanban State Color"
 msgstr ""
 
