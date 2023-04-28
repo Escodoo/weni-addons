@@ -1,93 +1,89 @@
-# Copyright 2023 Escodoo - Rodrigo Neves Trindade
+# Copyright 2023 - TODAY, Rodrigo Neves Trindade <rodrigo.trindade@escodoo.com.br>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
-from odoo import _, api, fields, models
+from odoo import fields, models
 
 
 class ProductUsage(models.Model):
-
     _name = "product.usage"
     _description = "Product Usage"
 
-    name = fields.Char()  
+    name = fields.Char(help="The name of the product usage record.")
 
     partner_id = fields.Many2one(
-        'res.partner', string='Partner'
+        "res.partner",
+        string="Partner",
+        help="The partner associated with this product usage.",
     )
 
     weni_id = fields.Char(
-        string="Weni ID",
+        string="Weni ID", help="A unique identifier for the Weni project."
     )
 
     project_uid = fields.Char(
-        string='Project UID'
+        string="Project UID", help="The unique identifier for the project."
     )
 
-    project_name = fields.Char(
-        string='Project Name'
+    project_name = fields.Char(string="Project Name", help="The name of the project.")
+
+    date = fields.Date(string="Date", help="The date of the product usage record.")
+
+    active_user_count = fields.Integer(
+        string="Active User Count",
+        help="The number of active users for this product usage record.",
     )
 
-    date = fields.Date(
-        string='Date'
+    channel_uuid = fields.Char(
+        string="Channel UUID", help="The unique identifier for the channel."
     )
 
-    active_user = fields.Integer(
-        string='Active User'
+    channel_name = fields.Char(string="Channel Name", help="The name of the channel.")
+
+    channel_type = fields.Char(string="Channel Type", help="The type of the channel.")
+
+    channel_message_count = fields.Integer(
+        string="Channel Message Count", help="The number of messages in the channel."
     )
 
-    channels_uuid = fields.Char(
-        string='Channels'
+    flow_uuid = fields.Char(
+        string="Flow UUID", help="The unique identifier for the flow."
     )
 
-    channels_name = fields.Char(
-        string='Name Channels'
-    )
+    flow_name = fields.Char(string="Flow Name", help="The name of the flow.")
 
-    channel_type = fields.Char(
-        string='Type Channels'
-    )
-
-    channels_qtdmsg= fields.Integer(
-        string='Quantity of Messages'
-    )
-
-    flows_uuid = fields.Char(
-        string='Flows'
-    )
-
-    flows_name = fields.Char(
-        string='Name Flow'
-    )
-
-    flows_qtdmsg = fields.Integer(
-        string='Flow Rate'
+    flow_message_count = fields.Integer(
+        string="Flow Message Count", help="The number of messages in the flow."
     )
 
     ia_connect_uuid = fields.Char(
-        string='IA Connect'
+        string="IA Connect UUID", help="The unique identifier for the IA Connect."
     )
 
     ia_connect_name = fields.Char(
-        string='IA Name'
+        string="IA Connect Name", help="The name of the IA Connect."
     )
 
-    ia_connect_qtdprediction = fields.Integer(
-        string='Quantity of Prediction'
+    ia_connect_prediction_count = fields.Integer(
+        string="IA Connect Prediction Count",
+        help="The number of predictions made by the IA Connect.",
     )
 
     human_service_department = fields.Char(
-        string='Human Service Department'
+        string="Human Service Department",
+        help="The department associated with the human service.",
     )
 
-    human_service_qrd_service = fields.Integer(
-        string='Human Service Qrd Service'
+    human_service_qrd_service_count = fields.Integer(
+        string="Human Service QRD Service Count",
+        help="The number of QRD services provided by the human service.",
     )
 
-    human_agents_qty = fields.Integer(
-        string='Quantity of Human Agents'
+    human_agent_count = fields.Integer(
+        string="Human Agent Count",
+        help="The number of human agents associated with this product usage record.",
     )
 
-    logins_qty = fields.Integer(
-        string='Quantity of Logins'
+    login_count = fields.Integer(
+        string="Login Count",
+        help="The number of logins associated with this product usage record.",
     )
-
