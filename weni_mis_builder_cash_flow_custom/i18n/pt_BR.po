@@ -1,0 +1,163 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* weni_mis_builder_cash_flow_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-03 15:18+0000\n"
+"PO-Revision-Date: 2023-05-03 12:20-0300\n"
+"Last-Translator: Marcel Savegnago <marcel.savegnago@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: pt_BR\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:mis.report.instance.period,name:weni_mis_builder_cash_flow_custom.mis_period_month_plus_10m
+#, fuzzy
+msgid "+10m"
+msgstr "+10m"
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:mis.report.instance.period,name:weni_mis_builder_cash_flow_custom.mis_period_month_plus_11m
+#, fuzzy
+msgid "+11m"
+msgstr "+11m"
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:mis.report.instance.period,name:weni_mis_builder_cash_flow_custom.mis_period_month_plus_12m
+#, fuzzy
+msgid "+12m"
+msgstr "+12m"
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:mis.report.instance.period,name:weni_mis_builder_cash_flow_custom.mis_period_month_plus_1m
+#, fuzzy
+msgid "+1m"
+msgstr "+1m"
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:mis.report.instance.period,name:weni_mis_builder_cash_flow_custom.mis_period_month_plus_2m
+#, fuzzy
+msgid "+2m"
+msgstr "+2m"
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:mis.report.instance.period,name:weni_mis_builder_cash_flow_custom.mis_period_month_plus_3m
+#, fuzzy
+msgid "+3m"
+msgstr "+3m"
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:mis.report.instance.period,name:weni_mis_builder_cash_flow_custom.mis_period_month_plus_4m
+#, fuzzy
+msgid "+4m"
+msgstr "+4m"
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:mis.report.instance.period,name:weni_mis_builder_cash_flow_custom.mis_period_month_plus_5m
+#, fuzzy
+msgid "+5m"
+msgstr "+5m"
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:mis.report.instance.period,name:weni_mis_builder_cash_flow_custom.mis_period_month_plus_6m
+#, fuzzy
+msgid "+6m"
+msgstr "+6m"
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:mis.report.instance.period,name:weni_mis_builder_cash_flow_custom.mis_period_month_plus_7m
+#, fuzzy
+msgid "+7m"
+msgstr "+7m"
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:mis.report.instance.period,name:weni_mis_builder_cash_flow_custom.mis_period_month_plus_8m
+#, fuzzy
+msgid "+8m"
+msgstr "+8m"
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:mis.report.instance.period,name:weni_mis_builder_cash_flow_custom.mis_period_month_plus_9m
+#, fuzzy
+msgid "+9m"
+msgstr "+9m"
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_mis_cash_flow_forecast_line__analytic_account_id
+msgid "Analytic Account"
+msgstr "Conta Analítica"
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:mis.report.instance,name:weni_mis_builder_cash_flow_custom.mis_instance_cash_flow_month
+msgid "Cash Flow Month"
+msgstr "Mês do Fluxo de Caixa"
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:mis.report.instance.period,name:weni_mis_builder_cash_flow_custom.mis_period_month_current
+msgid "Current"
+msgstr "Atual"
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model_terms:ir.ui.view,arch_db:weni_mis_builder_cash_flow_custom.mis_cash_flow_forecast_line_form_view
+#: model_terms:ir.ui.view,arch_db:weni_mis_builder_cash_flow_custom.mis_cash_flow_forecast_line_tree_view
+msgid "Document"
+msgstr "Documento"
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_mis_cash_flow_forecast_line__res_model_id
+msgid "Document Model"
+msgstr "Modelo de Documento"
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_mis_cash_flow_forecast_line__res_model
+msgid "Document Model Name"
+msgstr "Nome do Modelo de Documento"
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model_terms:ir.ui.view,arch_db:weni_mis_builder_cash_flow_custom.view_mis_cash_flow_forecast_line_graph
+#: model_terms:ir.ui.view,arch_db:weni_mis_builder_cash_flow_custom.view_mis_cash_flow_forecast_line_pivot
+msgid "Forecast"
+msgstr "Previsão"
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:mis.report.instance.period,name:weni_mis_builder_cash_flow_custom.mis_period_month_future
+msgid "Future"
+msgstr "Futuro"
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:ir.model,name:weni_mis_builder_cash_flow_custom.model_mis_cash_flow_forecast_line
+msgid "MIS Cash Flow Forecast Line"
+msgstr "Linha de Previsão do MIS Fluxo de Caixa"
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model_terms:ir.ui.view,arch_db:weni_mis_builder_cash_flow_custom.mis_cash_flow_forecast_line_form_view
+#: model_terms:ir.ui.view,arch_db:weni_mis_builder_cash_flow_custom.mis_cash_flow_forecast_line_tree_view
+msgid "Parent Document"
+msgstr "Documento Superior"
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_mis_cash_flow_forecast_line__parent_res_model_id
+msgid "Parent Document Model"
+msgstr "Modelo de Documento Pai"
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_mis_cash_flow_forecast_line__parent_res_model
+msgid "Parent Document Model Name"
+msgstr "Nome do Modelo do Documento Pai"
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_mis_cash_flow_forecast_line__parent_res_id
+msgid "Parent Resource ID"
+msgstr "ID do Recurso Pai"
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_mis_cash_flow_forecast_line__res_id
+msgid "Resource ID"
+msgstr "ID do recurso"
