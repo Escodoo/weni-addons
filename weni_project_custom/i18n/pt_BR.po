@@ -1,0 +1,117 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* weni_project_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-03 15:10+0000\n"
+"PO-Revision-Date: 2023-05-03 12:12-0300\n"
+"Last-Translator: Marcel Savegnago <marcel.savegnago@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: pt_BR\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: weni_project_custom
+#: model:ir.model.fields,field_description:weni_project_custom.field_res_partner__project_count
+#: model:ir.model.fields,field_description:weni_project_custom.field_res_users__project_count
+msgid "# Projects"
+msgstr "# Projetos"
+
+#. module: weni_project_custom
+#: model:ir.model.fields,help:weni_project_custom.field_project_task_kanban_state__color
+msgid "Choose a color"
+msgstr "Escolha uma cor"
+
+#. module: weni_project_custom
+#: model:ir.model.fields,field_description:weni_project_custom.field_project_task_kanban_state__color
+msgid "Color"
+msgstr "Cor"
+
+#. module: weni_project_custom
+#: model:ir.model,name:weni_project_custom.model_res_partner
+msgid "Contact"
+msgstr "Contato"
+
+#. module: weni_project_custom
+#: model:ir.model.fields,field_description:weni_project_custom.field_project_task_kanban_state__create_uid
+msgid "Created by"
+msgstr "Criado Por"
+
+#. module: weni_project_custom
+#: model:ir.model.fields,field_description:weni_project_custom.field_project_task_kanban_state__create_date
+msgid "Created on"
+msgstr "Criado em"
+
+#. module: weni_project_custom
+#: model:ir.model.fields,field_description:weni_project_custom.field_project_task_kanban_state__display_name
+msgid "Display Name"
+msgstr "Nome exibido"
+
+#. module: weni_project_custom
+#: model:ir.model.fields,field_description:weni_project_custom.field_project_task_kanban_state__id
+msgid "ID"
+msgstr "ID"
+
+#. module: weni_project_custom
+#: model:ir.actions.act_window,name:weni_project_custom.project_task_kanban_state_act_window
+#: model:ir.ui.menu,name:weni_project_custom.project_task_kanban_state_menu
+msgid "Kanban State"
+msgstr "Situação Kanban"
+
+#. module: weni_project_custom
+#: model:ir.model.fields,field_description:weni_project_custom.field_project_task_kanban_state____last_update
+msgid "Last Modified on"
+msgstr "Última Modificação em"
+
+#. module: weni_project_custom
+#: model:ir.model.fields,field_description:weni_project_custom.field_project_task_kanban_state__write_uid
+msgid "Last Updated by"
+msgstr "Última Atualização Feita por"
+
+#. module: weni_project_custom
+#: model:ir.model.fields,field_description:weni_project_custom.field_project_task_kanban_state__write_date
+msgid "Last Updated on"
+msgstr "Última Atualização Feita em"
+
+#. module: weni_project_custom
+#: model:ir.model.fields,field_description:weni_project_custom.field_project_task_kanban_state__name
+msgid "Name"
+msgstr "Nome"
+
+#. module: weni_project_custom
+#: model:ir.model,name:weni_project_custom.model_project_project
+msgid "Project"
+msgstr "Projeto"
+
+#. module: weni_project_custom
+#: model:ir.model,name:weni_project_custom.model_project_task_kanban_state
+msgid "Project Task Kanban State"
+msgstr "Estado Kanban da Tarefa do Projeto"
+
+#. module: weni_project_custom
+#: model:ir.model.fields,field_description:weni_project_custom.field_res_partner__project_ids
+#: model:ir.model.fields,field_description:weni_project_custom.field_res_users__project_ids
+#: model_terms:ir.ui.view,arch_db:weni_project_custom.res_partner_form_view
+msgid "Projects"
+msgstr "Projetos"
+
+#. module: weni_project_custom
+#: model:ir.model,name:weni_project_custom.model_project_task
+msgid "Task"
+msgstr "Tarefa"
+
+#. module: weni_project_custom
+#: model:ir.model.fields,field_description:weni_project_custom.field_project_task__weni_kanban_state_id
+msgid "Weni Kanban State"
+msgstr "Weni Estado do Kanban"
+
+#. module: weni_project_custom
+#: model:ir.model.fields,field_description:weni_project_custom.field_project_task__weni_kanban_state_color
+msgid "Weni Kanban State Color"
+msgstr "Weni Cor do Estado Kanban"
