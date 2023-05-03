@@ -6,21 +6,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-07 13:04+0000\n"
-"PO-Revision-Date: 2022-06-07 10:28-0300\n"
+"POT-Creation-Date: 2023-05-03 15:06+0000\n"
+"PO-Revision-Date: 2023-05-03 12:09-0300\n"
 "Last-Translator: Marcel Savegnago <marcel.savegnago@gmail.com>\n"
 "Language-Team: \n"
-"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: \n"
+"Language: pt_BR\n"
 "X-Generator: Poedit 3.0\n"
 
 #. module: weni_crm_custom
 #: model_terms:ir.ui.view,arch_db:weni_crm_custom.crm_lead_form_view_leads
 msgid "<span class=\"oe_grey\"> at </span>"
-msgstr "<span class=“oe_grey”> em </span>"
+msgstr "<span class=\"oe_grey\"> em </span>"
 
 #. module: weni_crm_custom
 #: model_terms:ir.ui.view,arch_db:weni_crm_custom.view_crm_lead_case_kanban
@@ -45,9 +45,14 @@ msgstr ""
 "                    </strong>"
 
 #. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__rd_actions_history
+msgid "Actions History"
+msgstr "Histórico de Ações"
+
+#. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_active_contacts
 msgid "Active Contacts"
-msgstr "Contatos ativos"
+msgstr "Contatos Ativos"
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_amount_nrr
@@ -88,6 +93,16 @@ msgstr "Avaliação da Empresa"
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_company_size
 msgid "Company Size"
 msgstr "Porte de Empresa"
+
+#. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__rd_conversion_origin
+msgid "Conversion Origin"
+msgstr "Origem de Conversão"
+
+#. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__rd_created_date
+msgid "Created Date"
+msgstr "Data de Criação"
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_channel__create_uid
@@ -157,7 +172,7 @@ msgstr "Detalhes do Diagnóstico"
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_decision_maker__display_name
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_user__display_name
 msgid "Display Name"
-msgstr "Nome Exibido"
+msgstr "Nome exibido"
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_user__email
@@ -173,6 +188,11 @@ msgstr "Projeto Enterprise"
 #: selection:crm.lead.decision.maker,decision_maker_type:0
 msgid "Financial"
 msgstr "Financeiro"
+
+#. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__rd_first_conversion_date
+msgid "First Conversion Date"
+msgstr "Data da Primeira Conversão"
 
 #. module: weni_crm_custom
 #: selection:crm.lead,weni_sale_sector:0
@@ -219,6 +239,12 @@ msgid "Implication"
 msgstr "Implicação"
 
 #. module: weni_crm_custom
+#: model_terms:ir.ui.view,arch_db:weni_crm_custom.crm_industry_crm_case_form_view_oppor
+#: model_terms:ir.ui.view,arch_db:weni_crm_custom.crm_industry_crm_lead_form_view_leads
+msgid "Information"
+msgstr "Informação"
+
+#. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_project_integration
 msgid "Integrations"
 msgstr "Integrações"
@@ -238,27 +264,32 @@ msgstr "Cargo"
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_decision_maker____last_update
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_user____last_update
 msgid "Last Modified on"
-msgstr "Última modificação em"
+msgstr "Última Modificação em"
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_channel__write_uid
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_decision_maker__write_uid
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_user__write_uid
 msgid "Last Updated by"
-msgstr "Ultima Atualização por"
+msgstr "Última Atualização Feita por"
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_channel__write_date
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_decision_maker__write_date
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_user__write_date
 msgid "Last Updated on"
-msgstr "Última Atualização em"
+msgstr "Última Atualização Feita em"
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_decision_maker__lead_id
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_user__lead_id
 msgid "Lead"
 msgstr "Prospecto"
+
+#. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__rd_odoo_lead_link
+msgid "Lead RD Link"
+msgstr "Link do RD"
 
 #. module: weni_crm_custom
 #: model:ir.model,name:weni_crm_custom.model_crm_lead
@@ -318,6 +349,11 @@ msgid "No Fit"
 msgstr "Sem Fit"
 
 #. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_no_show
+msgid "No Show"
+msgstr "No Show"
+
+#. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_user__phone
 msgid "Phone"
 msgstr "Telefone"
@@ -346,6 +382,17 @@ msgstr "Mercado Privado"
 #: selection:crm.lead,weni_sale_type:0
 msgid "Project"
 msgstr "Projeto"
+
+#. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_qualified
+msgid "Qualified ?"
+msgstr "Qualificado ?"
+
+#. module: weni_crm_custom
+#: model_terms:ir.ui.view,arch_db:weni_crm_custom.crm_industry_crm_case_form_view_oppor
+#: model_terms:ir.ui.view,arch_db:weni_crm_custom.crm_industry_crm_lead_form_view_leads
+msgid "RD Station"
+msgstr "RD Station"
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_project_release_date
@@ -384,11 +431,8 @@ msgstr "Técnico"
 
 #. module: weni_crm_custom
 #: model_terms:ir.ui.view,arch_db:weni_crm_custom.view_crm_lead_kanban
-msgid ""
-"This bar allows to filter the opportunities based on scheduled activities."
-msgstr ""
-"Esta barra permite filtrar as oportunidades com base nas atividades "
-"programadas."
+msgid "This bar allows to filter the opportunities based on scheduled activities."
+msgstr "Esta barra permite filtrar as oportunidades com base nas atividades programadas."
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_total_human_agents
@@ -423,28 +467,3 @@ msgstr "Usuários"
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_automation
 msgid "Weni Automation"
 msgstr "Automação Weni"
-
-#. module: weni_crm_custom
-#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_qualified
-msgid "Qualified ?"
-msgstr "Qualificado ?"
-
-#. module: weni_crm_custom
-#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__rd_created_date
-msgid "Created Date"
-msgstr "Data de Criação"
-
-#. module: weni_crm_custom
-#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__rd_first_conversion_date
-msgid "First Conversion Date"
-msgstr "Data da Primeira Conversão"
-
-#. module: weni_crm_custom
-#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__rd_conversion_origin
-msgid "Conversion Origin"
-msgstr "Origem de Conversão"
-
-#. module: weni_crm_custom
-#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__rd_actions_history
-msgid "Actions History"
-msgstr "Histórico de Ações"
