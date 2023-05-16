@@ -60,8 +60,16 @@ class ContractLine(models.Model):
 
         if self.contract_id.contract_type == "sale":
             account_id = self.contract_id.partner_id.property_account_receivable_id.id
+            operational_account_id = (
+                self.product_id.property_account_income_id.id
+                or self.product_id.categ_id.property_account_income_categ_id.id
+            )
         elif self.contract_id.contract_type == "purchase":
             account_id = self.contract_id.partner_id.property_account_payable_id.id
+            operational_account_id = (
+                self.product_id.property_account_expense_id.id
+                or self.product_id.categ_id.property_account_expense_categ_id.id
+            )
 
         parent_res_id = self.contract_id
         parent_res_model_id = self.env["ir.model"]._get(parent_res_id._name)
@@ -74,6 +82,7 @@ class ContractLine(models.Model):
             ),
             "date": recurring_next_date,
             "account_id": account_id,
+            "operational_account_id": operational_account_id,
             "partner_id": self.contract_id.partner_id.id,
             "balance": price_subtotal_company_signed,
             "company_id": self.contract_id.company_id.id,
