@@ -74,6 +74,17 @@ msgid "+9m"
 msgstr ""
 
 #. module: weni_mis_builder_cash_flow_custom
+#: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_account_move_line_forecast__account_id
+#: model_terms:ir.ui.view,arch_db:weni_mis_builder_cash_flow_custom.account_move_line_forecast_search_view
+msgid "Account"
+msgstr ""
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:ir.model,name:weni_mis_builder_cash_flow_custom.model_account_move_line_forecast
+msgid "Account Move Line Forecast"
+msgstr ""
+
+#. module: weni_mis_builder_cash_flow_custom
 #: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_mis_cash_flow_forecast_line__analytic_account_id
 msgid "Analytic Account"
 msgstr ""
@@ -84,8 +95,35 @@ msgid "Cash Flow Month"
 msgstr ""
 
 #. module: weni_mis_builder_cash_flow_custom
+#: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_account_move_line_forecast__company_id
+#: model_terms:ir.ui.view,arch_db:weni_mis_builder_cash_flow_custom.account_move_line_forecast_search_view
+msgid "Company"
+msgstr ""
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_account_move_line_forecast__credit
+msgid "Credit"
+msgstr ""
+
+#. module: weni_mis_builder_cash_flow_custom
 #: model:mis.report.instance.period,name:weni_mis_builder_cash_flow_custom.mis_period_month_current
 msgid "Current"
+msgstr ""
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_account_move_line_forecast__date
+#: model_terms:ir.ui.view,arch_db:weni_mis_builder_cash_flow_custom.account_move_line_forecast_search_view
+msgid "Date"
+msgstr ""
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_account_move_line_forecast__debit
+msgid "Debit"
+msgstr ""
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_account_move_line_forecast__display_name
+msgid "Display Name"
 msgstr ""
 
 #. module: weni_mis_builder_cash_flow_custom
@@ -111,13 +149,67 @@ msgid "Forecast"
 msgstr ""
 
 #. module: weni_mis_builder_cash_flow_custom
+#: selection:account.move.line.forecast,line_type:0
+#: model_terms:ir.ui.view,arch_db:weni_mis_builder_cash_flow_custom.account_move_line_forecast_search_view
+msgid "Forecast Line"
+msgstr ""
+
+#. module: weni_mis_builder_cash_flow_custom
 #: model:mis.report.instance.period,name:weni_mis_builder_cash_flow_custom.mis_period_month_future
 msgid "Future"
 msgstr ""
 
 #. module: weni_mis_builder_cash_flow_custom
+#: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_account_move_line_forecast__id
+msgid "ID"
+msgstr ""
+
+#. module: weni_mis_builder_cash_flow_custom
+#: selection:account.move.line.forecast,line_type:0
+#: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_account_move_line_forecast__move_line_id
+#: model_terms:ir.ui.view,arch_db:weni_mis_builder_cash_flow_custom.account_move_line_forecast_search_view
+msgid "Journal Item"
+msgstr ""
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model_terms:ir.ui.view,arch_db:weni_mis_builder_cash_flow_custom.account_move_line_forecast_search_view
+msgid "Journal items where matching number isn't set"
+msgstr ""
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_account_move_line_forecast____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_account_move_line_forecast__line_type
+#: model_terms:ir.ui.view,arch_db:weni_mis_builder_cash_flow_custom.account_move_line_forecast_search_view
+msgid "Line Type"
+msgstr ""
+
+#. module: weni_mis_builder_cash_flow_custom
 #: model:ir.model,name:weni_mis_builder_cash_flow_custom.model_mis_cash_flow_forecast_line
 msgid "MIS Cash Flow Forecast Line"
+msgstr ""
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_account_move_line_forecast__full_reconcile_id
+msgid "Matching Number"
+msgstr ""
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_account_move_line_forecast__name
+msgid "Name"
+msgstr ""
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model_terms:ir.ui.view,arch_db:weni_mis_builder_cash_flow_custom.account_move_line_forecast_tree_view
+msgid "Open Journal Item / Forecast Line"
+msgstr ""
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_mis_cash_flow_forecast_line__operational_account_id
+msgid "Operational Account"
 msgstr ""
 
 #. module: weni_mis_builder_cash_flow_custom
@@ -142,7 +234,33 @@ msgid "Parent Resource ID"
 msgstr ""
 
 #. module: weni_mis_builder_cash_flow_custom
+#: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_account_move_line_forecast__partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_account_move_line_forecast__reconciled
+msgid "Reconciled"
+msgstr ""
+
+#. module: weni_mis_builder_cash_flow_custom
 #: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_mis_cash_flow_forecast_line__res_id
 msgid "Resource ID"
+msgstr ""
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model_terms:ir.ui.view,arch_db:weni_mis_builder_cash_flow_custom.account_move_line_forecast_form_view
+#: model_terms:ir.ui.view,arch_db:weni_mis_builder_cash_flow_custom.account_move_line_forecast_tree_view
+msgid "Total"
+msgstr ""
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model_terms:ir.ui.view,arch_db:weni_mis_builder_cash_flow_custom.account_move_line_forecast_search_view
+msgid "Unreconciled"
+msgstr ""
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_account_move_line_forecast__user_type_id
+msgid "User Type"
 msgstr ""
 
