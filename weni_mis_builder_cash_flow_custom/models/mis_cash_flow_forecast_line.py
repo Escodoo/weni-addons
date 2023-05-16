@@ -25,6 +25,9 @@ class MisCashFlowForecastLine(models.Model):
     analytic_account_id = fields.Many2one(
         string="Analytic Account", comodel_name="account.analytic.account"
     )
+    operational_account_id = fields.Many2one(
+        string="Operational Account", comodel_name="account.account"
+    )
 
     def action_open_document_related(self):
         if self.res_model and self.res_id:
