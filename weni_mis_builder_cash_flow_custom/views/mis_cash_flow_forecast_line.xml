@@ -40,19 +40,12 @@
                 <field name="parent_res_id" />
             </field>
             <field name="account_id" position="after">
+                <field name="operational_account_id" />
                 <field name="analytic_account_id" />
             </field>
+
         </field>
     </record>
-
-<!--    <record model="ir.ui.view" id="mis_cash_flow_forecast_line_search_view">-->
-<!--        <field name="name">mis.cash_flow.forecast_line.search (in weni_mis_builder_cash_flow_custom)</field>-->
-<!--        <field name="model">mis.cash_flow.forecast_line</field>-->
-<!--        <field name="inherit_id" ref="TODO othermodule.search_view"/>-->
-<!--        <field name="arch" type="xml">-->
-<!--            &lt;!&ndash; TODO &ndash;&gt;-->
-<!--        </field>-->
-<!--    </record>-->
 
     <record model="ir.ui.view" id="mis_cash_flow_forecast_line_tree_view">
         <field
@@ -89,6 +82,7 @@
                 />
             </field>
             <field name="account_id" position="after">
+                <field name="operational_account_id" />
                 <field name="analytic_account_id" />
             </field>
 
