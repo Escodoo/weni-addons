@@ -13,9 +13,11 @@
         "mis_builder_cash_flow",
     ],
     "data": [
+        "security/account_move_line_forecast.xml",
         "views/mis_cash_flow_forecast_line.xml",
         "data/mis_report_instance.xml",
         "data/mis_report_style.xml",
+        "report/account_move_line_forecast_views.xml",
     ],
     "demo": [],
 }
