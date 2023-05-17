@@ -85,8 +85,22 @@ msgid "Account Move Line Forecast"
 msgstr ""
 
 #. module: weni_mis_builder_cash_flow_custom
+#: model:ir.actions.act_window,name:weni_mis_builder_cash_flow_custom.action_account_move_line_forecast
+#: model:ir.ui.menu,name:weni_mis_builder_cash_flow_custom.menu_account_move_line_forecast
+#: model_terms:ir.ui.view,arch_db:weni_mis_builder_cash_flow_custom.account_move_line_forecast_pivot_view
+msgid "Account Move Line With Forecast"
+msgstr ""
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_account_move_line_forecast__analytic_account_id
 #: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_mis_cash_flow_forecast_line__analytic_account_id
+#: model_terms:ir.ui.view,arch_db:weni_mis_builder_cash_flow_custom.account_move_line_forecast_search_view
 msgid "Analytic Account"
+msgstr ""
+
+#. module: weni_mis_builder_cash_flow_custom
+#: model:ir.model.fields,field_description:weni_mis_builder_cash_flow_custom.field_account_move_line_forecast__balance
+msgid "Balance"
 msgstr ""
 
 #. module: weni_mis_builder_cash_flow_custom
