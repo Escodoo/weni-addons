@@ -71,6 +71,7 @@ class ContractLine(models.Model):
                 or self.product_id.categ_id.property_account_expense_categ_id.id
             )
 
+        analytic_account_id = self.analytic_account_id.id
         parent_res_id = self.contract_id
         parent_res_model_id = self.env["ir.model"]._get(parent_res_id._name)
 
@@ -83,6 +84,7 @@ class ContractLine(models.Model):
             "date": recurring_next_date,
             "account_id": account_id,
             "operational_account_id": operational_account_id,
+            "analytic_account_id": analytic_account_id,
             "partner_id": self.contract_id.partner_id.id,
             "balance": price_subtotal_company_signed,
             "company_id": self.contract_id.company_id.id,
