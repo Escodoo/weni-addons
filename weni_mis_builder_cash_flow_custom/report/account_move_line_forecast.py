@@ -1,5 +1,6 @@
 # Copyright 2023 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+
 from psycopg2.extensions import AsIs
 
 from odoo import api, fields, models, tools
@@ -49,6 +50,9 @@ class AccountMoveLineForecast(models.Model):
     debit = fields.Float(
         readonly=True,
     )
+    balance = fields.Float(
+        readonly=True,
+    )
     date = fields.Date(
         readonly=True,
         index=True,
@@ -68,6 +72,13 @@ class AccountMoveLineForecast(models.Model):
         readonly=True,
         index=True,
     )
+    analytic_account_id = fields.Many2one(
+        "account.analytic.account",
+        string="Analytic Account",
+        auto_join=True,
+        readonly=True,
+        index=True,
+    )
 
     @api.model_cr
     def init(self):
@@ -79,8 +90,10 @@ class AccountMoveLineForecast(models.Model):
                 CAST('move_line' AS varchar) as line_type,
                 aml.id as move_line_id,
                 aml.account_id as account_id,
+                aml.analytic_account_id as analytic_account_id,
                 aml.debit AS debit,
                 aml.credit AS credit,
+                aml.balance AS balance,
                 aml.reconciled as reconciled,
                 aml.full_reconcile_id as full_reconcile_id,
                 aml.partner_id as partner_id,
@@ -95,6 +108,7 @@ class AccountMoveLineForecast(models.Model):
                 CAST('forecast_line' AS varchar) as line_type,
                 Null as move_line_id,
                 fl.operational_account_id as account_id,
+                fl.analytic_account_id as analytic_account_id,
                 CASE
                     WHEN fl.balance < 0
                     THEN -fl.balance
@@ -105,6 +119,7 @@ class AccountMoveLineForecast(models.Model):
                     THEN fl.balance
                     ELSE 0.0
                 END AS credit,
+                -fl.balance AS balance,
                 Null as reconciled,
                 Null as full_reconcile_id,
                 fl.partner_id as partner_id,
