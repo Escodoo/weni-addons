@@ -17,6 +17,7 @@
                 <field name="analytic_account_id" />
                 <field name="debit" sum="Total" />
                 <field name="credit" sum="Total" />
+                <field name="balance" sum="Total" />
                 <button
                     type="object"
                     string="Open Journal Item / Forecast Line"
@@ -44,6 +45,7 @@
                     <group>
                         <field name="debit" sum="Total" />
                         <field name="credit" sum="Total" />
+                        <field name="balance" sum="Total" />
                         <field name="company_id" groups="base.group_multi_company" />
                         <field name="line_type" />
                     </group>
@@ -113,5 +115,34 @@
             </search>
         </field>
     </record>
+
+    <record model="ir.ui.view" id="account_move_line_forecast_pivot_view">
+        <field name="name">account.move.line.forecast.pivot</field>
+        <field name="model">account.move.line.forecast</field>
+        <field name="type">pivot</field>
+        <field name="arch" type="xml">
+            <pivot string="Account Move Line With Forecast" display_quantity="false">
+                <field name="line_type" type="row" />
+                <field name="user_type_id" type="row" />
+                <field name="account_id" type="row" />
+                <field name="date" interval="month" type="col" />
+                <field name="balance" type="measure" />
+            </pivot>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_account_move_line_forecast">
+        <field name="name">Account Move Line With Forecast</field>
+        <field name="view_id" ref="account_move_line_forecast_tree_view" />
+        <field name="res_model">account.move.line.forecast</field>
+        <field name="view_mode">tree,pivot,graph,form</field>
+    </record>
+
+    <menuitem
+        id="menu_account_move_line_forecast"
+        parent="account.account_reports_management_menu"
+        action="action_account_move_line_forecast"
+        sequence="24"
+    />
 
 </odoo>

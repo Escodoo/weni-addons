@@ -50,6 +50,9 @@ class AccountMoveLineForecast(models.Model):
     debit = fields.Float(
         readonly=True,
     )
+    balance = fields.Float(
+        readonly=True,
+    )
     date = fields.Date(
         readonly=True,
         index=True,
@@ -90,6 +93,7 @@ class AccountMoveLineForecast(models.Model):
                 aml.analytic_account_id as analytic_account_id,
                 aml.debit AS debit,
                 aml.credit AS credit,
+                aml.balance AS balance,
                 aml.reconciled as reconciled,
                 aml.full_reconcile_id as full_reconcile_id,
                 aml.partner_id as partner_id,
@@ -115,6 +119,7 @@ class AccountMoveLineForecast(models.Model):
                     THEN fl.balance
                     ELSE 0.0
                 END AS credit,
+                -fl.balance AS balance,
                 Null as reconciled,
                 Null as full_reconcile_id,
                 fl.partner_id as partner_id,
