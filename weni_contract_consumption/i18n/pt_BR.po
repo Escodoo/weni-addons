@@ -6,16 +6,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-03 15:13+0000\n"
-"PO-Revision-Date: 2023-05-03 12:17-0300\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2023-05-28 18:08-0300\n"
 "Last-Translator: Marcel Savegnago <marcel.savegnago@gmail.com>\n"
 "Language-Team: \n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
-"Language: pt_BR\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.3.1\n"
 
 #. module: weni_contract_consumption
 #: model:ir.model.fields,field_description:weni_contract_consumption.field_contract_contract__contract_consumption_count
@@ -212,6 +212,11 @@ msgid "Login Count"
 msgstr "Contagem de Login"
 
 #. module: weni_contract_consumption
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__message_direction
+msgid "Message Direction"
+msgstr "Direção da Mensagem"
+
+#. module: weni_contract_consumption
 #: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__name
 msgid "Name"
 msgstr "Nome"
@@ -251,6 +256,11 @@ msgstr "A data do registro de uso do produto."
 #: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__human_service_department
 msgid "The department associated with the human service."
 msgstr "O departamento associado ao serviço humano."
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__message_direction
+msgid "The message direction"
+msgstr "A direção da mensagem"
 
 #. module: weni_contract_consumption
 #: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__ia_connect_name
@@ -318,6 +328,11 @@ msgid "The partner associated with this product usage."
 msgstr "O parceiro associado ao uso deste produto."
 
 #. module: weni_contract_consumption
+#: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__plan_type
+msgid "The type of plan"
+msgstr "O tipo do canal"
+
+#. module: weni_contract_consumption
 #: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__channel_type
 msgid "The type of the channel."
 msgstr "O tipo do canal."
@@ -346,6 +361,11 @@ msgstr "O identificador exclusivo do projeto."
 #: selection:contract.line.consumption,invoice_status:0
 msgid "To Invoice"
 msgstr "Para Faturar"
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__plan_type
+msgid "Type of Plan"
+msgstr "Tipo de Plano"
 
 #. module: weni_contract_consumption
 #: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__weni_id
