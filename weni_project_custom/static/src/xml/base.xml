@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="weni_template" inherit_id="template" xml:space="preserve">
+  <t t-extend="FormSelection.items">
+    <t t-jquery="span" t-operation="attributes">
+        <attribute
+                name="t-att-style"
+            >'background-color: ' + (rec.state_style || '')</attribute>
+    </t>
+  </t>
+</templates>

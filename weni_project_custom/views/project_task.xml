@@ -7,22 +7,11 @@
         <field name="model">project.task</field>
         <field name="inherit_id" ref="project.view_task_kanban" />
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='color']" position="after">
-                <field name="weni_kanban_state_color" />
-                <field name="weni_kanban_state_id" />
+            <xpath expr="//field[@name='kanban_state']" position="attributes">
+                <attribute name="invisible">1</attribute>
             </xpath>
-            <xpath expr="//div[hasclass('o_kanban_record_headings')]" position="inside">
-                <small class="o_kanban_record_subtitle">
-                    <t t-if="record.weni_kanban_state_id.value">
-                        <div class="o_kanban_tags_section oe_kanban_partner_categories">
-                            <span
-                                class="o_status"
-                                t-attf-style="background-color:#{record.weni_kanban_state_color.value}"
-                            />
-                            <field name="weni_kanban_state_id" />
-                        </div>
-                    </t>
-                </small>
+            <xpath expr="//field[@name='kanban_state']" position="after">
+                <field name="kanban_state" widget="weni_state_selection" />
             </xpath>
         </field>
     </record>
@@ -31,8 +20,11 @@
         <field name="model">project.task</field>
         <field name="inherit_id" ref="project.view_task_form2" />
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='user_id']" position="after">
-                <field name="weni_kanban_state_id" />
+            <xpath expr="//field[@name='kanban_state']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='kanban_state']" position="after">
+                <field name="kanban_state" widget="weni_state_selection" />
             </xpath>
         </field>
     </record>
