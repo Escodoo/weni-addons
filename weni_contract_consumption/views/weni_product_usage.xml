@@ -20,6 +20,7 @@
                             <field name="weni_id" />
                             <field name="project_uid" />
                             <field name="project_name" />
+                            <field name="plan_type" />
                             <field name="date" />
                         </group>
                         <group>
@@ -28,6 +29,7 @@
                             <field name="channel_name" />
                             <field name="channel_type" />
                             <field name="channel_message_count" />
+                            <field name="message_direction" />
                         </group>
                         <group>
                             <field name="flow_uuid" />

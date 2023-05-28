@@ -26,7 +26,13 @@ class WeniProductUsage(models.Model):
 
     project_name = fields.Char(string="Project Name", help="The name of the project.")
 
+    plan_type = fields.Char(string="Type of Plan", help="The type of plan")
+
     date = fields.Date(string="Date", help="The date of the product usage record.")
+
+    message_direction = fields.Char(
+        string="Message Direction", help="The message direction"
+    )
 
     active_user_count = fields.Integer(
         string="Active User Count",
