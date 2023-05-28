@@ -208,6 +208,11 @@ msgid "Login Count"
 msgstr ""
 
 #. module: weni_contract_consumption
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__message_direction
+msgid "Message Direction"
+msgstr ""
+
+#. module: weni_contract_consumption
 #: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__name
 msgid "Name"
 msgstr ""
@@ -246,6 +251,11 @@ msgstr ""
 #. module: weni_contract_consumption
 #: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__human_service_department
 msgid "The department associated with the human service."
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__message_direction
+msgid "The message direction"
 msgstr ""
 
 #. module: weni_contract_consumption
@@ -314,6 +324,11 @@ msgid "The partner associated with this product usage."
 msgstr ""
 
 #. module: weni_contract_consumption
+#: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__plan_type
+msgid "The type of plan"
+msgstr ""
+
+#. module: weni_contract_consumption
 #: model:ir.model.fields,help:weni_contract_consumption.field_weni_product_usage__channel_type
 msgid "The type of the channel."
 msgstr ""
@@ -341,6 +356,11 @@ msgstr ""
 #. module: weni_contract_consumption
 #: selection:contract.line.consumption,invoice_status:0
 msgid "To Invoice"
+msgstr ""
+
+#. module: weni_contract_consumption
+#: model:ir.model.fields,field_description:weni_contract_consumption.field_weni_product_usage__plan_type
+msgid "Type of Plan"
 msgstr ""
 
 #. module: weni_contract_consumption
