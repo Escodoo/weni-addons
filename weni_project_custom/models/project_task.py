@@ -7,19 +7,40 @@ from odoo import api, fields, models
 class ProjectTask(models.Model):
     _inherit = "project.task"
 
-    weni_kanban_state_id = fields.Many2one(
-        "project.task.kanban.state",
-        string="Weni Kanban State",
+    kanban_state = fields.Selection(
+        selection="_get_kanban_state_selection", string="Kanban State"
     )
-    weni_kanban_state_color = fields.Char(
-        string="Weni Kanban State Color",
-        compute="_compute_weni_kanban_state_color",
+    kanban_state_label = fields.Char(
+        compute="_compute_kanban_state_label",
+        string="Kanban State Label",
+        track_visibility="onchange",
     )
 
-    @api.depends("weni_kanban_state_id")
-    def _compute_weni_kanban_state_color(self):
-        for record in self:
-            if record.weni_kanban_state_id:
-                record.weni_kanban_state_color = record.weni_kanban_state_id.color
+    def _get_kanban_state_selection(self):
+        default_states = [
+            ("normal", "Grey"),
+            ("done", "Green"),
+            ("blocked", "Red"),
+        ]
+        weni_states = (
+            self.env["project.task.kanban.state"]
+            .search([])
+            .mapped(lambda state: (state.name, state.color))
+        )
+        return default_states + weni_states
+
+    @api.depends("stage_id", "kanban_state")
+    def _compute_kanban_state_label(self):
+        for task in self:
+            if task.kanban_state == "normal":
+                task.kanban_state_label = task.legend_normal
+            elif task.kanban_state == "blocked":
+                task.kanban_state_label = task.legend_blocked
             else:
-                record.weni_kanban_state_color = False
+                weni_states = self.env["project.task.kanban.state"].search(
+                    [("name", "=", task.kanban_state)]
+                )
+                if weni_states:
+                    task.kanban_state_label = weni_states.name
+                else:
+                    task.kanban_state_label = task.legend_done
