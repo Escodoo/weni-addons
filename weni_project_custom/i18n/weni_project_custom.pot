@@ -20,6 +20,13 @@ msgid "# Projects"
 msgstr ""
 
 #. module: weni_project_custom
+#. openerp-web
+#: code:addons/weni_project_custom/static/src/xml/base.xml:7
+#, python-format
+msgid "'background-color: ' + (rec.state_style || '')"
+msgstr ""
+
+#. module: weni_project_custom
 #: model:ir.model.fields,help:weni_project_custom.field_project_task_kanban_state__color
 msgid "Choose a color"
 msgstr ""
@@ -56,8 +63,14 @@ msgstr ""
 
 #. module: weni_project_custom
 #: model:ir.actions.act_window,name:weni_project_custom.project_task_kanban_state_act_window
+#: model:ir.model.fields,field_description:weni_project_custom.field_project_task__kanban_state
 #: model:ir.ui.menu,name:weni_project_custom.project_task_kanban_state_menu
 msgid "Kanban State"
+msgstr ""
+
+#. module: weni_project_custom
+#: model:ir.model.fields,field_description:weni_project_custom.field_project_task__kanban_state_label
+msgid "Kanban State Label"
 msgstr ""
 
 #. module: weni_project_custom
@@ -100,15 +113,5 @@ msgstr ""
 #. module: weni_project_custom
 #: model:ir.model,name:weni_project_custom.model_project_task
 msgid "Task"
-msgstr ""
-
-#. module: weni_project_custom
-#: model:ir.model.fields,field_description:weni_project_custom.field_project_task__weni_kanban_state_id
-msgid "Weni Kanban State"
-msgstr ""
-
-#. module: weni_project_custom
-#: model:ir.model.fields,field_description:weni_project_custom.field_project_task__weni_kanban_state_color
-msgid "Weni Kanban State Color"
 msgstr ""
 
