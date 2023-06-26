@@ -6,16 +6,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-03 15:06+0000\n"
-"PO-Revision-Date: 2023-05-03 12:09-0300\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2023-06-26 16:47-0300\n"
 "Last-Translator: Marcel Savegnago <marcel.savegnago@gmail.com>\n"
 "Language-Team: \n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
-"Language: pt_BR\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.3.1\n"
 
 #. module: weni_crm_custom
 #: model_terms:ir.ui.view,arch_db:weni_crm_custom.crm_lead_form_view_leads
@@ -195,11 +195,6 @@ msgid "First Conversion Date"
 msgstr "Data da Primeira Conversão"
 
 #. module: weni_crm_custom
-#: selection:crm.lead,weni_sale_sector:0
-msgid "Government"
-msgstr "Governo"
-
-#. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_has_dedicate_team
 msgid "Has Dedicated Team"
 msgstr "Tem Equipe Dedicada"
@@ -374,11 +369,6 @@ msgid "Primary Problems"
 msgstr "Problemas Primários"
 
 #. module: weni_crm_custom
-#: selection:crm.lead,weni_sale_sector:0
-msgid "Private Market"
-msgstr "Mercado Privado"
-
-#. module: weni_crm_custom
 #: selection:crm.lead,weni_sale_type:0
 msgid "Project"
 msgstr "Projeto"
@@ -411,13 +401,9 @@ msgstr "Problemas Secundários"
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_sale_sector
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_sector_demand
 msgid "Sector"
 msgstr "Setor"
-
-#. module: weni_crm_custom
-#: selection:crm.lead,weni_sale_sector:0
-msgid "Social Impact"
-msgstr "Impacto Social"
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_systems_used
@@ -431,18 +417,16 @@ msgstr "Técnico"
 
 #. module: weni_crm_custom
 #: model_terms:ir.ui.view,arch_db:weni_crm_custom.view_crm_lead_kanban
-msgid "This bar allows to filter the opportunities based on scheduled activities."
-msgstr "Esta barra permite filtrar as oportunidades com base nas atividades programadas."
+msgid ""
+"This bar allows to filter the opportunities based on scheduled activities."
+msgstr ""
+"Esta barra permite filtrar as oportunidades com base nas atividades "
+"programadas."
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_total_human_agents
 msgid "Total Human Agents"
 msgstr "Total de Agentes Humanos"
-
-#. module: weni_crm_custom
-#: selection:crm.lead,weni_sale_sector:0
-msgid "UN"
-msgstr "UN"
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_use_chatbot_solution
@@ -467,3 +451,15 @@ msgstr "Usuários"
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_automation
 msgid "Weni Automation"
 msgstr "Automação Weni"
+
+#~ msgid "Government"
+#~ msgstr "Governo"
+
+#~ msgid "Private Market"
+#~ msgstr "Mercado Privado"
+
+#~ msgid "Social Impact"
+#~ msgstr "Impacto Social"
+
+#~ msgid "UN"
+#~ msgstr "UN"
