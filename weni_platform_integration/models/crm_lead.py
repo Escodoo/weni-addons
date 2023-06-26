@@ -11,3 +11,8 @@ class CrmLead(models.Model):
         string="Weni ID",
         index=True,
     )
+
+    weni_url_link = fields.Char(
+        string="Weni URL Link",
+        index=True,
+    )

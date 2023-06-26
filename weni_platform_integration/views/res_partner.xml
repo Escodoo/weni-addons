@@ -14,7 +14,6 @@
                           <group>
                               <field name="weni_id" />
                           </group>
-                          <group />
                       </group>
                 </page>
             </notebook>
