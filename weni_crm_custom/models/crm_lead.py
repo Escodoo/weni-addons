@@ -27,8 +27,7 @@ class CrmLead(models.Model):
             ("enterprise", "Enterprise Project"),
         ],
     )
-    weni_sale_sector = fields.Char(
-        string="Sector")
+    weni_sale_sector = fields.Char(string="Sector")
     weni_linkedin_profile = fields.Char(string="Linkedin Profile")
     weni_lost_date = fields.Date("Lost Date", track_visibility="always")
     weni_is_freezed = fields.Boolean(string="Is freezed")
