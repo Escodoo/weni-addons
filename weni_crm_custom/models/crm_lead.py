@@ -27,15 +27,8 @@ class CrmLead(models.Model):
             ("enterprise", "Enterprise Project"),
         ],
     )
-    weni_sale_sector = fields.Selection(
-        string="Sector",
-        selection=[
-            ("un", "UN"),
-            ("private", "Private Market"),
-            ("social", "Social Impact"),
-            ("government", "Government"),
-        ],
-    )
+    weni_sale_sector = fields.Char(
+        string="Sector")
     weni_linkedin_profile = fields.Char(string="Linkedin Profile")
     weni_lost_date = fields.Date("Lost Date", track_visibility="always")
     weni_is_freezed = fields.Boolean(string="Is freezed")
