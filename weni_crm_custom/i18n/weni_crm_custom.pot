@@ -144,6 +144,11 @@ msgid "Decision Markers"
 msgstr ""
 
 #. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_sector_demand
+msgid "Demand Sector"
+msgstr ""
+
+#. module: weni_crm_custom
 #: model_terms:ir.ui.view,arch_db:weni_crm_custom.crm_lead_form_view_leads
 #: model_terms:ir.ui.view,arch_db:weni_crm_custom.crm_lead_form_view_oppor
 msgid "Diagnostic"
@@ -389,7 +394,6 @@ msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_sale_sector
-#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_sector_demand
 msgid "Sector"
 msgstr ""
 
