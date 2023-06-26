@@ -156,6 +156,7 @@
         <field name="arch" type="xml">
             <field name="tag_ids" position="after">
                 <field name="weni_sale_sector" />
+                <field name="weni_sector_demand" />
                 <field name="industry_id" position="move" />
                 <field name="secondary_industry_ids" position="move" />
                 <field name="weni_automation" />
@@ -288,6 +289,7 @@
         <field name="arch" type="xml">
             <field name="tag_ids" position="after">
                 <field name="weni_sale_sector" />
+                <field name="weni_sector_demand" />
                 <field name="industry_id" position="move" />
                 <field name="secondary_industry_ids" position="move" />
                 <field name="weni_automation" />
