@@ -103,7 +103,13 @@ msgid "Weni ID"
 msgstr ""
 
 #. module: weni_platform_integration
+#: model_terms:ir.ui.view,arch_db:weni_platform_integration.crm_lead_form_view
 #: model_terms:ir.ui.view,arch_db:weni_platform_integration.res_partner_form_view
 msgid "Weni Integration"
+msgstr ""
+
+#. module: weni_platform_integration
+#: model:ir.model.fields,field_description:weni_platform_integration.field_crm_lead__weni_url_link
+msgid "Weni URL Link"
 msgstr ""
 
