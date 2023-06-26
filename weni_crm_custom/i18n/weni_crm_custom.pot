@@ -183,11 +183,6 @@ msgid "First Conversion Date"
 msgstr ""
 
 #. module: weni_crm_custom
-#: selection:crm.lead,weni_sale_sector:0
-msgid "Government"
-msgstr ""
-
-#. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_has_dedicate_team
 msgid "Has Dedicated Team"
 msgstr ""
@@ -362,11 +357,6 @@ msgid "Primary Problems"
 msgstr ""
 
 #. module: weni_crm_custom
-#: selection:crm.lead,weni_sale_sector:0
-msgid "Private Market"
-msgstr ""
-
-#. module: weni_crm_custom
 #: selection:crm.lead,weni_sale_type:0
 msgid "Project"
 msgstr ""
@@ -399,12 +389,8 @@ msgstr ""
 
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_sale_sector
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_sector_demand
 msgid "Sector"
-msgstr ""
-
-#. module: weni_crm_custom
-#: selection:crm.lead,weni_sale_sector:0
-msgid "Social Impact"
 msgstr ""
 
 #. module: weni_crm_custom
@@ -425,11 +411,6 @@ msgstr ""
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_total_human_agents
 msgid "Total Human Agents"
-msgstr ""
-
-#. module: weni_crm_custom
-#: selection:crm.lead,weni_sale_sector:0
-msgid "UN"
 msgstr ""
 
 #. module: weni_crm_custom
