@@ -1,0 +1,118 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* weni_platform_integration
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Marcel Savegnago <marcel.savegnago@gmail.com>\n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.3.1\n"
+
+#. module: weni_platform_integration
+#: model:ir.model,name:weni_platform_integration.model_account_analytic_account
+msgid "Analytic Account"
+msgstr "Conta Analítica"
+
+#. module: weni_platform_integration
+#: model:ir.model,name:weni_platform_integration.model_res_partner
+msgid "Contact"
+msgstr "Contato"
+
+#. module: weni_platform_integration
+#: model:ir.model,name:weni_platform_integration.model_contract_contract
+msgid "Contract"
+msgstr "Contrato"
+
+#. module: weni_platform_integration
+#: model:ir.model,name:weni_platform_integration.model_contract_line
+msgid "Contract Line"
+msgstr "Linha de Contrato"
+
+#. module: weni_platform_integration
+#: model:ir.model,name:weni_platform_integration.model_res_currency
+msgid "Currency"
+msgstr "Moeda"
+
+#. module: weni_platform_integration
+#: model:ir.model,name:weni_platform_integration.model_account_invoice
+msgid "Invoice"
+msgstr "Fatura"
+
+#. module: weni_platform_integration
+#: model:ir.model,name:weni_platform_integration.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Linha da Fatura"
+
+#. module: weni_platform_integration
+#: model:ir.model,name:weni_platform_integration.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Prospecção/Oportunidade"
+
+#. module: weni_platform_integration
+#: model:ir.model,name:weni_platform_integration.model_account_payment_mode
+msgid "Payment Modes"
+msgstr "Modos de Pagamento"
+
+#. module: weni_platform_integration
+#: model:ir.model,name:weni_platform_integration.model_account_payment_term
+msgid "Payment Terms"
+msgstr "Condições de Pagamento"
+
+#. module: weni_platform_integration
+#: model:ir.model,name:weni_platform_integration.model_account_payment
+msgid "Payments"
+msgstr "Pagamentos"
+
+#. module: weni_platform_integration
+#: model:ir.model,name:weni_platform_integration.model_product_product
+msgid "Product"
+msgstr "Produto"
+
+#. module: weni_platform_integration
+#: model:ir.model,name:weni_platform_integration.model_product_template
+msgid "Product Template"
+msgstr "Modelo de Produto"
+
+#. module: weni_platform_integration
+#: model:ir.model,name:weni_platform_integration.model_project_project
+msgid "Project"
+msgstr "Projeto"
+
+#. module: weni_platform_integration
+#: model:ir.model.fields,field_description:weni_platform_integration.field_account_analytic_account__weni_id
+#: model:ir.model.fields,field_description:weni_platform_integration.field_account_invoice__weni_id
+#: model:ir.model.fields,field_description:weni_platform_integration.field_account_invoice_line__weni_id
+#: model:ir.model.fields,field_description:weni_platform_integration.field_account_payment__weni_id
+#: model:ir.model.fields,field_description:weni_platform_integration.field_account_payment_mode__weni_id
+#: model:ir.model.fields,field_description:weni_platform_integration.field_account_payment_term__weni_id
+#: model:ir.model.fields,field_description:weni_platform_integration.field_contract_contract__weni_id
+#: model:ir.model.fields,field_description:weni_platform_integration.field_contract_line__weni_id
+#: model:ir.model.fields,field_description:weni_platform_integration.field_crm_lead__weni_id
+#: model:ir.model.fields,field_description:weni_platform_integration.field_product_product__weni_id
+#: model:ir.model.fields,field_description:weni_platform_integration.field_product_template__weni_id
+#: model:ir.model.fields,field_description:weni_platform_integration.field_project_project__weni_id
+#: model:ir.model.fields,field_description:weni_platform_integration.field_res_currency__weni_id
+#: model:ir.model.fields,field_description:weni_platform_integration.field_res_partner__weni_id
+#: model:ir.model.fields,field_description:weni_platform_integration.field_res_users__weni_id
+msgid "Weni ID"
+msgstr "Weni ID"
+
+#. module: weni_platform_integration
+#: model_terms:ir.ui.view,arch_db:weni_platform_integration.crm_lead_form_view
+#: model_terms:ir.ui.view,arch_db:weni_platform_integration.res_partner_form_view
+msgid "Weni Integration"
+msgstr "Integração Weni"
+
+#. module: weni_platform_integration
+#: model:ir.model.fields,field_description:weni_platform_integration.field_crm_lead__weni_url_link
+msgid "Weni URL Link"
+msgstr "Weni URL Link"
