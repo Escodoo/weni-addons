@@ -3,7 +3,7 @@
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo>
 
-    <record model="ir.ui.view" id="crm_lead_form_view">
+    <record model="ir.ui.view" id="crm_case_form_view_leads">
         <field name="name">crm.lead.form (in weni_platform_integration)</field>
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.crm_case_form_view_leads" />
@@ -21,7 +21,7 @@
         </field>
     </record>
 
-    <record model="ir.ui.view" id="crm_lead_form_view">
+    <record model="ir.ui.view" id="crm_case_form_view_oppor">
         <field name="name">crm.lead.form (in weni_platform_integration)</field>
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.crm_case_form_view_oppor" />
@@ -38,23 +38,5 @@
             </notebook>
         </field>
     </record>
-
-<!--    <record model="ir.ui.view" id="crm_lead_search_view">-->
-<!--        <field name="name">crm.lead.search (in weni_platform_integration)</field>-->
-<!--        <field name="model">crm.lead</field>-->
-<!--        <field name="inherit_id" ref="TODO othermodule.search_view"/>-->
-<!--        <field name="arch" type="xml">-->
-<!--            &lt;!&ndash; TODO &ndash;&gt;-->
-<!--        </field>-->
-<!--    </record>-->
-
-<!--    <record model="ir.ui.view" id="crm_lead_tree_view">-->
-<!--        <field name="name">crm.lead.tree (in weni_platform_integration)</field>-->
-<!--        <field name="model">crm.lead</field>-->
-<!--        <field name="inherit_id" ref="TODO othermodule.tree_view"/>-->
-<!--        <field name="arch" type="xml">-->
-<!--            &lt;!&ndash; TODO &ndash;&gt;-->
-<!--        </field>-->
-<!--    </record>-->
 
 </odoo>
