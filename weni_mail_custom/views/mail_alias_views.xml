@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<!--
+# Copyright 2023 - TODAY, Escodoo
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="mail_alias_form_view">
+            <field name="name">mail.alias.form (in weni_alias_custom)</field>
+            <field name="model">mail.alias</field>
+            <field name="inherit_id" ref="mail.view_mail_alias_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='alias_model_id']" position="after">
+                    <field name="whitelist_words" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
