@@ -46,6 +46,8 @@
                             <span class="oe_grey"> %%</span>
                         </div>
                     </div>
+
+
                 </h2>
                 <h2 class="o_row row no-gutters d-flex">
                     <div class="col">
@@ -61,6 +63,7 @@
                         </div>
                     </div>
                 </h2>
+
             </h1>
 
             <page name="extra" position="attributes">
@@ -207,6 +210,7 @@
                                 widget='monetary'
                                 options="{'currency_field': 'company_currency'}"
                             />
+
                         </div>
                     </div>
                 </h2>
@@ -339,6 +343,7 @@
                     name="quick_create_view"
                 >crm.quick_create_opportunity_form</attribute>
                 <attribute name="archivable">false</attribute>
+
             </kanban>
             <kanban position="inside">
                 <field
@@ -348,6 +353,8 @@
                 <field name="planned_revenue" />
                 <field name="kanban_state" />
                 <field name="company_currency" />
+
+
                 <progressbar
                     field="activity_state"
                     colors='{"planned": "success", "today": "warning", "overdue": "danger"}'
@@ -382,6 +389,17 @@
                         name="weni_amount_nrr"
                         widget="monetary"
                         options="{'currency_field': 'company_currency'}"
+                    />
+                </div>
+
+                <div>
+                    <strong>
+                        Expected Closing:
+                    </strong>
+                    <field
+                        name="date_deadline"
+                        widget="date"
+                        domain="[('date_deadline','=',True)]"
                     />
                 </div>
             </xpath>

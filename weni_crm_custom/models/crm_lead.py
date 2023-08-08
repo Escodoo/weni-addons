@@ -34,7 +34,16 @@ class CrmLead(models.Model):
     weni_is_freezed = fields.Boolean(string="Is freezed")
 
     # ICP Details
-    weni_company_size = fields.Integer(string="Company Size")
+    weni_company_size = fields.Selection(
+        string="Company Size",
+        selection=[
+            ("mb", "Microbusiness"),
+            ("smb", "Small and Medium-sized Business"),
+            ("msb", "Medium-sized Business"),
+            ("lsb", "Large-sized Business"),
+        ],
+    )
+
     weni_active_contacts = fields.Integer(string="Active Contacts")
     weni_has_dedicate_team = fields.Boolean(string="Has Dedicated Team")
     weni_customer_rating = fields.Float(string="Company Rating")
