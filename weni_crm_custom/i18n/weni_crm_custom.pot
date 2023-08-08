@@ -21,6 +21,13 @@ msgstr ""
 #. module: weni_crm_custom
 #: model_terms:ir.ui.view,arch_db:weni_crm_custom.view_crm_lead_case_kanban
 msgid "<strong>\n"
+"                        Expected Closing:\n"
+"                    </strong>"
+msgstr ""
+
+#. module: weni_crm_custom
+#: model_terms:ir.ui.view,arch_db:weni_crm_custom.view_crm_lead_case_kanban
+msgid "<strong>\n"
 "                        MRR:\n"
 "                    </strong>"
 msgstr ""
@@ -248,6 +255,11 @@ msgid "Job Position"
 msgstr ""
 
 #. module: weni_crm_custom
+#: selection:crm.lead,weni_company_size:0
+msgid "Large-sized Business"
+msgstr ""
+
+#. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_channel____last_update
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_decision_maker____last_update
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_user____last_update
@@ -307,6 +319,16 @@ msgstr ""
 #. module: weni_crm_custom
 #: selection:crm.lead,weni_icp_classification:0
 msgid "Medium Fit"
+msgstr ""
+
+#. module: weni_crm_custom
+#: selection:crm.lead,weni_company_size:0
+msgid "Medium-sized Business"
+msgstr ""
+
+#. module: weni_crm_custom
+#: selection:crm.lead,weni_company_size:0
+msgid "Microbusiness"
 msgstr ""
 
 #. module: weni_crm_custom
@@ -395,6 +417,11 @@ msgstr ""
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_sale_sector
 msgid "Sector"
+msgstr ""
+
+#. module: weni_crm_custom
+#: selection:crm.lead,weni_company_size:0
+msgid "Small and Medium-sized Business"
 msgstr ""
 
 #. module: weni_crm_custom
