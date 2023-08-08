@@ -1,0 +1,43 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* weni_mail_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: weni_mail_custom
+#: model:ir.model,name:weni_mail_custom.model_mail_alias
+msgid "Email Aliases"
+msgstr ""
+
+#. module: weni_mail_custom
+#: model:ir.model,name:weni_mail_custom.model_mail_thread
+msgid "Email Thread"
+msgstr ""
+
+#. module: weni_mail_custom
+#: model:ir.model.fields,help:weni_mail_custom.field_crm_team__whitelist_words
+#: model:ir.model.fields,help:weni_mail_custom.field_mail_alias__whitelist_words
+#: model:ir.model.fields,help:weni_mail_custom.field_mail_alias_mixin__whitelist_words
+#: model:ir.model.fields,help:weni_mail_custom.field_mail_channel__whitelist_words
+#: model:ir.model.fields,help:weni_mail_custom.field_project_project__whitelist_words
+msgid "List of allowed words separated by comma."
+msgstr ""
+
+#. module: weni_mail_custom
+#: model:ir.model.fields,field_description:weni_mail_custom.field_crm_team__whitelist_words
+#: model:ir.model.fields,field_description:weni_mail_custom.field_mail_alias__whitelist_words
+#: model:ir.model.fields,field_description:weni_mail_custom.field_mail_alias_mixin__whitelist_words
+#: model:ir.model.fields,field_description:weni_mail_custom.field_mail_channel__whitelist_words
+#: model:ir.model.fields,field_description:weni_mail_custom.field_project_project__whitelist_words
+msgid "Whitelist Words"
+msgstr ""
+
