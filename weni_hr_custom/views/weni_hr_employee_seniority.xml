@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2023 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record model="ir.ui.view" id="weni_hr_employee_seniority_form_view">
+        <field name="name">weni.hr.employee.seniority.form (in weni_hr_custom)</field>
+        <field name="model">weni.hr.employee.seniority</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="sequence"/>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter"></div>
+            </form>
+        </field>
+    </record>
+
+    <!-- <record model="ir.ui.view" id="weni_hr_employee_seniority_search_view">
+        <field name="name">weni.hr.employee.seniority.search (in weni_hr_custom)</field>
+        <field name="model">weni.hr.employee.seniority</field>
+        <field name="arch" type="xml">
+            <search>
+
+            </search>
+        </field>
+    </record> -->
+
+    <record model="ir.ui.view" id="weni_hr_employee_seniority_tree_view">
+        <field name="name">weni.hr.employee.seniority.tree (in weni_hr_custom)</field>
+        <field name="model">weni.hr.employee.seniority</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence" widget="handle" />
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="weni_hr_employee_seniority_act_window">
+        <field name="name">Employee Seniority</field>
+        <field name="res_model">weni.hr.employee.seniority</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <record model="ir.ui.menu" id="weni_hr_employee_seniority_menu">
+        <field name="name">Employee Seniority</field>
+        <field name="parent_id" ref="hr.menu_human_resources_configuration"/>
+        <field name="action" ref="weni_hr_employee_seniority_act_window"/>
+        <field name="sequence" eval="16"/>
+    </record>
+
+</odoo>
