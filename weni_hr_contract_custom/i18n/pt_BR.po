@@ -1,0 +1,130 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* weni_hr_contract_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.3.2\n"
+
+#. module: weni_hr_contract_custom
+#: model:ir.model.fields,field_description:weni_hr_contract_custom.field_weni_hr_contract_benefit__amount
+msgid "Amount"
+msgstr "Quantidade"
+
+#. module: weni_hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:weni_hr_contract_custom.weni_hr_contract_benefit_template_form_view
+msgid "Benefit Name"
+msgstr "Nome do Benefício"
+
+#. module: weni_hr_contract_custom
+#: model:ir.model.fields,field_description:weni_hr_contract_custom.field_weni_hr_contract_benefit__benefit_template_id
+msgid "Benefit Template"
+msgstr "Modelo de Benefício"
+
+#. module: weni_hr_contract_custom
+#: model:ir.model.fields,field_description:weni_hr_contract_custom.field_weni_hr_contract_benefit__benefit_template_code
+#: model:ir.model.fields,field_description:weni_hr_contract_custom.field_weni_hr_contract_benefit_template__code
+msgid "Code"
+msgstr "Código"
+
+#. module: weni_hr_contract_custom
+#: model:ir.model,name:weni_hr_contract_custom.model_hr_contract
+#: model:ir.model.fields,field_description:weni_hr_contract_custom.field_weni_hr_contract_benefit__contract_id
+msgid "Contract"
+msgstr "Contrato"
+
+#. module: weni_hr_contract_custom
+#: model:ir.model,name:weni_hr_contract_custom.model_weni_hr_contract_benefit
+msgid "Contract Benefit"
+msgstr "Benefício do Contrato"
+
+#. module: weni_hr_contract_custom
+#: model:ir.actions.act_window,name:weni_hr_contract_custom.weni_hr_contract_benefit_template_act_window
+#: model:ir.model,name:weni_hr_contract_custom.model_weni_hr_contract_benefit_template
+#: model:ir.ui.menu,name:weni_hr_contract_custom.weni_hr_contract_benefit_template_menu
+msgid "Contract Benefit Template"
+msgstr "Modelo de Benefício de Contrato"
+
+#. module: weni_hr_contract_custom
+#: model:ir.model.fields,field_description:weni_hr_contract_custom.field_hr_contract__weni_benefit_ids
+#: model_terms:ir.ui.view,arch_db:weni_hr_contract_custom.hr_contract_form_view
+msgid "Contract Benefits"
+msgstr "Benefícios do Contrato"
+
+#. module: weni_hr_contract_custom
+#: model:ir.model.fields,field_description:weni_hr_contract_custom.field_weni_hr_contract_benefit__create_uid
+#: model:ir.model.fields,field_description:weni_hr_contract_custom.field_weni_hr_contract_benefit_template__create_uid
+msgid "Created by"
+msgstr "Criado por"
+
+#. module: weni_hr_contract_custom
+#: model:ir.model.fields,field_description:weni_hr_contract_custom.field_weni_hr_contract_benefit__create_date
+#: model:ir.model.fields,field_description:weni_hr_contract_custom.field_weni_hr_contract_benefit_template__create_date
+msgid "Created on"
+msgstr "Criado em"
+
+#. module: weni_hr_contract_custom
+#: model:ir.model.fields,field_description:weni_hr_contract_custom.field_weni_hr_contract_benefit_template__default_value
+msgid "Default value for this benefit"
+msgstr "Valor padrão para esse benefício"
+
+#. module: weni_hr_contract_custom
+#: model:ir.model.fields,field_description:weni_hr_contract_custom.field_weni_hr_contract_benefit__display_name
+#: model:ir.model.fields,field_description:weni_hr_contract_custom.field_weni_hr_contract_benefit_template__display_name
+msgid "Display Name"
+msgstr "Nome de Exibição"
+
+#. module: weni_hr_contract_custom
+#: model:ir.model.fields,field_description:weni_hr_contract_custom.field_weni_hr_contract_benefit__id
+#: model:ir.model.fields,field_description:weni_hr_contract_custom.field_weni_hr_contract_benefit_template__id
+msgid "ID"
+msgstr "ID"
+
+#. module: weni_hr_contract_custom
+#: model:ir.model.fields,field_description:weni_hr_contract_custom.field_weni_hr_contract_benefit____last_update
+#: model:ir.model.fields,field_description:weni_hr_contract_custom.field_weni_hr_contract_benefit_template____last_update
+msgid "Last Modified on"
+msgstr "Última Modificação em"
+
+#. module: weni_hr_contract_custom
+#: model:ir.model.fields,field_description:weni_hr_contract_custom.field_weni_hr_contract_benefit__write_uid
+#: model:ir.model.fields,field_description:weni_hr_contract_custom.field_weni_hr_contract_benefit_template__write_uid
+msgid "Last Updated by"
+msgstr "Última Atualização por"
+
+#. module: weni_hr_contract_custom
+#: model:ir.model.fields,field_description:weni_hr_contract_custom.field_weni_hr_contract_benefit__write_date
+#: model:ir.model.fields,field_description:weni_hr_contract_custom.field_weni_hr_contract_benefit_template__write_date
+msgid "Last Updated on"
+msgstr "Última Atualização em"
+
+#. module: weni_hr_contract_custom
+#: model:ir.model.fields,field_description:weni_hr_contract_custom.field_weni_hr_contract_benefit_template__name
+msgid "Name"
+msgstr "Nome"
+
+#. module: weni_hr_contract_custom
+#: model:ir.model.fields,field_description:weni_hr_contract_custom.field_weni_hr_contract_benefit__contract_state
+msgid "Status"
+msgstr "Status"
+
+#. module: weni_hr_contract_custom
+#: model:ir.model.fields,help:weni_hr_contract_custom.field_weni_hr_contract_benefit__contract_state
+msgid "Status of the contract"
+msgstr "Status do Contrato"
+
+#. module: weni_hr_contract_custom
+#: model:ir.model.fields,field_description:weni_hr_contract_custom.field_hr_contract__weni_benefit_total_amount
+msgid "Total Benefit Amount"
+msgstr "Valor Total do Benefício"
