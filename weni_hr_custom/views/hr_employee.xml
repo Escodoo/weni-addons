@@ -12,9 +12,11 @@
             <field name="tz" position="after">
                 <field name="weni_seniority_id" />
                 <field name="weni_level" />
+                <field name="weni_is_leader" />
+            </field>
+            <field name="company_id" position="before">
                 <field name="weni_date_last_progression" />
                 <field name="weni_key_outcome_job_salary_plan" />
-                <field name="weni_is_leader" />
             </field>
             <field name="gender" position="after">
                 <field name="weni_sexual_orientation_id" />
