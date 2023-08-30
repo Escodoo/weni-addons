@@ -7,6 +7,6 @@ from odoo import fields, models
 class MailAlias(models.Model):
     _inherit = "mail.alias"
 
-    whitelist_words = fields.Text(
-        string="Whitelist Words", help="List of allowed words separated by comma."
+    weni_mail_blacklist_ids = fields.One2many(
+        "weni.mail.blacklist", "alias_id", string="Weni Mail lines", copy=True
     )

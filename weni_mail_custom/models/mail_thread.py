@@ -1,6 +1,7 @@
 # Copyright 2023 - TODAY, Escodoo
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
+import re
 from odoo import api, models
 
 
@@ -11,7 +12,7 @@ class MailThread(models.AbstractModel):
     def message_route(
         self, message, message_dict, model=None, thread_id=None, custom_values=None
     ):
-        aliases = self.env["mail.alias"].search([("whitelist_words", "!=", "")])
+        aliases = self.env["mail.alias"].search([("weni_mail_blacklist_ids", "!=", False)])
         if aliases:
             matching_aliases = self._find_matching_aliases(message_dict)
             if matching_aliases:
@@ -20,7 +21,7 @@ class MailThread(models.AbstractModel):
                     + matching_aliases.mapped("display_name")
                 )
                 message_dict["recipients"] = recipients
-            if not self._contains_whitelist_words(message_dict.get("body", "")):
+            if not self._contains_blacklist_emails(message_dict.get("from", "")):
                 return False
         else:
             pass
@@ -31,16 +32,17 @@ class MailThread(models.AbstractModel):
 
     def _find_matching_aliases(self, message_dict):
         pass
-
-    def _contains_whitelist_words(self, body):
-        if body:
-            body = body.lower()
-            aliases = self.env["mail.alias"].search([("whitelist_words", "!=", "")])
+    
+    def _contains_blacklist_emails(self, sender_email):
+        if sender_email:
+            # Get email in characters < >, default response is FirstName LastName <name@email.com>
+            sender_email = re.search(r'<([^>]+)>', sender_email).group(1)
+            # Search all mails blacklist
+            aliases = self.env["mail.alias"].search([("weni_mail_blacklist_ids", "!=", False)])
             for alias in aliases:
-                whitelist_words = [
-                    word.strip().lower() for word in alias.whitelist_words.split(",")
-                ]
-                for word in whitelist_words:
-                    if word in body:
-                        return True
-        return False
+                blacklist_emails = alias.weni_mail_blacklist_ids.mapped('weni_blacklist_mail')
+                if sender_email in blacklist_emails:
+                    # Return False to stop process alias, example: create helpdesk.ticket
+                    return False
+        # Allow continue process to alias
+        return True

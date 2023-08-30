@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <!--
 # Copyright 2023 - TODAY, Escodoo
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
@@ -10,8 +10,21 @@
             <field name="model">mail.alias</field>
             <field name="inherit_id" ref="mail.view_mail_alias_form" />
             <field name="arch" type="xml">
-                <xpath expr="//field[@name='alias_model_id']" position="after">
-                    <field name="whitelist_words" />
+                <xpath expr='/form/sheet' position="inside">
+                    <div class="oe_clear" />
+                    <notebook>
+                        <page string="Blacklist" name="blacklist_mail">
+                            <field
+                                name="weni_mail_blacklist_ids"
+                            >
+                                <tree editable="bottom">
+                                    <field name="weni_blacklist_mail"
+                                        string="E-mail"
+                                    />
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
                 </xpath>
             </field>
         </record>

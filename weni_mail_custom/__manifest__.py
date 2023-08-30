@@ -10,5 +10,8 @@
     "author": "Escodoo",
     "website": "https://github.com/Escodoo/weni-addons",
     "depends": ["mail"],
-    "data": ["views/mail_alias_views.xml"],
+    "data": [
+        "security/ir.model.access.csv",
+        "views/mail_alias_views.xml",
+    ],
 }
