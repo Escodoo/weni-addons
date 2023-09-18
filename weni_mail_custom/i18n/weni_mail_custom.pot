@@ -14,6 +14,36 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: weni_mail_custom
+#: model:ir.model.fields,field_description:weni_mail_custom.field_weni_mail_blacklist__alias_id
+msgid "Alias"
+msgstr ""
+
+#. module: weni_mail_custom
+#: model_terms:ir.ui.view,arch_db:weni_mail_custom.mail_alias_form_view
+msgid "Blacklist"
+msgstr ""
+
+#. module: weni_mail_custom
+#: model:ir.model.fields,field_description:weni_mail_custom.field_weni_mail_blacklist__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: weni_mail_custom
+#: model:ir.model.fields,field_description:weni_mail_custom.field_weni_mail_blacklist__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: weni_mail_custom
+#: model:ir.model.fields,field_description:weni_mail_custom.field_weni_mail_blacklist__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: weni_mail_custom
+#: model_terms:ir.ui.view,arch_db:weni_mail_custom.mail_alias_form_view
+msgid "E-mail"
+msgstr ""
+
+#. module: weni_mail_custom
 #: model:ir.model,name:weni_mail_custom.model_mail_alias
 msgid "Email Aliases"
 msgstr ""
@@ -24,20 +54,41 @@ msgid "Email Thread"
 msgstr ""
 
 #. module: weni_mail_custom
-#: model:ir.model.fields,help:weni_mail_custom.field_crm_team__whitelist_words
-#: model:ir.model.fields,help:weni_mail_custom.field_mail_alias__whitelist_words
-#: model:ir.model.fields,help:weni_mail_custom.field_mail_alias_mixin__whitelist_words
-#: model:ir.model.fields,help:weni_mail_custom.field_mail_channel__whitelist_words
-#: model:ir.model.fields,help:weni_mail_custom.field_project_project__whitelist_words
-msgid "List of allowed words separated by comma."
+#: model:ir.model.fields,field_description:weni_mail_custom.field_weni_mail_blacklist__id
+msgid "ID"
 msgstr ""
 
 #. module: weni_mail_custom
-#: model:ir.model.fields,field_description:weni_mail_custom.field_crm_team__whitelist_words
-#: model:ir.model.fields,field_description:weni_mail_custom.field_mail_alias__whitelist_words
-#: model:ir.model.fields,field_description:weni_mail_custom.field_mail_alias_mixin__whitelist_words
-#: model:ir.model.fields,field_description:weni_mail_custom.field_mail_channel__whitelist_words
-#: model:ir.model.fields,field_description:weni_mail_custom.field_project_project__whitelist_words
-msgid "Whitelist Words"
+#: model:ir.model.fields,field_description:weni_mail_custom.field_weni_mail_blacklist____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: weni_mail_custom
+#: model:ir.model.fields,field_description:weni_mail_custom.field_weni_mail_blacklist__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: weni_mail_custom
+#: model:ir.model.fields,field_description:weni_mail_custom.field_weni_mail_blacklist__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: weni_mail_custom
+#: model:ir.model.fields,field_description:weni_mail_custom.field_weni_mail_blacklist__weni_blacklist_mail
+msgid "Weni Blacklist Mail"
+msgstr ""
+
+#. module: weni_mail_custom
+#: model:ir.model,name:weni_mail_custom.model_weni_mail_blacklist
+msgid "Weni Mail Blacklist"
+msgstr ""
+
+#. module: weni_mail_custom
+#: model:ir.model.fields,field_description:weni_mail_custom.field_crm_team__weni_mail_blacklist_ids
+#: model:ir.model.fields,field_description:weni_mail_custom.field_mail_alias__weni_mail_blacklist_ids
+#: model:ir.model.fields,field_description:weni_mail_custom.field_mail_alias_mixin__weni_mail_blacklist_ids
+#: model:ir.model.fields,field_description:weni_mail_custom.field_mail_channel__weni_mail_blacklist_ids
+#: model:ir.model.fields,field_description:weni_mail_custom.field_project_project__weni_mail_blacklist_ids
+msgid "Weni Mail lines"
 msgstr ""
 
