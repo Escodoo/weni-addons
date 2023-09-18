@@ -13,18 +13,25 @@ class TestMailThread(TransactionCase):
         self.MailAlias = self.env["mail.alias"]
         self.MailThread = self.env["mail.thread"]
         self.user_group = self.env.ref("base.group_user")
-
-    def test_message_route_with_whitelist_words(self):
-        alias = self.MailAlias.create(
+        self.WeniMail = self.env["weni.mail.blacklist"]
+        self.alias = self.MailAlias.create(
             {
                 "alias_name": "support@example.com",
                 "alias_model_id": self.env["ir.model"]._get("res.partner").id,
-                "whitelist_words": "urgent,help",
             }
         )
-        self.assertTrue(alias)
+        self.weni_mail = self.WeniMail.create(
+            {
+                "alias_id": self.alias.id,
+                "weni_blacklist_mail": "kaynnan.lemes@escodoo.com.br"
+            }
+        )
+        self.alias.write({'weni_mail_blacklist_ids': [(4, blacklist.id) for blacklist in self.weni_mail]})
+
+    def test_message_route_with_whitelist_words(self):        
+        self.assertTrue(self.alias)
         message_dict = {
-            "recipients": "support@example.com",
+            "recipients": "kaynnan.lemes@escodoo.com.br",
             "body": "This is an urgent request. Please help.",
         }
         # Create a simple email message object
@@ -40,22 +47,21 @@ class TestMailThread(TransactionCase):
         )
         self.assertTrue(result, "The message_route should not return False.")
         self.assertIn(
-            "support@example.com",
+            "kaynnan.lemes@escodoo.com.br",
             message_dict["recipients"],
             "The recipients should include the mail alias.",
         )
 
-    def test_message_route_without_matching_whitelist_words(self):
+    def test_message_route_without_matching_blacklist_mail(self):
         alias = self.MailAlias.create(
             {
                 "alias_name": "support@example.com",
                 "alias_model_id": self.env["ir.model"]._get("res.partner").id,
-                "whitelist_words": "urgent,help",
             }
         )
         self.assertTrue(alias)
         message_dict = {
-            "recipients": "support@example.com",
+            "recipients": "kaynnan.lemes@escodoo.com.br",
             "body": "This is a general inquiry.",
         }
         message = Message()
@@ -68,4 +74,6 @@ class TestMailThread(TransactionCase):
             thread_id=None,
             custom_values=None,
         )
-        self.assertFalse(result, "The message_route should return False.")
+        self.assertTrue(result)
+        blacklist_mail = self.MailThread._contains_blacklist_emails(message_dict.get("from", ""))
+        self.assertTrue(blacklist_mail)
