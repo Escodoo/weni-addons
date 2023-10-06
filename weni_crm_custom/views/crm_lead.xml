@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright 2021 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo>
@@ -127,6 +127,7 @@
                         <field name="weni_use_chatbot_solution" />
                         <field name="weni_systems_used" />
                         <field name="weni_icp_classification" />
+                        <field name="weni_customer_profile" />
                     </group>
                 </page>
                 <page name="weni_diagnostic" string="Diagnostic">
@@ -138,6 +139,7 @@
                         <field name="weni_need" />
                         <field name="weni_project_integration" />
                         <field name="weni_channels_used" />
+                        <field name="weni_monthly_attendance_number" />
                     </group>
                 </page>
                 <page name="weni_decision_makers" string="Decision Makers">
@@ -179,6 +181,27 @@
                         <group>
                             <field name="rd_odoo_lead_link" />
                             <field name="rd_first_conversion_date" />
+                            <field name="weni_last_source_attribution" />
+                        </group>
+                        <group>
+                            <field name="weni_first_source_attribution" />
+                            <field name="weni_multi_source_attribution" />
+                            <field name="weni_fbclid" />
+                        </group>
+                        <group>
+                            <field name="weni_gclid" />
+                            <field name="weni_utm_source" />
+                            <field name="weni_utm_medium" />
+                        </group>
+                        <group>
+                            <field name="weni_utm_campaign" />
+                            <field name="weni_utm_content" />
+                            <field name="weni_utm_term" />
+                        </group>
+                        <group>
+                            <field name="weni_client_user_agent" />
+                            <field name="weni_client_ip_address" />
+                            <field name="weni_analytics_client_id" />
                         </group>
                     </group>
                 </page>
@@ -261,6 +284,7 @@
                         <field name="weni_use_chatbot_solution" />
                         <field name="weni_systems_used" />
                         <field name="weni_icp_classification" />
+                        <field name="weni_customer_profile" />
                     </group>
                 </page>
                 <page name="weni_diagnostic" string="Diagnostic">
@@ -272,6 +296,7 @@
                         <field name="weni_need" />
                         <field name="weni_project_integration" />
                         <field name="weni_channels_used" />
+                        <field name="weni_monthly_attendance_number" />
                     </group>
                 </page>
                 <page name="weni_decision_makers" string="Decision Makers">
@@ -312,6 +337,27 @@
                         <group>
                             <field name="rd_odoo_lead_link" />
                             <field name="rd_first_conversion_date" />
+                            <field name="weni_last_source_attribution" />
+                        </group>
+                        <group>
+                            <field name="weni_first_source_attribution" />
+                            <field name="weni_multi_source_attribution" />
+                            <field name="weni_fbclid" />
+                        </group>
+                        <group>
+                            <field name="weni_gclid" />
+                            <field name="weni_utm_source" />
+                            <field name="weni_utm_medium" />
+                        </group>
+                        <group>
+                            <field name="weni_utm_campaign" />
+                            <field name="weni_utm_content" />
+                            <field name="weni_utm_term" />
+                        </group>
+                        <group>
+                            <field name="weni_client_user_agent" />
+                            <field name="weni_client_ip_address" />
+                            <field name="weni_analytics_client_id" />
                         </group>
                     </group>
                 </page>

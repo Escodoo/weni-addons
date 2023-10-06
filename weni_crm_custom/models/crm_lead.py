@@ -100,6 +100,31 @@ class CrmLead(models.Model):
     rd_odoo_lead_link = fields.Char(string="Lead RD Link")
     rd_actions_history = fields.Html(string="Actions History")
 
+    weni_monthly_attendance_number = fields.Char(string="Monthly Attendance Number")
+    weni_customer_profile = fields.Selection(
+        string="Customer Profile",
+        selection=[
+            ("enterprise", "Enterprise"),
+            ("startups_tech", "Startups / Tech"),
+            ("middle_market", "Middle Market"),
+            ("civic_engagement", "Civic Engagement"),
+            ("other", "Other"),
+        ],
+    )
+    weni_last_source_attribution = fields.Char(string="Last Source Attribution")
+    weni_first_source_attribution = fields.Char(string="First Source Attribution")
+    weni_multi_source_attribution = fields.Char(string="Multi Source Attribution")
+    weni_fbclid = fields.Char(string="Fbclid")
+    weni_gclid = fields.Char(string="Gclid")
+    weni_utm_source = fields.Char(string="UTM Source")
+    weni_utm_medium = fields.Char(string="UTM Medium")
+    weni_utm_campaign = fields.Char(string="UTM Campaign")
+    weni_utm_content = fields.Char(string="UTM Content")
+    weni_utm_term = fields.Char(string="UTM Term")
+    weni_client_user_agent = fields.Char(string="Client User Agent")
+    weni_client_ip_address = fields.Char(string="Client Ip Address")
+    weni_analytics_client_id = fields.Char(string="Analytics Client ID")
+    
     @api.multi
     def action_set_lost(self):
         super().action_set_lost()
