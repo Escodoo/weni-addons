@@ -60,6 +60,11 @@ msgid "Amount Non-Recurring Revenue"
 msgstr ""
 
 #. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_analytics_client_id
+msgid "Analytics Client ID"
+msgstr ""
+
+#. module: weni_crm_custom
 #: model:ir.model,name:weni_crm_custom.model_crm_lead_channel
 msgid "CRM Lead Channel"
 msgstr ""
@@ -77,6 +82,21 @@ msgstr ""
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_channels_used
 msgid "Channels Used"
+msgstr ""
+
+#. module: weni_crm_custom
+#: selection:crm.lead,weni_customer_profile:0
+msgid "Civic Engagement"
+msgstr ""
+
+#. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_client_ip_address
+msgid "Client Ip Address"
+msgstr ""
+
+#. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_client_user_agent
+msgid "Client User Agent"
 msgstr ""
 
 #. module: weni_crm_custom
@@ -126,6 +146,11 @@ msgstr ""
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_current_situation
 msgid "Current Situation"
+msgstr ""
+
+#. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_customer_profile
+msgid "Customer Profile"
 msgstr ""
 
 #. module: weni_crm_custom
@@ -180,8 +205,18 @@ msgid "Email"
 msgstr ""
 
 #. module: weni_crm_custom
+#: selection:crm.lead,weni_customer_profile:0
+msgid "Enterprise"
+msgstr ""
+
+#. module: weni_crm_custom
 #: selection:crm.lead,weni_sale_type:0
 msgid "Enterprise Project"
+msgstr ""
+
+#. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_fbclid
+msgid "Fbclid"
 msgstr ""
 
 #. module: weni_crm_custom
@@ -192,6 +227,16 @@ msgstr ""
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__rd_first_conversion_date
 msgid "First Conversion Date"
+msgstr ""
+
+#. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_first_source_attribution
+msgid "First Source Attribution"
+msgstr ""
+
+#. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_gclid
+msgid "Gclid"
 msgstr ""
 
 #. module: weni_crm_custom
@@ -267,6 +312,11 @@ msgid "Last Modified on"
 msgstr ""
 
 #. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_last_source_attribution
+msgid "Last Source Attribution"
+msgstr ""
+
+#. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_channel__write_uid
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_decision_maker__write_uid
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_user__write_uid
@@ -332,13 +382,28 @@ msgid "Microbusiness"
 msgstr ""
 
 #. module: weni_crm_custom
+#: selection:crm.lead,weni_customer_profile:0
+msgid "Middle Market"
+msgstr ""
+
+#. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead_user__mobile
 msgid "Mobile"
 msgstr ""
 
 #. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_monthly_attendance_number
+msgid "Monthly Attendance Number"
+msgstr ""
+
+#. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__planned_revenue
 msgid "Monthly Recurring Revenue"
+msgstr ""
+
+#. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_multi_source_attribution
+msgid "Multi Source Attribution"
 msgstr ""
 
 #. module: weni_crm_custom
@@ -361,6 +426,11 @@ msgstr ""
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_no_show
 msgid "No Show"
+msgstr ""
+
+#. module: weni_crm_custom
+#: selection:crm.lead,weni_customer_profile:0
+msgid "Other"
 msgstr ""
 
 #. module: weni_crm_custom
@@ -425,6 +495,11 @@ msgid "Small and Medium-sized Business"
 msgstr ""
 
 #. module: weni_crm_custom
+#: selection:crm.lead,weni_customer_profile:0
+msgid "Startups / Tech"
+msgstr ""
+
+#. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_systems_used
 msgid "Systems Used"
 msgstr ""
@@ -442,6 +517,31 @@ msgstr ""
 #. module: weni_crm_custom
 #: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_total_human_agents
 msgid "Total Human Agents"
+msgstr ""
+
+#. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_utm_campaign
+msgid "UTM Campaign"
+msgstr ""
+
+#. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_utm_content
+msgid "UTM Content"
+msgstr ""
+
+#. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_utm_medium
+msgid "UTM Medium"
+msgstr ""
+
+#. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_utm_source
+msgid "UTM Source"
+msgstr ""
+
+#. module: weni_crm_custom
+#: model:ir.model.fields,field_description:weni_crm_custom.field_crm_lead__weni_utm_term
+msgid "UTM Term"
 msgstr ""
 
 #. module: weni_crm_custom
